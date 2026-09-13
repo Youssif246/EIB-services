@@ -35,7 +35,11 @@
       <!-- Right Column: Architectural Photography Anchor -->
       <div class="hero-image-col">
         <div class="hero-image-frame">
-          <img src="/hero-image.png" alt="Corporate Architecture" class="hero-photo" loading="eager" />
+          <picture>
+            <source media="(max-width: 768px)" srcset="/hero-image-mobile.webp" type="image/webp" />
+            <source srcset="/hero-image.webp" type="image/webp" />
+            <img src="/hero-image.png" alt="Corporate Architecture" class="hero-photo" width="1672" height="941" loading="eager" fetchpriority="high" decoding="async" />
+          </picture>
         </div>
       </div>
     </div>
@@ -74,7 +78,7 @@
           <article class="service-carousel-card">
             <div class="card-image-box">
               <a [routerLink]="['/services', srv.slug]" class="card-image-link" (click)="onServiceCardClick($event)" [attr.aria-label]="srv.title">
-                <img [src]="srv.imageUrl" [alt]="srv.title" class="card-img" (error)="onImageError($event)" loading="lazy" draggable="false" />
+                <img [src]="srv.imageUrl" [alt]="srv.title" class="card-img" (error)="onImageError($event)" loading="lazy" decoding="async" width="400" height="245" draggable="false" />
               </a>
               <div class="card-img-vignette"></div>
               <div class="card-badge-pill">
@@ -160,7 +164,7 @@
         <article class="industry-card" [class.is-center]="idx === industrySlideIndex + 1">
           <!-- Large High-Quality Image Viewport -->
           <div class="card-visual-frame">
-            <img [src]="ind.imageUrl" [alt]="ind.title" class="card-image" (error)="onImageError($event)" loading="lazy"
+            <img [src]="ind.imageUrl" [alt]="ind.title" class="card-image" (error)="onImageError($event)" loading="lazy" decoding="async" width="400" height="300"
               draggable="false" />
             <div class="card-image-vignette"></div>
             <span class="card-floating-num">{{ ind.num }}</span>

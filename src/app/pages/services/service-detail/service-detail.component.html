@@ -35,7 +35,7 @@
 
         <div class="hero-media">
           <div class="service-photo-frame">
-            <img [src]="srv.imageUrl" [alt]="srv.title" class="service-photo" />
+            <img [src]="srv.imageUrl" [alt]="srv.title" class="service-photo" loading="eager" fetchpriority="high" decoding="async" width="800" height="500" />
           </div>
         </div>
       </div>
