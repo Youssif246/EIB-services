@@ -25,8 +25,12 @@
   user-select: none;
   cursor: default;
   /* Grand Architectural Curtain Lift: Unveils live website */
-  animation: eibCurtainLift 0.70s cubic-bezier(0.76, 0, 0.24, 1) 2.45s forwards;
-  will-change: transform;
+  animation: eibCurtainLift 0.48s cubic-bezier(0.76, 0, 0.24, 1) 1.45s forwards;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  contain: strict;
 }
 
 /* Subtle Architectural Axis Crosshairs */
@@ -42,6 +46,8 @@
 .grid-line {
   position: absolute;
   background-color: rgba(21, 23, 26, 0.07);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .grid-line-h {
@@ -49,7 +55,7 @@
   height: 1px;
   transform: scaleX(0);
   transform-origin: center;
-  animation: gridExpandH 0.80s cubic-bezier(0.16, 1, 0.3, 1) 0.08s forwards;
+  animation: gridExpandH 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
 }
 
 .grid-line-v {
@@ -57,7 +63,7 @@
   width: 1px;
   transform: scaleY(0);
   transform-origin: center;
-  animation: gridExpandV 0.80s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
+  animation: gridExpandV 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.08s forwards;
 }
 
 /* Central Stage Container */
@@ -71,9 +77,13 @@
   padding: 44px 48px;
   width: 90%;
   max-width: 480px;
-  background-color: rgba(244, 241, 234, 0.92);
-  backdrop-filter: blur(2px);
-  animation: stageContentFade 0.50s cubic-bezier(0.16, 1, 0.3, 1) 2.38s forwards;
+  background-color: rgba(244, 241, 234, 0.96);
+  border-radius: 4px;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  animation: stageContentFade 0.35s cubic-bezier(0.16, 1, 0.3, 1) 1.35s forwards;
 }
 
 /* Viewfinder Framing Corner Accents */
@@ -83,7 +93,8 @@
   height: 16px;
   pointer-events: none;
   opacity: 0;
-  animation: cornerSettle 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.28s forwards;
+  animation: cornerSettle 0.38s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+  will-change: transform, opacity;
 }
 
 .corner-tl {
@@ -91,7 +102,7 @@
   left: 0;
   border-top: 1.5px solid rgba(223, 54, 45, 0.75); /* EIB Red Accent */
   border-left: 1.5px solid rgba(223, 54, 45, 0.75);
-  transform: translate(-4px, -4px);
+  transform: translate3d(-4px, -4px, 0);
 }
 
 .corner-tr {
@@ -99,7 +110,7 @@
   right: 0;
   border-top: 1px solid rgba(21, 23, 26, 0.25);
   border-right: 1px solid rgba(21, 23, 26, 0.25);
-  transform: translate(4px, -4px);
+  transform: translate3d(4px, -4px, 0);
 }
 
 .corner-bl {
@@ -107,7 +118,7 @@
   left: 0;
   border-bottom: 1px solid rgba(21, 23, 26, 0.25);
   border-left: 1px solid rgba(21, 23, 26, 0.25);
-  transform: translate(-4px, 4px);
+  transform: translate3d(-4px, 4px, 0);
 }
 
 .corner-br {
@@ -115,7 +126,7 @@
   right: 0;
   border-bottom: 1.5px solid rgba(242, 114, 39, 0.75); /* EIB Orange Accent */
   border-right: 1.5px solid rgba(242, 114, 39, 0.75);
-  transform: translate(4px, 4px);
+  transform: translate3d(4px, 4px, 0);
 }
 
 /* --------------------------------------------------------------------------
@@ -126,7 +137,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: markPulse 0.55s cubic-bezier(0.16, 1, 0.3, 1) 1.15s both;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  animation: markPulse 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
 }
 
 .eib-mark-svg {
@@ -139,18 +154,21 @@
 /* Red Square Animation (glides from top-left) */
 .rect-red {
   transform-origin: 38px 38px;
-  animation: glideRedSquare 0.82s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+  will-change: transform, opacity;
+  animation: glideRedSquare 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
 }
 
 /* Orange Square Animation (glides from bottom-right) */
 .rect-orange {
   transform-origin: 62px 62px;
-  animation: glideOrangeSquare 0.82s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
+  will-change: transform, opacity;
+  animation: glideOrangeSquare 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.24s both;
 }
 
 /* Overlap Intersection Plane Animation (reveals on meeting) */
 .rect-overlap {
-  animation: revealOverlap 0.50s ease-out 1.05s both;
+  will-change: opacity;
+  animation: revealOverlap 0.35s ease-out 0.58s both;
 }
 
 /* --------------------------------------------------------------------------
@@ -186,7 +204,11 @@
   color: var(--eib-charcoal, #15171A);
   line-height: 1;
   display: inline-block;
-  animation: acronymRise 0.68s cubic-bezier(0.16, 1, 0.3, 1) 0.80s both;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  animation: acronymRise 0.48s cubic-bezier(0.16, 1, 0.3, 1) 0.48s both;
 }
 
 /* Architectural Hairline Divider */
@@ -195,9 +217,10 @@
   height: 1px;
   background-color: rgba(21, 23, 26, 0.18);
   margin: 10px 0 12px;
-  transform: scaleX(0);
+  transform: scale3d(0, 1, 1);
   transform-origin: center;
-  animation: hairlineExpand 0.60s cubic-bezier(0.16, 1, 0.3, 1) 1.05s forwards;
+  will-change: transform, opacity;
+  animation: hairlineExpand 0.42s cubic-bezier(0.16, 1, 0.3, 1) 0.62s forwards;
 }
 
 /* Descriptor (Elite Integrated Business / شركة إيليت لقطاع الأعمال) */
@@ -212,7 +235,11 @@
   color: var(--eib-charcoal, #15171A);
   line-height: 1.3;
   display: block;
-  animation: textRise 0.62s cubic-bezier(0.16, 1, 0.3, 1) 1.25s both;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  animation: textRise 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.76s both;
 }
 
 .eib-desc-text.ar-desc {
@@ -233,7 +260,11 @@
   color: var(--eib-ink-secondary, #4A4D50);
   line-height: 1.3;
   display: block;
-  animation: textRise 0.62s cubic-bezier(0.16, 1, 0.3, 1) 1.50s both;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  animation: textRise 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.90s both;
 }
 
 .eib-tagline-text.ar-desc {
@@ -265,7 +296,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Keyframe Choreography
+   Keyframe Choreography (Hardware Accelerated 60/120fps)
    -------------------------------------------------------------------------- */
 
 /* Grid axes expansion */
@@ -304,21 +335,21 @@
   }
   100% {
     opacity: 1;
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 /* SVG Red Square Gliding Entrance */
 @keyframes glideRedSquare {
   0% {
-    transform: translate(-32px, -32px);
+    transform: translate3d(-30px, -30px, 0);
     opacity: 0;
   }
   60% {
     opacity: 1;
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
@@ -326,14 +357,14 @@
 /* SVG Orange Square Gliding Entrance */
 @keyframes glideOrangeSquare {
   0% {
-    transform: translate(32px, 32px);
+    transform: translate3d(30px, 30px, 0);
     opacity: 0;
   }
   60% {
     opacity: 1;
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
@@ -351,24 +382,24 @@
 /* Logo Convergence Authoritative Pulse */
 @keyframes markPulse {
   0% {
-    transform: scale(1);
+    transform: scale3d(1, 1, 1);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale3d(1.04, 1.04, 1);
   }
   100% {
-    transform: scale(1);
+    transform: scale3d(1, 1, 1);
   }
 }
 
 /* Acronym Rise from Mask */
 @keyframes acronymRise {
   0% {
-    transform: translateY(110%);
+    transform: translate3d(0, 105%, 0);
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
@@ -376,11 +407,11 @@
 /* Hairline Divider Expand */
 @keyframes hairlineExpand {
   0% {
-    transform: scaleX(0);
+    transform: scale3d(0, 1, 1);
     opacity: 0;
   }
   100% {
-    transform: scaleX(1);
+    transform: scale3d(1, 1, 1);
     opacity: 1;
   }
 }
@@ -388,11 +419,11 @@
 /* Typography Rise */
 @keyframes textRise {
   0% {
-    transform: translateY(100%);
+    transform: translate3d(0, 100%, 0);
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
@@ -401,26 +432,30 @@
 @keyframes stageContentFade {
   0% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale3d(1, 1, 1);
   }
   100% {
     opacity: 0.85;
-    transform: scale(0.98);
+    transform: scale3d(0.98, 0.98, 1);
   }
 }
 
 /* Architectural Curtain Lift Exit */
 @keyframes eibCurtainLift {
   0% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
     visibility: visible;
   }
-  99% {
-    transform: translateY(-100%);
-    visibility: visible;
+  1% {
+    pointer-events: none; /* Immediately release touches to page */
+  }
+  25% {
+    opacity: 0.95;
   }
   100% {
-    transform: translateY(-100%);
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
   }
@@ -431,7 +466,7 @@
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   .eib-loader-screen {
-    animation: eibQuickDismiss 0.25s ease-out 0.15s forwards !important;
+    animation: eibQuickDismiss 0.20s ease-out 0.10s forwards !important;
   }
 
   .grid-line,
@@ -467,13 +502,13 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 640px) {
   .eib-loader-stage {
-    padding: 36px 28px;
-    max-width: 330px;
+    padding: 34px 24px;
+    max-width: 320px;
   }
 
   .eib-mark-svg {
-    width: 62px;
-    height: 62px;
+    width: 60px;
+    height: 60px;
   }
 
   .acronym-mask {

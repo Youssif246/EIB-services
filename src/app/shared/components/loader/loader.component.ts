@@ -16,7 +16,7 @@ export class LoaderComponent {
       // Safety timeout to guarantee DOM cleanup after curtain lift finishes
       setTimeout(() => {
         this.isFinished = true;
-      }, 3500);
+      }, 2200);
     }
   }
 

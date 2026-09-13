@@ -238,6 +238,13 @@
   --grad-footer:            linear-gradient(180deg, #0A0C0E 0%, #07080A 100%);
 }
 
+/* Mobile GPU Performance: Disable heavy SVG feTurbulence fractal noise on mobile screens */
+@media (max-width: 768px) {
+  :root {
+    --eib-paper-grain: none;
+  }
+}
+
 /* ==========================================================================
    PRO CORPORATE DARK MODE ARCHITECTURE (All Pages & Components)
    Strictly Enforced Scope: Hero, Services, Industries, Philosophy, Trust,
@@ -615,6 +622,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: clip;
   max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: auto; /* Restores instant, 120Hz native kinetic momentum scroll on touch devices */
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 body.eib-body {
