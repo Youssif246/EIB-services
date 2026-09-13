@@ -1,0 +1,61 @@
+@if (!isFinished) {
+<aside class="eib-loader-screen" (animationend)="onAnimationEnd($event)" aria-hidden="true">
+  <!-- Subtle Architectural Axis Crosshairs -->
+  <div class="eib-loader-grid">
+    <div class="grid-line grid-line-h"></div>
+    <div class="grid-line grid-line-v"></div>
+  </div>
+
+  <!-- Central Architectural Stage -->
+  <div class="eib-loader-stage">
+    
+    <!-- Viewfinder Corner Accents -->
+    <div class="eib-corner corner-tl"></div>
+    <div class="eib-corner corner-tr"></div>
+    <div class="eib-corner corner-bl"></div>
+    <div class="eib-corner corner-br"></div>
+
+    <!-- Animated Official EIB Geometric Emblem -->
+    <div class="eib-mark-stage">
+      <svg class="eib-mark-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="eib-loader-overlap-clip">
+            <rect x="34" y="34" width="56" height="56" rx="8" />
+          </clipPath>
+        </defs>
+        <!-- Red Square: glides from top-left offset -->
+        <rect class="rect-red" x="10" y="10" width="56" height="56" rx="8" fill="#DF362D" />
+        <!-- Orange Square: glides from bottom-right offset -->
+        <rect class="rect-orange" x="34" y="34" width="56" height="56" rx="8" fill="#F27227" fill-opacity="0.95" />
+        <!-- Intersection Plane: reveals on precise geometric convergence -->
+        <rect class="rect-overlap" x="10" y="10" width="56" height="56" rx="8" fill="#B3281E" fill-opacity="0.35"
+          clip-path="url(#eib-loader-overlap-clip)" />
+      </svg>
+    </div>
+
+    <!-- Editorial Typography Suite -->
+    <div class="eib-type-stage">
+      <!-- Acronym reveal from mask -->
+      <div class="eib-mask-wrap acronym-mask">
+        <span class="eib-acronym-text">EIB</span>
+      </div>
+
+      <!-- Architectural hairline divider -->
+      <div class="eib-hairline-rule"></div>
+
+      <!-- Descriptor reveal from mask -->
+      <div class="eib-mask-wrap desc-mask">
+        <span class="eib-desc-text en-desc">ELITE INTEGRATED BUSINESS</span>
+        <span class="eib-desc-text ar-desc">شركة إيليت لقطاع الأعمال</span>
+      </div>
+
+      <!-- Institutional Tagline -->
+      <div class="eib-mask-wrap tagline-mask">
+        <span class="eib-tagline-text en-desc">Strategic Advisory &amp; Operational Solutions</span>
+        <span class="eib-tagline-text ar-desc">استشارات إدارية وحلول تشغيلية متكاملة</span>
+      </div>
+    </div>
+
+  </div>
+</aside>
+}
