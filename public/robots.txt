@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eib-service.com/sitemap.xml
