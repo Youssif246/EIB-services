@@ -1,0 +1,60 @@
+<section class="eib-section cta-section">
+  <!-- Subtle Architectural Framing Geometry (Low-Contrast Asymmetry) -->
+  <div class="cta-architectural-frame" aria-hidden="true">
+    <span class="frame-watermark">05</span>
+    <div class="frame-rect-primary"></div>
+    <div class="frame-rect-secondary"></div>
+    <div class="frame-axis-h"></div>
+    <div class="frame-axis-v-start"></div>
+    <div class="frame-axis-v-end"></div>
+    <span class="frame-corner-plus top-start">+</span>
+    <span class="frame-corner-plus bottom-end">+</span>
+  </div>
+
+  <div class="eib-container">
+    <!-- Perfectly Centered Editorial Content Group -->
+    <div class="cta-centered-content">
+
+      @if (languageService.t.cta.eyebrow) {
+        <div class="cta-eyebrow">
+          <span class="cta-eyebrow-line" aria-hidden="true"></span>
+          <span class="cta-eyebrow-text">{{ languageService.t.cta.eyebrow }}</span>
+          <span class="cta-eyebrow-line" aria-hidden="true"></span>
+        </div>
+      }
+
+      <h2 class="cta-headline">
+        {{ languageService.t.cta.title }}
+      </h2>
+
+      <p class="cta-statement">
+        {{ languageService.t.cta.statement }}
+      </p>
+
+      <div class="cta-action-row">
+        @if (customUrl) {
+          <a [href]="customUrl" target="_blank" rel="noopener noreferrer" class="cta-advisory-btn">
+            <span class="btn-text">{{ languageService.t.cta.primaryBtn }}</span>
+            <span class="btn-arrow" aria-hidden="true">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </a>
+        } @else {
+          <a routerLink="/contact" class="cta-advisory-btn">
+            <span class="btn-text">{{ languageService.t.cta.primaryBtn }}</span>
+            <span class="btn-arrow" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+        }
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Architectural Transition Bridge to Footer -->
+  <div class="cta-footer-bridge" aria-hidden="true">
+    <span class="bridge-axis-line"></span>
+    <span class="bridge-axis-marker"></span>
+  </div>
+</section>

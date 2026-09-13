@@ -1,0 +1,417 @@
+/* ==========================================================================
+   EIB Services Page — Modern Balanced Bento Cards Stylesheet
+   Architecture: Equal Visual Weight for All 8 Core Strategic Practices
+   Palette: Pure White Cards (#FFFFFF) over Warm Ivory Surface (#FAF8F5)
+   ========================================================================== */
+
+.services-directory-page {
+  display: block;
+  background-color: var(--eib-surface-hero, #FAF8F5);
+}
+
+/* ==========================================================================
+   01 — SERVICES HERO
+   ========================================================================== */
+.services-hero {
+  background-color: var(--eib-surface-hero, #FAF8F5);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 10%, rgba(255, 255, 255, 0.95) 0%, transparent 80%),
+    var(--eib-paper-grain);
+  padding-top: clamp(36px, 4.5vw, 56px);
+  padding-bottom: clamp(40px, 5vw, 64px);
+  border-bottom: 1px solid rgba(21, 23, 26, 0.08);
+  position: relative;
+}
+
+/* Breadcrumb Trail */
+.breadcrumb-trail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: #7E7A72;
+  margin-bottom: clamp(20px, 2.8vw, 36px);
+}
+
+.breadcrumb-item {
+  color: #5C5A56;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.breadcrumb-item:hover {
+  color: #8F2525;
+}
+
+.breadcrumb-sep {
+  color: rgba(21, 23, 26, 0.25);
+}
+
+.breadcrumb-current {
+  color: #15171A;
+  font-weight: 600;
+}
+
+/* Hero Typography */
+.hero-content-stack {
+  max-width: 860px;
+}
+
+.services-headline {
+  font-size: clamp(1.65rem, 4.8vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.22;
+  color: #15171A;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px 0;
+  word-break: break-word;
+}
+
+[dir="rtl"] .services-headline {
+  letter-spacing: normal;
+  line-height: 1.36;
+}
+
+.services-lead-desc {
+  font-size: clamp(1.025rem, 1.2vw, 1.15rem);
+  line-height: 1.8;
+  color: #52504C;
+  margin: 0;
+  max-width: 68ch;
+}
+
+/* ==========================================================================
+   02 — BALANCED BENTO GRID (ALL 8 CORE SERVICES EQUALLY)
+   ========================================================================== */
+.services-grid-section {
+  background-color: #FAF8F5;
+  padding-top: clamp(48px, 6vw, 80px);
+  padding-bottom: clamp(64px, 8vw, 110px);
+}
+
+.services-bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(18px, 2.2vw, 26px);
+}
+
+@media (min-width: 860px) {
+  .services-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Service Bento Card
+   -------------------------------------------------------------------------- */
+.service-bento-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(21, 23, 26, 0.08);
+  border-radius: 14px;
+  padding: clamp(24px, 3.2vw, 36px);
+  box-shadow: 0 2px 10px rgba(21, 23, 26, 0.025);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  transition:
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-bento-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(143, 37, 37, 0.32);
+  box-shadow: 0 12px 32px -4px rgba(143, 37, 37, 0.09);
+}
+
+/* Card Header: Icon + Number */
+.card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.service-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(143, 37, 37, 0.06);
+  color: #8F2525;
+  border: 1px solid rgba(143, 37, 37, 0.12);
+  flex-shrink: 0;
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    transform 220ms ease,
+    border-color 220ms ease;
+}
+
+.service-bento-card:hover .service-icon-box {
+  background-color: #8F2525;
+  color: #FAF8F5;
+  border-color: #8F2525;
+  transform: scale(1.05);
+}
+
+.service-id-badge {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: rgba(21, 23, 26, 0.22);
+  font-family: var(--font-en), sans-serif;
+  letter-spacing: -0.02em;
+  padding: 4px 10px;
+  background-color: rgba(21, 23, 26, 0.03);
+  border: 1px solid rgba(21, 23, 26, 0.06);
+  border-radius: 6px;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+
+.service-bento-card:hover .service-id-badge {
+  color: #8F2525;
+  border-color: rgba(143, 37, 37, 0.2);
+}
+
+/* Card Content: Title + Description */
+.card-main-content {
+  margin-bottom: 22px;
+}
+
+.service-card-title {
+  font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0 0 10px 0;
+  color: #15171A;
+}
+
+.title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.title-link:hover {
+  color: #8F2525;
+}
+
+.external-icon-mini {
+  font-size: 0.72em;
+  margin-inline-start: 6px;
+  vertical-align: 1px;
+  opacity: 0.7;
+}
+
+.service-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #555149;
+  margin: 0;
+}
+
+/* Capability Pills / Scannable Focus Tags */
+.card-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.capability-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: rgba(21, 23, 26, 0.035);
+  border: 1px solid rgba(21, 23, 26, 0.065);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #4A463F;
+  line-height: 1.4;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.service-bento-card:hover .capability-pill {
+  background-color: rgba(143, 37, 37, 0.04);
+  border-color: rgba(143, 37, 37, 0.12);
+  color: #2D2A26;
+}
+
+.pill-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #8F2525;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* Card Bottom Action Bar */
+.card-bottom-bar {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(21, 23, 26, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.service-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 6px 10px;
+  font-size: 0.885rem;
+  font-weight: 700;
+  color: #8F2525;
+  text-decoration: none;
+  transition: color 200ms ease, transform 200ms ease;
+  touch-action: manipulation;
+}
+
+.btn-arrow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[dir="rtl"] .btn-arrow-icon svg,
+[dir="rtl"] .btn-arrow-icon i {
+  transform: rotate(180deg);
+}
+
+.service-bento-card:hover .service-action-btn {
+  color: #781D1D;
+}
+
+.service-bento-card:hover .btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .service-bento-card:hover .btn-arrow-icon {
+  transform: translateX(-4px) rotate(180deg);
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 600px) {
+  .service-bento-card {
+    padding: 20px;
+  }
+
+  .card-top-row {
+    margin-bottom: 16px;
+  }
+
+  .capability-pill {
+    font-size: 0.775rem;
+    padding: 5px 10px;
+  }
+}
+
+/* ==========================================================================
+   SERVICES COMPONENT DARK THEME SPECIFIC OVERRIDES (:host-context)
+   ========================================================================== */
+:host-context([data-theme="dark"]) .services-hero {
+  background-color: #121419 !important;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(168, 46, 46, 0.12) 0%, rgba(18, 20, 25, 0) 70%),
+    var(--eib-paper-grain) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:host-context([data-theme="dark"]) .services-headline {
+  color: #F9FAFB !important;
+}
+
+:host-context([data-theme="dark"]) .services-lead-desc {
+  color: #9CA3AF !important;
+}
+
+:host-context([data-theme="dark"]) .breadcrumb-item {
+  color: #9CA3AF !important;
+}
+
+:host-context([data-theme="dark"]) .breadcrumb-item:hover {
+  color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .breadcrumb-current {
+  color: #F9FAFB !important;
+}
+
+:host-context([data-theme="dark"]) .breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.18) !important;
+}
+
+:host-context([data-theme="dark"]) .services-grid-section {
+  background-color: #0F1115 !important;
+}
+
+:host-context([data-theme="dark"]) .service-bento-card {
+  background-color: #1A1D24 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.06) !important;
+}
+
+:host-context([data-theme="dark"]) .service-bento-card:hover {
+  border-color: rgba(168, 46, 46, 0.4) !important;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55), 0 0 24px rgba(168, 46, 46, 0.22) !important;
+  transform: translateY(-2px);
+}
+
+:host-context([data-theme="dark"]) .service-icon-box {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #E4E4E7 !important;
+}
+
+:host-context([data-theme="dark"]) .service-bento-card:hover .service-icon-box {
+  background: rgba(168, 46, 46, 0.16) !important;
+  border-color: rgba(168, 46, 46, 0.45) !important;
+  color: #FFA3A3 !important;
+  box-shadow: 0 0 16px rgba(168, 46, 46, 0.3) !important;
+}
+
+:host-context([data-theme="dark"]) .card-num {
+  color: rgba(255, 255, 255, 0.15) !important;
+}
+
+:host-context([data-theme="dark"]) .card-title {
+  color: #F9FAFB !important;
+}
+
+:host-context([data-theme="dark"]) .card-desc {
+  color: #9CA3AF !important;
+}
+
+:host-context([data-theme="dark"]) .capability-pill {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #D4D4D8 !important;
+}
+
+:host-context([data-theme="dark"]) .pill-bullet {
+  background-color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .card-bottom-bar {
+  border-top-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+:host-context([data-theme="dark"]) .service-action-btn {
+  color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .service-bento-card:hover .service-action-btn {
+  color: #FFFFFF !important;
+}

@@ -1,0 +1,465 @@
+<!-- ==========================================================================
+     01 — EDITORIAL HERO
+     Art Direction: Editorial Cover for a Global Professional-Services Firm
+     Asymmetric Grid | High-Impact Typography | Controlled Imagery
+     ========================================================================== -->
+<section class="eib-section hero-section">
+  <div class="eib-container">
+    <div class="hero-layout">
+      <!-- Left Column: Typographic Narrative -->
+      <div class="hero-text-col">
+        <div class="eib-eyebrow">
+          <span class="eib-eyebrow-line"></span>
+          <span>{{ languageService.t.home.hero.eyebrow }}</span>
+        </div>
+
+        <h1 class="hero-headline">
+          {{ languageService.t.home.hero.title }}
+        </h1>
+
+        <p class="hero-lead">
+          {{ languageService.t.home.hero.description }}
+        </p>
+
+        <div class="hero-ctas">
+          <a routerLink="/contact" class="eib-btn eib-btn-primary hero-primary-btn">
+            {{ languageService.t.home.hero.primaryCta }}
+          </a>
+          <a routerLink="/" fragment="services" class="eib-editorial-link hero-secondary-btn">
+            <span>{{ languageService.t.home.hero.secondaryCta }}</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Architectural Photography Anchor -->
+      <div class="hero-image-col">
+        <div class="hero-image-frame">
+          <img src="/hero-image.png" alt="Corporate Architecture" class="hero-photo" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     02 — EDITORIAL SERVICES DIRECTORY (01–08 PRACTICES)
+     Not a Catalog, Not a Dashboard, Not a Collection of Cards
+     ========================================================================== -->
+<section id="services" class="eib-section services-section">
+  <div class="eib-container">
+    <div class="section-intro">
+      <span class="journey-chapter">01</span>
+      <div class="eib-eyebrow">
+        <span class="eib-eyebrow-line orange"></span>
+        <span>{{ languageService.t.home.services.eyebrow }}</span>
+      </div>
+      <h2 class="eib-section-title">
+        {{ languageService.t.home.services.title }}
+      </h2>
+      <p class="eib-section-subtitle">
+        {{ languageService.t.home.services.subtitle }}
+      </p>
+    </div>
+
+    <!-- 3-Card Services Carousel (Executive Corporate Edition) -->
+    <div class="services-carousel-wrap">
+      <div class="services-slider-viewport" [class.is-dragging]="isServicesDragging"
+        (pointerdown)="onServicesPointerDown($event)"
+        (pointermove)="onServicesPointerMove($event)"
+        (pointerup)="onServicesPointerUp($event)"
+        (pointercancel)="onServicesPointerCancel($event)">
+        <div class="services-slider-track" [style.transform]="getServicesTrackTransform()">
+          @for (srv of languageService.t.services; track srv.id) {
+          <article class="service-carousel-card">
+            <div class="card-image-box">
+              <a [routerLink]="['/services', srv.slug]" class="card-image-link" (click)="onServiceCardClick($event)" [attr.aria-label]="srv.title">
+                <img [src]="srv.imageUrl" [alt]="srv.title" class="card-img" (error)="onImageError($event)" loading="lazy" draggable="false" />
+              </a>
+              <div class="card-img-vignette"></div>
+              <div class="card-badge-pill">
+                <span class="badge-accent">{{ srv.id }}</span>
+                <span class="badge-sep">/</span>
+                <span class="badge-total">{{ totalServicesFormatted }}</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-accent-bar"></div>
+              <h3 class="card-title">
+                <a [routerLink]="['/services', srv.slug]" class="title-internal-link" (click)="onServiceCardClick($event)">
+                  {{ srv.title }}
+                </a>
+              </h3>
+              <p class="card-desc">{{ srv.shortDesc }}</p>
+
+              <div class="card-action">
+                <a [routerLink]="['/services', srv.slug]" class="card-link" (click)="onServiceCardClick($event)">
+                  <span class="link-label">{{ languageService.t.home.services.viewMandate }}</span>
+                  <span class="link-arrow-circle">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+          }
+        </div>
+      </div>
+
+      <!-- Executive Navigation Controls -->
+      <div class="services-arrows-bar">
+        <button type="button" class="services-arrow-btn prev" (click)="prevSlide()" aria-label="Previous Services">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <span class="services-nav-dot"></span>
+
+        <button type="button" class="services-arrow-btn next" (click)="nextSlide()" aria-label="Next Services">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     03 — REGULATED INDUSTRY EXPERTISE (EDITORIAL DISCOVERY)
+     Answering: "Does EIB Understand My Industry?"
+     Visual Discovery | Zero Platform Dashboard Selectors
+     ========================================================================== -->
+<!-- ==========================================================================
+     03 — REGULATED INDUSTRY EXPERTISE
+     Simple 3-Card Editorial Industry Slider
+     ========================================================================== -->
+<section id="industries" class="eib-section industry-slider-section">
+  <div class="eib-container">
+
+    <!-- Editorial Section Header -->
+    <header class="industry-slider-header">
+      <div class="industry-eyebrow-row">
+        <span class="journey-chapter">02</span>
+        <div class="industry-slider-eyebrow">
+          <span class="industry-eyebrow-line"></span>
+          <span class="industry-eyebrow-text">{{ languageService.t.home.industries.eyebrow }}</span>
+        </div>
+      </div>
+      <h2 class="industry-slider-title">
+        {{ languageService.t.home.industries.title }}
+      </h2>
+      <p class="industry-slider-subtitle">
+        {{ languageService.t.home.industries.subtitle }}
+      </p>
+    </header>
+
+    <!-- 3-Card Editorial Horizontal Viewport -->
+    <div class="industry-slider-viewport" [class.is-dragging]="isDragging" (pointerdown)="onPointerDown($event)"
+      (pointermove)="onPointerMove($event)" (pointerup)="onPointerUp($event)" (pointercancel)="onPointerCancel($event)">
+      <div class="industry-slider-track" [style.transform]="getIndustryTrackTransform()">
+        @for (ind of industries; track ind.id; let idx = $index) {
+        <article class="industry-card" [class.is-center]="idx === industrySlideIndex + 1">
+          <!-- Large High-Quality Image Viewport -->
+          <div class="card-visual-frame">
+            <img [src]="ind.imageUrl" [alt]="ind.title" class="card-image" (error)="onImageError($event)" loading="lazy"
+              draggable="false" />
+            <div class="card-image-vignette"></div>
+            <span class="card-floating-num">{{ ind.num }}</span>
+          </div>
+
+          <!-- Card Editorial Body -->
+          <div class="card-editorial-body">
+            <div class="card-meta-line">
+              <span class="card-accent-rule"></span>
+              <span class="card-num-label">{{ ind.num }}</span>
+            </div>
+
+            <h3 class="card-title">{{ ind.title }}</h3>
+            <p class="card-desc">{{ ind.desc }}</p>
+
+            <div class="card-action">
+              <a routerLink="/contact" class="card-explore-link" (click)="onCardClick($event)">
+                <span class="explore-text">
+                  {{ languageService.t.home.industries.cta || (languageService.isRtl() ? 'اكتشف الخبرة' : 'Explore
+                  Capability') }}
+                </span>
+                <span class="explore-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </article>
+        }
+      </div>
+    </div>
+
+    <!-- Executive Navigation Controls -->
+    <div class="industry-nav-bar">
+      <button type="button" class="services-arrow-btn prev" (click)="prevIndustrySlide()"
+        [attr.aria-label]="languageService.isRtl() ? 'القطاع السابق' : 'Previous Industry'">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+
+      <span class="services-nav-dot"></span>
+
+      <button type="button" class="services-arrow-btn next" (click)="nextIndustrySlide()"
+        [attr.aria-label]="languageService.isRtl() ? 'القطاع التالي' : 'Next Industry'">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================================
+     04 — STRATEGIC PHILOSOPHY / INSTITUTIONAL INTEGRATION
+     Refined Architectural Information Design: 01 → 02 → 03 → RESULT
+     ========================================================================== -->
+<section id="philosophy" class="eib-section institutional-section">
+  <!-- Single Subtle EIB Intersecting Squares Signature Motif -->
+  <div class="institutional-blueprint-layer" aria-hidden="true">
+    <svg class="blueprint-single-motif" viewBox="0 0 400 400" fill="none">
+      <rect x="50" y="50" width="220" height="220" stroke="rgba(21, 23, 26, 0.05)" stroke-width="1.5" />
+      <rect x="130" y="130" width="220" height="220" stroke="rgba(143, 37, 37, 0.07)" stroke-width="1.5" />
+    </svg>
+  </div>
+
+  <div class="eib-container institutional-container">
+
+    <!-- Focused Editorial Header: Eyebrow ↓ Headline ↓ 1-2 Line Statement -->
+    <header class="institutional-header">
+      <div class="institutional-eyebrow-row">
+        <span class="journey-chapter">03</span>
+        <div class="eib-eyebrow">
+          <span class="eib-eyebrow-line"></span>
+          <span class="eyebrow-text">{{ languageService.t.home.about.eyebrow }}</span>
+        </div>
+      </div>
+
+      <h2 class="institutional-statement">
+        {{ languageService.t.home.about.title }}
+      </h2>
+
+      <p class="institutional-short-intro">
+        {{ languageService.t.home.about.shortIntro || languageService.t.home.about.lead }}
+      </p>
+    </header>
+
+    <!-- The Hero Visual System: 01 → 02 → 03 → RESULT -->
+    <div class="institutional-path-system">
+
+      <!-- Continuous Architectural Path Track -->
+      <div class="stages-progression-track">
+
+        <!-- Stage 01: Diagnostics -->
+        <article class="stage-milestone" data-stage="01">
+          <div class="stage-ghost-num" aria-hidden="true">01</div>
+
+          <div class="stage-path-conduit" aria-hidden="true">
+            <div class="conduit-node">
+              <span class="node-ring"></span>
+              <span class="node-core"></span>
+            </div>
+            <div class="conduit-connector">
+              <span class="connector-line"></span>
+              <span class="connector-arrow"></span>
+            </div>
+          </div>
+
+          <div class="stage-body">
+            <div class="stage-step-tag">
+              <span class="step-num">01</span>
+              <span class="step-rule"></span>
+            </div>
+            <h3 class="stage-title">{{ languageService.t.home.about.pillar1Title }}</h3>
+            <p class="stage-desc">{{ languageService.t.home.about.pillar1Text }}</p>
+          </div>
+        </article>
+
+        <!-- Stage 02: Integrated Execution -->
+        <article class="stage-milestone" data-stage="02">
+          <div class="stage-ghost-num" aria-hidden="true">02</div>
+
+          <div class="stage-path-conduit" aria-hidden="true">
+            <div class="conduit-node">
+              <span class="node-ring"></span>
+              <span class="node-core"></span>
+            </div>
+            <div class="conduit-connector">
+              <span class="connector-line"></span>
+              <span class="connector-arrow"></span>
+            </div>
+          </div>
+
+          <div class="stage-body">
+            <div class="stage-step-tag">
+              <span class="step-num">02</span>
+              <span class="step-rule"></span>
+            </div>
+            <h3 class="stage-title">{{ languageService.t.home.about.pillar2Title }}</h3>
+            <p class="stage-desc">{{ languageService.t.home.about.pillar2Text }}</p>
+          </div>
+        </article>
+
+        <!-- Stage 03: Capability Institutionalization -->
+        <article class="stage-milestone" data-stage="03">
+          <div class="stage-ghost-num" aria-hidden="true">03</div>
+
+          <div class="stage-path-conduit" aria-hidden="true">
+            <div class="conduit-node">
+              <span class="node-ring"></span>
+              <span class="node-core"></span>
+            </div>
+            <div class="conduit-connector is-terminal">
+              <span class="connector-line"></span>
+              <span class="connector-terminal-joint"></span>
+            </div>
+          </div>
+
+          <div class="stage-body">
+            <div class="stage-step-tag">
+              <span class="step-num">03</span>
+              <span class="step-rule"></span>
+            </div>
+            <h3 class="stage-title">{{ languageService.t.home.about.pillar3Title }}</h3>
+            <p class="stage-desc">{{ languageService.t.home.about.pillar3Text }}</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Centered Editorial Button -->
+      <div class="institutional-action-wrap">
+        <a routerLink="/about" class="institutional-btn">
+          <span>{{ languageService.t.home.about.readMore }}</span>
+          <i class="fa-solid fa-arrow-right btn-arrow-icon" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================================
+     05 — VALUE PROPOSITION & TRUST (WHY EIB)
+     Vertical Editorial List | Zero Cards | Architectural Information Design
+     ========================================================================== -->
+<section id="trust" class="eib-section trust-section">
+  <div class="eib-container">
+
+    <!-- Section Editorial Header -->
+    <header class="trust-header">
+      <div class="trust-eyebrow-row">
+        <span class="journey-chapter">04</span>
+        <div class="eib-eyebrow">
+          <span class="eib-eyebrow-line"></span>
+          <span class="eyebrow-text">{{ languageService.t.home.trust.eyebrow }}</span>
+        </div>
+      </div>
+
+      <h2 class="trust-headline">
+        {{ languageService.t.home.trust.title }}
+      </h2>
+
+      @if (languageService.t.home.trust.subtitle) {
+      <p class="trust-short-intro">
+        {{ languageService.t.home.trust.subtitle }}
+      </p>
+      }
+    </header>
+
+    <!-- 3-Column Executive Advisory Pillars Grid -->
+    <div class="trust-pillars-grid">
+
+      <!-- Pillar 01 -->
+      <article class="trust-pillar-card">
+        <div class="pillar-header-bar">
+          <div class="pillar-num-wrapper">
+            <span class="pillar-num">01</span>
+            <span class="pillar-num-label">{{ languageService.isRtl() ? 'الركيزة التنظيمية' : 'Regulatory Mandate'
+              }}</span>
+          </div>
+          <span class="pillar-accent-rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="pillar-body">
+          <h3 class="pillar-title">{{ languageService.t.home.trust.driver1Title }}</h3>
+          <p class="pillar-desc">{{ languageService.t.home.trust.driver1Desc }}</p>
+        </div>
+
+        @if (languageService.t.home.trust.driver1Detail) {
+        <div class="pillar-proof-card">
+          <div class="proof-label-row">
+            <span class="proof-dot" aria-hidden="true"></span>
+            <span class="proof-label">{{ languageService.isRtl() ? 'المحددات والاعتمادات' : 'Compliance & Scope'
+              }}</span>
+          </div>
+          <p class="proof-content">{{ languageService.t.home.trust.driver1Detail }}</p>
+        </div>
+        }
+      </article>
+
+      <!-- Pillar 02 -->
+      <article class="trust-pillar-card">
+        <div class="pillar-header-bar">
+          <div class="pillar-num-wrapper">
+            <span class="pillar-num">02</span>
+            <span class="pillar-num-label">{{ languageService.isRtl() ? 'الركيزة المعيارية' : 'Standards Mandate'
+              }}</span>
+          </div>
+          <span class="pillar-accent-rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="pillar-body">
+          <h3 class="pillar-title">{{ languageService.t.home.trust.driver2Title }}</h3>
+          <p class="pillar-desc">{{ languageService.t.home.trust.driver2Desc }}</p>
+        </div>
+
+        @if (languageService.t.home.trust.driver2Detail) {
+        <div class="pillar-proof-card">
+          <div class="proof-label-row">
+            <span class="proof-dot" aria-hidden="true"></span>
+            <span class="proof-label">{{ languageService.isRtl() ? 'المحددات والاعتمادات' : 'Compliance & Scope'
+              }}</span>
+          </div>
+          <p class="proof-content">{{ languageService.t.home.trust.driver2Detail }}</p>
+        </div>
+        }
+      </article>
+
+      <!-- Pillar 03 -->
+      <article class="trust-pillar-card">
+        <div class="pillar-header-bar">
+          <div class="pillar-num-wrapper">
+            <span class="pillar-num">03</span>
+            <span class="pillar-num-label">{{ languageService.isRtl() ? 'الركيزة التشغيلية' : 'Operational Mandate'
+              }}</span>
+          </div>
+          <span class="pillar-accent-rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="pillar-body">
+          <h3 class="pillar-title">{{ languageService.t.home.trust.driver3Title }}</h3>
+          <p class="pillar-desc">{{ languageService.t.home.trust.driver3Desc }}</p>
+        </div>
+
+        @if (languageService.t.home.trust.driver3Detail) {
+        <div class="pillar-proof-card">
+          <div class="proof-label-row">
+            <span class="proof-dot" aria-hidden="true"></span>
+            <span class="proof-label">{{ languageService.isRtl() ? 'المحددات والاعتمادات' : 'Compliance & Scope'
+              }}</span>
+          </div>
+          <p class="proof-content">{{ languageService.t.home.trust.driver3Detail }}</p>
+        </div>
+        }
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================================
+     06 — FINAL RESTRAINED CTA
+     ========================================================================== -->
+<app-cta></app-cta>

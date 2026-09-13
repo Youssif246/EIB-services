@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="eib-orange-sq">
+      <rect x="34" y="34" width="64" height="64" rx="14" />
+    </clipPath>
+  </defs>
+  <!-- Red Square (Top-Left) - Vivid, High-Contrast & Bold -->
+  <rect x="2" y="2" width="64" height="64" rx="14" fill="#E8271E" />
+  <!-- Orange Square (Bottom-Right) - Saturated, Luminous & Warm -->
+  <rect x="34" y="34" width="64" height="64" rx="14" fill="#F46E1C" />
+  <!-- Optical Overlap Intersection for Rich Depth -->
+  <rect x="2" y="2" width="64" height="64" rx="14" fill="#A61C14" fill-opacity="0.28" clip-path="url(#eib-orange-sq)" />
+</svg>

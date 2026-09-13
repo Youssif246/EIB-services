@@ -1,0 +1,139 @@
+<article class="services-directory-page">
+
+  <!-- ==========================================================================
+       01 — SERVICES HERO
+       ========================================================================== -->
+  <header class="eib-section services-hero">
+    <div class="eib-container">
+
+      <!-- Breadcrumb Trail -->
+      <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+        <a routerLink="/" class="breadcrumb-item">{{ languageService.t.nav.home }}</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">{{ languageService.t.servicesPage.breadcrumbServices }}</span>
+      </nav>
+
+      <div class="hero-content-stack">
+        <div class="eib-eyebrow">
+          <span class="eib-eyebrow-line"></span>
+          <span class="eyebrow-text">{{ languageService.t.servicesPage.eyebrow }}</span>
+        </div>
+
+        <h1 class="services-headline">
+          {{ languageService.t.servicesPage.title }}
+        </h1>
+
+        <p class="services-lead-desc">
+          {{ languageService.t.servicesPage.desc }}
+        </p>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       02 — ALL 8 CORE SERVICES (BALANCED BENTO CARDS GRID)
+       Equal visual weight across all 8 strategic practices
+       ========================================================================== -->
+  <section class="eib-section services-grid-section">
+    <div class="eib-container">
+
+      <div class="services-bento-grid">
+        @for (srv of services; track srv.id) {
+          <div class="service-bento-card">
+            
+            <!-- Card Header: Expressive Icon + Elegant Number -->
+            <div class="card-top-row">
+              <div class="service-icon-box" [attr.data-slug]="srv.slug">
+                @switch (srv.slug) {
+                  @case ('management-consulting') {
+                    <!-- 01: Management Consulting Icon -->
+                    <i class="fa-solid fa-layer-group"></i>
+                  }
+                  @case ('financial-solutions') {
+                    <!-- 02: Financial Solutions Icon -->
+                    <i class="fa-solid fa-scale-balanced"></i>
+                  }
+                  @case ('quality-iso-excellence') {
+                    <!-- 03: Quality & ISO Excellence Icon -->
+                    <i class="fa-solid fa-certificate"></i>
+                  }
+                  @case ('pr-media') {
+                    <!-- 04: PR & Media Icon -->
+                    <i class="fa-solid fa-bullhorn"></i>
+                  }
+                  @case ('exhibitions-events') {
+                    <!-- 05: Exhibitions & Conferences Icon -->
+                    <i class="fa-solid fa-calendar-check"></i>
+                  }
+                  @case ('business-technology-software') {
+                    <!-- 06: Business Tech & Software Icon -->
+                    <i class="fa-solid fa-laptop-code"></i>
+                  }
+                  @case ('professional-development') {
+                    <!-- 07: Professional Development Icon -->
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  }
+                  @case ('digital-marketing-advertising') {
+                    <!-- 08: Digital Marketing Icon -->
+                    <i class="fa-solid fa-bullseye"></i>
+                  }
+                  @case ('contracting-construction') {
+                    <!-- 09: Contracting & Construction Icon -->
+                    <i class="fa-solid fa-helmet-safety"></i>
+                  }
+                  @default {
+                    <i class="fa-solid fa-briefcase"></i>
+                  }
+                }
+              </div>
+
+              <span class="service-id-badge">{{ srv.id }}</span>
+            </div>
+
+            <!-- Card Body: Title + Description -->
+            <div class="card-main-content">
+              <h2 class="service-card-title">
+                <a [routerLink]="['/services', srv.slug]" class="title-link">
+                  {{ srv.title }}
+                </a>
+              </h2>
+
+              <p class="service-card-desc">
+                {{ srv.shortDesc }}
+              </p>
+            </div>
+
+            <!-- Scannable Capability Pills -->
+            <div class="card-pills-wrap">
+              @for (pill of srv.pills; track pill) {
+                <span class="capability-pill">
+                  <span class="pill-dot" aria-hidden="true"></span>
+                  <span>{{ pill }}</span>
+                </span>
+              }
+            </div>
+
+            <!-- Card Footer: Direct Action Button -->
+            <div class="card-bottom-bar">
+              <a [routerLink]="['/services', srv.slug]" class="service-action-btn">
+                <span>{{ languageService.t.servicesPage.exploreService }}</span>
+                <span class="btn-arrow-icon" aria-hidden="true">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+          </div>
+        }
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       03 — FINAL CTA
+       ========================================================================== -->
+  <app-cta></app-cta>
+
+</article>

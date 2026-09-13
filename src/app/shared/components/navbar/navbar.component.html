@@ -1,0 +1,138 @@
+<header class="eib-floating-nav-wrapper" [class.is-scrolled]="isScrolled" [class.menu-open]="mobileMenuOpen">
+  
+  <!-- Floating Island Capsule (Apple & Linear Grade Pill) -->
+  <div class="eib-floating-capsule">
+    
+    <!-- 1. Brand Identity (Square Overlapping Logo + EIB / إيليت) -->
+    <a routerLink="/" class="eib-capsule-logo" (click)="closeMobileMenu()" aria-label="EIB Home">
+      <app-brand-logo size="sm" [theme]="themeService.isDark() ? 'dark' : 'light'"></app-brand-logo>
+    </a>
+
+    <!-- 2. Desktop Primary Navigation Links (Centered Axis) -->
+    <nav class="eib-capsule-menu" aria-label="Primary Navigation">
+      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" class="eib-capsule-link">
+        <span>{{ languageService.t.nav.home }}</span>
+        <span class="capsule-active-indicator" aria-hidden="true"></span>
+      </a>
+
+      <a routerLink="/about" routerLinkActive="is-active" class="eib-capsule-link">
+        <span>{{ languageService.t.nav.about }}</span>
+        <span class="capsule-active-indicator" aria-hidden="true"></span>
+      </a>
+
+      <a routerLink="/services" routerLinkActive="is-active" [class.is-active]="isServicesActive()" class="eib-capsule-link services-capsule-link">
+        <span>{{ languageService.t.nav.services }}</span>
+        <span class="capsule-active-indicator" aria-hidden="true"></span>
+      </a>
+
+      <a routerLink="/contact" routerLinkActive="is-active" class="eib-capsule-link">
+        <span>{{ languageService.t.nav.contact }}</span>
+        <span class="capsule-active-indicator" aria-hidden="true"></span>
+      </a>
+    </nav>
+
+    <!-- 3. Actions & CTA (End Axis / Left in RTL) -->
+    <div class="eib-capsule-actions">
+      <!-- Style Mode Switch (Light / Dark) -->
+      <button
+        type="button"
+        class="eib-capsule-theme"
+        (click)="themeService.toggleTheme()"
+        [attr.aria-label]="themeService.isDark() ? 'Switch to Light mode' : 'Switch to Dark mode'"
+        [title]="themeService.isDark() ? (languageService.isRtl() ? 'المظهر النهاري' : 'Light Mode') : (languageService.isRtl() ? 'المظهر الليلي' : 'Dark Mode')"
+      >
+        @if (themeService.isDark()) {
+          <i class="fa-solid fa-sun theme-icon sun-icon" aria-hidden="true"></i>
+        } @else {
+          <i class="fa-solid fa-moon theme-icon moon-icon" aria-hidden="true"></i>
+        }
+      </button>
+
+      <!-- Quiet Refined Text-Style Language Switcher -->
+      <button
+        type="button"
+        class="eib-capsule-lang"
+        (click)="languageService.toggleLanguage()"
+        [attr.aria-label]="languageService.t.nav.switchLang"
+      >
+        <span class="lang-globe-icon" aria-hidden="true">
+          <i class="fa-solid fa-globe"></i>
+        </span>
+        <span>{{ languageService.t.nav.switchLang }}</span>
+      </button>
+
+      <!-- Pill Shaped Primary Advisory CTA Button in Signature Maroon -->
+      <a routerLink="/contact" class="eib-capsule-cta">
+        <span>{{ languageService.t.nav.initiateConsultation }}</span>
+        <i class="fa-solid fa-arrow-right capsule-cta-arrow" aria-hidden="true"></i>
+      </a>
+
+      <!-- Minimalist Animated Toggle Button (Mobile) -->
+      <button
+        type="button"
+        class="eib-capsule-toggle"
+        (click)="toggleMobileMenu($event)"
+        [attr.aria-label]="mobileMenuOpen ? 'Close navigation' : 'Open navigation'"
+        [attr.aria-expanded]="mobileMenuOpen"
+      >
+        <span class="toggle-bar bar-1" [class.open]="mobileMenuOpen"></span>
+        <span class="toggle-bar bar-2" [class.open]="mobileMenuOpen"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Floating Island Expansion Card (Smooth Glass Backdrop & Rounded Panel) -->
+  @if (mobileMenuOpen) {
+    <div class="eib-mobile-overlay-backdrop" (click)="closeMobileMenu($event)" aria-hidden="true"></div>
+    <div class="eib-mobile-floating-panel" role="dialog" aria-modal="true" aria-label="Mobile Navigation" (click)="$event.stopPropagation()">
+      <nav class="mobile-panel-nav">
+        <a routerLink="/" (click)="closeMobileMenu()" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" class="mobile-panel-link">
+          <span>{{ languageService.t.nav.home }}</span>
+          <i class="fa-solid fa-arrow-right panel-arrow" aria-hidden="true"></i>
+        </a>
+
+        <a routerLink="/about" (click)="closeMobileMenu()" routerLinkActive="is-active" class="mobile-panel-link">
+          <span>{{ languageService.t.nav.about }}</span>
+          <i class="fa-solid fa-arrow-right panel-arrow" aria-hidden="true"></i>
+        </a>
+
+        <a routerLink="/services" (click)="closeMobileMenu()" routerLinkActive="is-active" [class.is-active]="isServicesActive()" class="mobile-panel-link">
+          <div class="panel-services-label">
+            <span>{{ languageService.t.nav.services }}</span>
+            <span class="panel-services-badge">{{ languageService.isRtl() ? (languageService.t.services.length + ' خدمات') : (languageService.t.services.length + ' Services') }}</span>
+          </div>
+          <i class="fa-solid fa-arrow-right panel-arrow" aria-hidden="true"></i>
+        </a>
+
+        <a routerLink="/contact" (click)="closeMobileMenu()" routerLinkActive="is-active" class="mobile-panel-link">
+          <span>{{ languageService.t.nav.contact }}</span>
+          <i class="fa-solid fa-arrow-right panel-arrow" aria-hidden="true"></i>
+        </a>
+      </nav>
+
+      <div class="mobile-panel-footer">
+        <a routerLink="/contact" (click)="closeMobileMenu()" class="mobile-panel-cta">
+          <span>{{ languageService.t.nav.initiateConsultation }}</span>
+          <i class="fa-solid fa-arrow-right panel-cta-arrow" aria-hidden="true"></i>
+        </a>
+
+        <div class="mobile-panel-tools-row">
+          <button type="button" class="mobile-panel-lang" (click)="languageService.toggleLanguage()">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <span>{{ languageService.t.nav.switchLang }}</span>
+          </button>
+
+          <button type="button" class="mobile-panel-theme" (click)="themeService.toggleTheme()">
+            @if (themeService.isDark()) {
+              <i class="fa-solid fa-sun" aria-hidden="true"></i>
+              <span>{{ languageService.isRtl() ? 'نهاري' : 'Light' }}</span>
+            } @else {
+              <i class="fa-solid fa-moon" aria-hidden="true"></i>
+              <span>{{ languageService.isRtl() ? 'ليلي' : 'Dark' }}</span>
+            }
+          </button>
+        </div>
+      </div>
+    </div>
+  }
+</header>

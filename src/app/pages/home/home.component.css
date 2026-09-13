@@ -1,0 +1,2147 @@
+/* ==========================================================================
+   EIB Home Page — ARCHITECTURAL EDITORIAL ART DIRECTION
+   Rhythmic Neutral Surface Progression:
+   Hero (Warm Ivory) ──→ Services (Off-White) ──→ Industries (Warm Sand)
+   ──→ Philosophy (Ivory / Almost White) ──→ Trust (Warm Stone)
+   ──→ CTA (Deep Charcoal) ──→ Footer (Near Black)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   JOURNEY CHAPTER MARKS — Architectural Section Numbering
+   -------------------------------------------------------------------------- */
+.journey-chapter {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #8F2525;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+[dir="rtl"] .journey-chapter {
+  letter-spacing: 0.06em;
+  font-family: var(--font-ar);
+}
+
+/* --------------------------------------------------------------------------
+   01 — Hero Section (Warm Ivory Architectural Cover)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  background-color: var(--eib-surface-hero, #F5F1E8);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 10%, rgba(255, 255, 255, 0.8) 0%, rgba(245, 241, 232, 0.35) 65%, transparent 100%),
+    var(--eib-paper-grain);
+  padding-top: clamp(48px, 6vw, 96px);
+  padding-bottom: clamp(64px, 8vw, 128px);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(21, 23, 26, 0.07);
+}
+
+/* Subtle Architectural Datum Guideline (Subconscious Vertical Reference) */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  inset-inline-start: clamp(20px, 4.5vw, 64px);
+  width: 1px;
+  background-color: rgba(21, 23, 26, 0.045);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Precision Geometric Coordinate Frame (Desktop only) */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: clamp(24px, 4vw, 56px);
+  inset-inline-end: clamp(16px, 4vw, 64px);
+  width: clamp(150px, 18vw, 270px);
+  height: clamp(150px, 18vw, 270px);
+  border: 1px solid rgba(21, 23, 26, 0.06);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .hero-layout {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 72px;
+  }
+}
+
+.hero-headline {
+  font-size: clamp(2.1rem, 5.2vw, 4.35rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #111315;
+  margin-bottom: 22px;
+  letter-spacing: -0.035em;
+  word-break: break-word;
+}
+
+[dir="rtl"] .hero-headline {
+  letter-spacing: 0;
+  line-height: 1.34;
+}
+
+.hero-lead {
+  font-size: clamp(1.02rem, 1.25vw, 1.25rem);
+  color: #484B50;
+  line-height: 1.8;
+  margin-bottom: 34px;
+  max-width: 560px;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+/* Elevated Museum-Grade Architectural Photography Plate */
+.hero-image-col {
+  width: 100%;
+}
+
+.hero-image-frame {
+  position: relative;
+  border: 1px solid rgba(21, 23, 26, 0.12);
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px -4px rgba(21, 23, 26, 0.08);
+  box-sizing: border-box;
+}
+
+/* Offset Secondary Perimeter (Architectural Asymmetry) */
+.hero-image-frame::before {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  inset-inline-start: -14px;
+  inset-inline-end: 14px;
+  top: 14px;
+  border: 1px solid rgba(143, 37, 37, 0.16);
+  border-radius: 12px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Precision Corner Registration Crosshair (Top-End) */
+.hero-image-frame::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  inset-inline-end: -5px;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #8F2525;
+  border-inline-end: 2px solid #8F2525;
+  pointer-events: none;
+}
+
+.hero-photo {
+  width: 100%;
+  height: clamp(340px, 38vw, 530px);
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  filter: contrast(1.04) saturate(0.92);
+}
+
+/* Mobile Responsiveness Fine-Tuning */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+
+  /* Completely remove the geometric watermark box and guideline to prevent text clash */
+  .hero-section::before,
+  .hero-section::after {
+    display: none !important;
+  }
+
+  .hero-layout {
+    gap: 28px;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.8rem, 6.8vw, 2.35rem);
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .hero-lead {
+    font-size: 0.96875rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .hero-ctas .hero-primary-btn {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    box-shadow: 0 4px 16px rgba(143, 37, 37, 0.28);
+  }
+
+  .hero-ctas .hero-secondary-btn {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    padding: 12px 16px;
+    min-height: 44px;
+    font-size: 0.9375rem;
+    box-sizing: border-box;
+  }
+
+  .hero-image-col {
+    margin-top: 4px;
+  }
+
+  .hero-image-frame {
+    padding: 6px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(21, 23, 26, 0.07);
+  }
+
+  /* Remove negative bleed offset on phones to eliminate horizontal scrolling/overflow */
+  .hero-image-frame::before,
+  .hero-image-frame::after {
+    display: none !important;
+  }
+
+  .hero-photo {
+    height: clamp(230px, 60vw, 340px);
+    border-radius: 8px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   02 — Services Editorial Directory (01–08 Practices)
+   Surface: Soft Off-White / Architectural Cream (#FAF8F5)
+   -------------------------------------------------------------------------- */
+.services-section {
+  background-color: var(--eib-surface-services, #FAF8F5);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255, 255, 255, 0.85) 0%, transparent 75%),
+    var(--eib-paper-grain);
+  padding: clamp(84px, 9vw, 136px) 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(21, 23, 26, 0.07);
+}
+
+/* Background Architectural Watermark "01" (Bleeding Partially Outside Content) */
+.services-section::before {
+  content: '01';
+  position: absolute;
+  top: clamp(24px, 4vw, 56px);
+  inset-inline-start: clamp(10px, 4vw, 60px);
+  font-family: var(--font-en);
+  font-size: clamp(9rem, 16vw, 15rem);
+  font-weight: 900;
+  line-height: 0.8;
+  color: rgba(21, 23, 26, 0.03);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.section-intro {
+  margin-bottom: clamp(40px, 5vw, 64px);
+  position: relative;
+  z-index: 1;
+  max-width: 68ch;
+}
+
+/* Asymmetric Editorial Header Hairline Rule */
+.section-intro::after {
+  content: '';
+  display: block;
+  width: clamp(64px, 12vw, 140px);
+  height: 1px;
+  background-color: rgba(21, 23, 26, 0.12);
+  margin-top: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Services Swiper Carousel (Architectural Corporate Plate Edition)
+   -------------------------------------------------------------------------- */
+.services-carousel-wrap {
+  --slider-gap: 24px;
+  --cards-per-view: 3;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1023px) {
+  .services-carousel-wrap {
+    --slider-gap: 20px;
+    --cards-per-view: 2;
+  }
+}
+
+@media (max-width: 639px) {
+  .services-carousel-wrap {
+    --slider-gap: 16px;
+    --cards-per-view: 1;
+  }
+}
+
+.services-slider-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 8px 0 24px;
+  cursor: grab;
+  cursor: -webkit-grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  z-index: 1;
+}
+
+.services-slider-viewport.is-dragging {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.services-slider-track {
+  display: flex;
+  gap: var(--slider-gap, 24px);
+  transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.services-slider-viewport.is-dragging .services-slider-track {
+  transition: none !important;
+}
+
+/* Crisp Architectural Service Plate (Zero Generic Card Vibes) */
+.service-carousel-card {
+  flex: 0 0 calc((100% - (var(--cards-per-view, 3) - 1) * var(--slider-gap, 24px)) / var(--cards-per-view, 3));
+  width: calc((100% - (var(--cards-per-view, 3) - 1) * var(--slider-gap, 24px)) / var(--cards-per-view, 3));
+  min-height: 480px;
+  background: #FFFFFF;
+  border: 1px solid rgba(21, 23, 26, 0.09);
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px rgba(21, 23, 26, 0.03);
+  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 350ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 300ms ease;
+  position: relative;
+}
+
+.service-carousel-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(143, 37, 37, 0.3);
+  box-shadow: 0 12px 30px -6px rgba(21, 23, 26, 0.08);
+}
+
+.card-image-box {
+  width: 100%;
+  height: 245px;
+  overflow: hidden;
+  background: var(--eib-surface-stone);
+  position: relative;
+  border-bottom: 1px solid rgba(21, 23, 26, 0.07);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.92) contrast(1.04);
+  transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-carousel-card:hover .card-img {
+  transform: scale(1.03);
+}
+
+.card-img-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(21, 23, 26, 0.12) 0%, transparent 40%, rgba(21, 23, 26, 0.38) 100%);
+  pointer-events: none;
+}
+
+/* Architectural Index Badge (Replacing SaaS Pill) */
+.card-badge-pill {
+  position: absolute;
+  top: 14px;
+  inset-inline-start: 14px;
+  background: rgba(18, 20, 22, 0.85);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 3px 9px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-family: var(--font-en);
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 2;
+  letter-spacing: 0.05em;
+}
+
+.badge-accent {
+  color: var(--eib-terracotta);
+  font-weight: 800;
+}
+
+.badge-sep {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.badge-total {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card-body {
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+
+.card-accent-bar {
+  width: 22px;
+  height: 2px;
+  background: var(--eib-burgundy);
+  margin-bottom: 16px;
+  border-radius: 1px;
+  transition: width 350ms cubic-bezier(0.16, 1, 0.3, 1), background-color 350ms ease;
+}
+
+.service-carousel-card:hover .card-accent-bar {
+  width: 36px;
+  background: var(--eib-terracotta);
+}
+
+.card-title {
+  font-size: 1.24rem;
+  font-weight: 800;
+  color: #15171A;
+  line-height: 1.32;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  transition: color 250ms ease;
+}
+
+[dir="rtl"] .card-title {
+  letter-spacing: normal;
+  line-height: 1.4;
+}
+
+.service-carousel-card:hover .card-title {
+  color: var(--eib-burgundy);
+}
+
+.card-image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.title-external-link,
+.title-internal-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 250ms ease;
+}
+
+.title-external-link:hover,
+.title-internal-link:hover {
+  color: var(--eib-burgundy);
+}
+
+.card-desc {
+  font-size: 0.92rem;
+  color: #52555A;
+  line-height: 1.72;
+  margin-bottom: 22px;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-action {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(21, 23, 26, 0.08);
+}
+
+.card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #15171A;
+  transition: color 250ms ease;
+}
+
+.link-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.service-carousel-card:hover .card-link {
+  color: var(--eib-burgundy);
+}
+
+.link-arrow-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--eib-surface-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #15171A;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-carousel-card:hover .link-arrow-circle {
+  background: var(--eib-burgundy);
+  color: #FFFFFF;
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .service-carousel-card:hover .link-arrow-circle {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .link-arrow-circle svg,
+[dir="rtl"] .link-arrow-circle i {
+  transform: rotate(180deg);
+}
+
+/* Executive Navigation Controls */
+.services-arrows-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.services-nav-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(21, 23, 26, 0.2);
+}
+
+.services-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1px solid rgba(21, 23, 26, 0.12);
+  color: #15171A;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(21, 23, 26, 0.04);
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.services-arrow-btn:hover {
+  border-color: var(--eib-burgundy);
+  color: var(--eib-burgundy);
+  background: #FAF8F5;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(21, 23, 26, 0.08);
+}
+
+.services-arrow-btn:active {
+  transform: scale(0.96);
+}
+
+[dir="rtl"] .services-arrow-btn svg,
+[dir="rtl"] .services-arrow-btn i {
+  transform: rotate(180deg);
+}
+
+
+/* --------------------------------------------------------------------------
+   03 — Regulated Industry Expertise (3-Card Editorial Industry Slider)
+   Art Direction: Premium Corporate Consulting / Editorial Magazine Presentation
+   -------------------------------------------------------------------------- */
+:host {
+  --slider-gap: 32px;
+  --cards-per-view: 3;
+}
+
+@media (max-width: 1023px) {
+  :host {
+    --slider-gap: 24px;
+    --cards-per-view: 2;
+  }
+}
+
+@media (max-width: 639px) {
+  :host {
+    --slider-gap: 16px;
+    --cards-per-view: 1;
+  }
+}
+
+.industry-slider-section {
+  background-color: var(--eib-surface-industries, #F0EAE0);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255, 255, 255, 0.5) 0%, transparent 75%),
+    var(--eib-paper-grain);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(21, 23, 26, 0.08);
+  border-bottom: 1px solid rgba(21, 23, 26, 0.08);
+  padding: clamp(84px, 9vw, 136px) 0;
+}
+
+/* Background Architectural Watermark "02" (Alternating to End Flank for Asymmetry) */
+.industry-slider-section::before {
+  content: '02';
+  position: absolute;
+  top: clamp(28px, 4vw, 56px);
+  inset-inline-end: clamp(10px, 4vw, 60px);
+  font-family: var(--font-en);
+  font-size: clamp(9rem, 16vw, 15rem);
+  font-weight: 900;
+  line-height: 0.8;
+  color: rgba(21, 23, 26, 0.035);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Section Header */
+.industry-slider-header {
+  margin-bottom: clamp(40px, 5vw, 64px);
+  max-width: 68ch;
+  position: relative;
+  z-index: 1;
+}
+
+/* Asymmetric Editorial Header Hairline Rule */
+.industry-slider-header::after {
+  content: '';
+  display: block;
+  width: clamp(64px, 12vw, 140px);
+  height: 1px;
+  background-color: rgba(21, 23, 26, 0.12);
+  margin-top: 24px;
+}
+
+.industry-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.industry-eyebrow-row .journey-chapter {
+  margin-bottom: 0;
+}
+
+.industry-slider-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.industry-eyebrow-line {
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background-color: #8F2525;
+}
+
+.industry-eyebrow-text {
+  font-family: var(--font-en);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8F2525;
+}
+
+[dir="rtl"] .industry-eyebrow-text {
+  font-family: var(--font-ar);
+  letter-spacing: 0.04em;
+}
+
+.industry-slider-title {
+  font-size: clamp(2.1rem, 3.6vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #15171A;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+
+[dir="rtl"] .industry-slider-title {
+  letter-spacing: normal;
+  line-height: 1.35;
+}
+
+.industry-slider-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #4A4D50;
+  margin: 0;
+  max-width: 58ch;
+}
+
+/* ==========================================================================
+   Horizontal Viewport & Track
+   ========================================================================== */
+.industry-slider-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 8px 0 20px;
+  cursor: grab;
+  cursor: -webkit-grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  z-index: 1;
+}
+
+.industry-slider-viewport.is-dragging {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.industry-slider-track {
+  display: flex;
+  gap: var(--slider-gap, 32px);
+  transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.industry-slider-viewport.is-dragging .industry-slider-track {
+  transition: none !important;
+}
+
+.industry-slider-viewport.is-dragging .industry-card {
+  transition: none !important;
+}
+
+/* ==========================================================================
+   Editorial Industry Card (Sitting Proudly on Warm Sand)
+   ========================================================================== */
+.industry-card {
+  flex: 0 0 calc((100% - (var(--cards-per-view, 3) - 1) * var(--slider-gap, 32px)) / var(--cards-per-view, 3));
+  width: calc((100% - (var(--cards-per-view, 3) - 1) * var(--slider-gap, 32px)) / var(--cards-per-view, 3));
+  background-color: #FFFFFF;
+  border: 1px solid rgba(21, 23, 26, 0.09);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(21, 23, 26, 0.03);
+  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 300ms ease,
+    box-shadow 350ms ease;
+}
+
+/* Subtle Center Card Prominence on Desktop */
+@media (min-width: 1024px) {
+  .industry-card.is-center {
+    border-color: rgba(143, 37, 37, 0.28);
+    box-shadow: 0 10px 28px -6px rgba(21, 23, 26, 0.07);
+    transform: translateY(-4px);
+  }
+
+  .industry-card.is-center .card-num-label {
+    color: #8F2525;
+  }
+
+  .industry-card.is-center .card-accent-rule {
+    background-color: #8F2525;
+    width: 26px;
+  }
+}
+
+.industry-card:hover {
+  border-color: rgba(143, 37, 37, 0.35);
+  transform: translateY(-5px);
+  box-shadow: 0 14px 34px -8px rgba(21, 23, 26, 0.09);
+}
+
+.industry-card:hover .card-image {
+  transform: scale(1.04);
+}
+
+.industry-card:hover .card-title {
+  color: #8F2525;
+}
+
+.industry-card:hover .card-explore-link {
+  color: #8F2525;
+}
+
+/* Card Visual Frame (Dominant & Immersive Editorial Presence) */
+.card-visual-frame {
+  position: relative;
+  width: 100%;
+  height: clamp(260px, 25vw, 340px);
+  overflow: hidden;
+  background-color: #E2DACB;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  filter: saturate(0.92) contrast(1.04);
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.card-image-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(21, 23, 26, 0.04) 0%, transparent 35%, rgba(21, 23, 26, 0.48) 100%);
+  pointer-events: none;
+}
+
+.card-floating-num {
+  position: absolute;
+  top: 14px;
+  inset-inline-end: 14px;
+  font-family: var(--font-en);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  background: rgba(18, 20, 22, 0.82);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 3px 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  letter-spacing: 0.06em;
+}
+
+/* Card Editorial Body */
+.card-editorial-body {
+  padding: clamp(22px, 2.4vw, 28px) clamp(18px, 2vw, 24px);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-meta-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.card-accent-rule {
+  width: 18px;
+  height: 2px;
+  background-color: #8A8780;
+  transition: width 300ms ease, background-color 300ms ease;
+}
+
+.card-num-label {
+  font-family: var(--font-en);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #8A8780;
+  transition: color 300ms ease;
+}
+
+.card-title {
+  font-size: clamp(1.2rem, 1.5vw, 1.38rem);
+  font-weight: 800;
+  line-height: 1.32;
+  color: #15171A;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.015em;
+  transition: color 250ms ease;
+}
+
+[dir="rtl"] .card-title {
+  letter-spacing: normal;
+  line-height: 1.4;
+}
+
+.card-desc {
+  font-size: 0.92rem;
+  line-height: 1.68;
+  color: #55585C;
+  margin: 0 0 20px 0;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-action {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(21, 23, 26, 0.08);
+}
+
+.card-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #15171A;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: color 220ms ease, gap 220ms ease;
+}
+
+.explore-arrow {
+  display: inline-block;
+  transition: transform 220ms ease;
+}
+
+[dir="rtl"] .explore-arrow {
+  transform: scaleX(-1);
+}
+
+.card-explore-link:hover .explore-arrow {
+  transform: translateX(5px);
+}
+
+[dir="rtl"] .card-explore-link:hover .explore-arrow {
+  transform: scaleX(-1) translateX(5px);
+}
+
+/* Navigation Controls Bar */
+.industry-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   04 — Strategic Philosophy & Institutional Integration
+   Architectural Information Design: Unified 3-Stage Integration System
+   Diagnosis (01) → Execution (02) → Institutionalization (03) → Result
+   -------------------------------------------------------------------------- */
+.institutional-section {
+  background-color: var(--eib-surface-philosophy, #FAF8F4);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 15%, rgba(255, 255, 255, 0.9) 0%, transparent 80%),
+    var(--eib-paper-grain);
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(100px, 11vw, 156px);
+  padding-bottom: clamp(112px, 12vw, 176px);
+  border-bottom: 1px solid rgba(21, 23, 26, 0.07);
+}
+
+/* Background Architectural Watermark "03" (Bleeding Out for Editorial Cadence) */
+.institutional-section::before {
+  content: '03';
+  position: absolute;
+  top: clamp(28px, 4vw, 56px);
+  inset-inline-start: clamp(10px, 4vw, 60px);
+  font-family: var(--font-en);
+  font-size: clamp(9rem, 16vw, 15rem);
+  font-weight: 900;
+  line-height: 0.8;
+  color: rgba(21, 23, 26, 0.03);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Single Subtle EIB Signature Intersecting Squares Motif */
+.institutional-blueprint-layer {
+  position: absolute;
+  top: clamp(20px, 5vw, 60px);
+  inset-inline-end: clamp(16px, 5vw, 80px);
+  width: clamp(220px, 26vw, 380px);
+  height: clamp(220px, 26vw, 380px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+.blueprint-single-motif {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.institutional-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Editorial Manifesto Header: Eyebrow ↓ Authoritative Headline ↓ Controlled Statement
+   ========================================================================== */
+.institutional-header {
+  margin-bottom: clamp(64px, 8vw, 100px);
+  max-width: 860px;
+}
+
+.institutional-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.institutional-eyebrow-row .journey-chapter {
+  margin-bottom: 0;
+}
+
+.institutional-eyebrow-row .eib-eyebrow {
+  margin-bottom: 0;
+}
+
+.institutional-statement {
+  font-size: clamp(2.5rem, 4.4vw, 3.85rem);
+  font-weight: 800;
+  line-height: 1.12;
+  color: #111315;
+  letter-spacing: -0.025em;
+  margin: 0 0 24px 0;
+}
+
+[dir="rtl"] .institutional-statement {
+  letter-spacing: normal;
+  line-height: 1.32;
+}
+
+/* Controlled Editorial Supporting Statement */
+.institutional-short-intro {
+  font-size: clamp(1.1rem, 1.35vw, 1.25rem);
+  line-height: 1.8;
+  color: #484B50;
+  margin: 0;
+  max-width: 62ch;
+}
+
+/* ==========================================================================
+   Hero Visual System: 01 → 02 → 03 Continuous Architectural Path
+   ========================================================================== */
+.institutional-path-system {
+  position: relative;
+  margin-top: clamp(40px, 5vw, 64px);
+}
+
+.stages-progression-track {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .stages-progression-track {
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(32px, 3.5vw, 56px);
+    align-items: start;
+  }
+}
+
+/* Stage Milestone Item */
+.stage-milestone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Oversized Ghost Number as Subtle Low-Contrast Background Typography */
+.stage-ghost-num {
+  position: absolute;
+  top: -30px;
+  inset-inline-start: -8px;
+  font-family: var(--font-en);
+  font-size: clamp(6rem, 9vw, 8.5rem);
+  font-weight: 900;
+  line-height: 0.8;
+  color: rgba(21, 23, 26, 0.038);
+  letter-spacing: -0.06em;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  transition: color 350ms ease;
+}
+
+.stage-milestone:hover .stage-ghost-num {
+  color: rgba(143, 37, 37, 0.07);
+}
+
+/* Architectural Conduit Track & Directional Arrows */
+.stage-path-conduit {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 28px;
+  margin-bottom: 26px;
+  position: relative;
+  z-index: 1;
+}
+
+.conduit-node {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.node-ring {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid #8F2525;
+  transform: rotate(45deg);
+  background: #FAF9F4;
+  box-shadow: 0 0 0 3px #FAF9F4;
+  transition: all 300ms ease;
+}
+
+.node-core {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #8F2525;
+}
+
+.stage-milestone:hover .node-ring {
+  background: #8F2525;
+  transform: rotate(90deg);
+}
+
+.stage-milestone:hover .node-core {
+  background: #FAF9F4;
+}
+
+.conduit-connector {
+  flex: 1;
+  height: 1px;
+  background: rgba(21, 23, 26, 0.18);
+  position: relative;
+  margin-inline-start: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.connector-arrow {
+  position: absolute;
+  inset-inline-end: 0;
+  width: 7px;
+  height: 7px;
+  border-top: 1.5px solid rgba(21, 23, 26, 0.35);
+  border-inline-end: 1.5px solid rgba(21, 23, 26, 0.35);
+  transform: rotate(45deg);
+  transition: border-color 300ms ease;
+}
+
+[dir="rtl"] .connector-arrow {
+  transform: rotate(225deg);
+}
+
+.stage-milestone:hover .connector-arrow {
+  border-color: #8F2525;
+}
+
+.conduit-connector.is-terminal {
+  background: linear-gradient(to right,
+      rgba(21, 23, 26, 0.18) 0%,
+      rgba(143, 37, 37, 0.4) 100%);
+}
+
+[dir="rtl"] .conduit-connector.is-terminal {
+  background: linear-gradient(to left,
+      rgba(21, 23, 26, 0.18) 0%,
+      rgba(143, 37, 37, 0.4) 100%);
+}
+
+.connector-terminal-joint {
+  position: absolute;
+  inset-inline-end: 0;
+  width: 6px;
+  height: 6px;
+  background: #8F2525;
+  transform: rotate(45deg);
+}
+
+/* Stage Editorial Content & Prominent Hierarchy */
+.stage-body {
+  position: relative;
+  z-index: 1;
+}
+
+.stage-step-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.step-num {
+  font-family: var(--font-en);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #8F2525;
+}
+
+.step-rule {
+  width: 20px;
+  height: 1.5px;
+  background: #8F2525;
+  opacity: 0.7;
+  transition: width 300ms ease;
+}
+
+.stage-milestone:hover .step-rule {
+  width: 32px;
+}
+
+.stage-title {
+  font-size: clamp(1.4rem, 1.8vw, 1.65rem);
+  font-weight: 800;
+  line-height: 1.3;
+  color: #15171A;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.015em;
+  transition: color 250ms ease;
+}
+
+[dir="rtl"] .stage-title {
+  letter-spacing: normal;
+  line-height: 1.42;
+}
+
+.stage-milestone:hover .stage-title {
+  color: #8F2525;
+}
+
+.stage-desc {
+  font-size: 0.9375rem;
+  line-height: 1.76;
+  color: #64676C;
+  margin: 0;
+  max-width: 38ch;
+}
+
+/* ==========================================================================
+   Editorial Action Wrap — Centered Executive Button
+   ========================================================================== */
+.institutional-action-wrap {
+  margin-top: clamp(56px, 7vw, 84px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.institutional-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #15171A;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(21, 23, 26, 0.18);
+  border-radius: 4px;
+  padding: 14px 34px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(21, 23, 26, 0.04);
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+[dir="rtl"] .institutional-btn {
+  letter-spacing: normal;
+}
+
+.institutional-btn:hover {
+  color: #FFFFFF;
+  background-color: #15171A;
+  border-color: #15171A;
+  box-shadow: 0 8px 24px -4px rgba(21, 23, 26, 0.18);
+  transform: translateY(-2px);
+}
+
+.institutional-btn:active {
+  transform: translateY(0);
+}
+
+.institutional-btn .btn-arrow-icon {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.institutional-btn:hover .btn-arrow-icon {
+  transform: translateX(5px);
+}
+
+[dir="rtl"] .institutional-btn .btn-arrow-icon {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .institutional-btn:hover .btn-arrow-icon {
+  transform: rotate(180deg) translateX(5px);
+}
+
+/* ==========================================================================
+   Responsive Adaptations — Methodology Stages & Action
+   ========================================================================== */
+@media (max-width: 991px) {
+  .stages-progression-track {
+    padding-inline-start: 0;
+    border-inline-start: none;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+  }
+
+  .stage-milestone {
+    background: #FFFFFF;
+    border: 1px solid rgba(21, 23, 26, 0.08);
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .stage-ghost-num {
+    position: absolute !important;
+    top: 10px !important;
+    inset-inline-start: auto !important;
+    inset-inline-end: 18px !important;
+    font-size: clamp(3.8rem, 12vw, 5rem) !important;
+    line-height: 1 !important;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+  }
+
+  .stage-path-conduit {
+    position: relative !important;
+    top: 0 !important;
+    inset-inline-start: 0 !important;
+    width: 100% !important;
+    height: 24px;
+    margin-bottom: 18px !important;
+    display: flex !important;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .conduit-connector {
+    display: flex !important;
+    flex: 1;
+    height: 1px;
+    margin-inline-start: 12px;
+  }
+
+  .stage-body {
+    position: relative;
+    z-index: 1;
+  }
+
+  .stage-desc {
+    max-width: 100%;
+  }
+
+  .institutional-action-wrap {
+    margin-top: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+
+  .institutional-btn {
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 639px) {
+  .stage-milestone {
+    padding: 22px 18px !important;
+    border-radius: 16px !important;
+  }
+
+  .stage-title {
+    font-size: 1.25rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .stage-desc {
+    font-size: 0.8875rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .institutional-action-wrap {
+    margin-top: 24px;
+  }
+
+  .institutional-btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 13px 18px !important;
+    font-size: 0.875rem !important;
+    border-radius: 12px !important;
+    gap: 10px !important;
+    line-height: 1.35 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   05 — Value Proposition & Trust (Why EIB)
+   Surface: Slightly Deeper Warm Stone (#E9E2D4)
+   Structured Architectural Composition with Subtle Oversized Numbering
+   -------------------------------------------------------------------------- */
+.trust-section {
+  background-color: var(--eib-surface-trust, #E9E2D4);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 10%, rgba(255, 255, 255, 0.45) 0%, transparent 75%),
+    var(--eib-paper-grain);
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(96px, 10vw, 152px);
+  padding-bottom: clamp(112px, 11vw, 172px);
+  border-top: 1px solid rgba(21, 23, 26, 0.09);
+}
+
+/* Background Architectural Watermark "04" (Alternating to End Flank for Asymmetry) */
+.trust-section::before {
+  content: '04';
+  position: absolute;
+  top: clamp(28px, 4vw, 56px);
+  inset-inline-end: clamp(10px, 4vw, 60px);
+  font-family: var(--font-en);
+  font-size: clamp(9rem, 16vw, 15rem);
+  font-weight: 900;
+  line-height: 0.8;
+  color: rgba(21, 23, 26, 0.035);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Subtle architectural vertical bridge to the next section */
+.trust-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 64px;
+  background-color: rgba(21, 23, 26, 0.12);
+  pointer-events: none;
+}
+
+/* Section Header */
+.trust-header {
+  margin-bottom: clamp(64px, 7.5vw, 96px);
+  max-width: 860px;
+  position: relative;
+  z-index: 1;
+}
+
+.trust-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.trust-eyebrow-row .journey-chapter {
+  margin-bottom: 0;
+}
+
+.trust-eyebrow-row .eib-eyebrow {
+  margin-bottom: 0;
+}
+
+.trust-headline {
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #15171A;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px 0;
+}
+
+[dir="rtl"] .trust-headline {
+  letter-spacing: normal;
+  line-height: 1.32;
+}
+
+.trust-short-intro {
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  line-height: 1.75;
+  color: #5C5A56;
+  margin: 0;
+  max-width: 60ch;
+}
+
+/* 3-Column Executive Advisory Pillars Grid */
+.trust-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 2.8vw, 36px);
+  position: relative;
+  z-index: 1;
+}
+
+.trust-pillar-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(21, 23, 26, 0.09);
+  border-top: 3px solid #8F2525;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px -4px rgba(21, 23, 26, 0.04);
+  padding: clamp(36px, 3.8vw, 48px) clamp(26px, 2.8vw, 38px);
+  position: relative;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms ease, border-color 300ms ease;
+  box-sizing: border-box;
+}
+
+.trust-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(21, 23, 26, 0.08);
+  border-color: rgba(143, 37, 37, 0.25);
+  border-top-color: #8F2525;
+}
+
+/* Pillar Header Bar (Static Identity) */
+.pillar-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(21, 23, 26, 0.07);
+  margin-bottom: 24px;
+}
+
+.pillar-num-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.pillar-num {
+  font-family: 'Outfit', var(--font-en), sans-serif;
+  font-size: clamp(2.4rem, 3.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  color: #15171A;
+  letter-spacing: -0.04em;
+  transition: color 250ms ease;
+}
+
+.pillar-num-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #8F2525;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+[dir="rtl"] .pillar-num-label {
+  letter-spacing: 0.02em;
+  font-family: var(--font-ar);
+}
+
+.pillar-accent-rule {
+  width: 24px;
+  height: 2px;
+  background-color: rgba(21, 23, 26, 0.12);
+  transition: width 350ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms ease;
+}
+
+.trust-pillar-card:hover .pillar-accent-rule {
+  width: 40px;
+  background-color: #8F2525;
+}
+
+.trust-pillar-card:hover .pillar-num {
+  color: #8F2525;
+}
+
+/* Pillar Body */
+.pillar-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-title {
+  font-size: clamp(1.3rem, 1.6vw, 1.55rem);
+  font-weight: 800;
+  line-height: 1.36;
+  color: #15171A;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.015em;
+  transition: color 250ms ease;
+}
+
+[dir="rtl"] .pillar-title {
+  letter-spacing: normal;
+  line-height: 1.44;
+}
+
+.trust-pillar-card:hover .pillar-title {
+  color: #8F2525;
+}
+
+.pillar-desc {
+  font-size: 0.9875rem;
+  line-height: 1.85;
+  color: #5C5A56;
+  margin: 0 0 28px 0;
+}
+
+/* Pillar Proof Card: Inset Verification Box (Visible in Static State) */
+.pillar-proof-card {
+  margin-top: auto;
+  background-color: #F8F6F0;
+  border: 1px solid rgba(21, 23, 26, 0.06);
+  border-radius: 4px;
+  padding: 16px 20px;
+  transition: background-color 250ms ease;
+}
+
+.trust-pillar-card:hover .pillar-proof-card {
+  background-color: #F4EFE6;
+}
+
+.proof-label-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.proof-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #8F2525;
+  flex-shrink: 0;
+}
+
+.proof-label {
+  font-size: 0.725rem;
+  font-weight: 800;
+  color: #8F2525;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+[dir="rtl"] .proof-label {
+  letter-spacing: 0.02em;
+  font-family: var(--font-ar);
+}
+
+.proof-content {
+  font-size: 0.835rem;
+  font-weight: 600;
+  color: #35383D;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive: Tablet */
+@media (max-width: 991px) and (min-width: 640px) {
+  .trust-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 639px) {
+  .trust-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .trust-pillar-card {
+    padding: 28px 20px;
+  }
+
+  .pillar-header-bar {
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+  }
+
+  .pillar-num {
+    font-size: 2.2rem;
+  }
+}
+
+/* ==========================================================================
+   HOME COMPONENT DARK THEME SPECIFIC OVERRIDES (:host-context)
+   ========================================================================== */
+:host-context([data-theme="dark"]) .hero-section {
+  background-color: #121419 !important;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(168, 46, 46, 0.12) 0%, rgba(18, 20, 25, 0) 70%),
+    var(--eib-paper-grain) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:host-context([data-theme="dark"]) .hero-section::before,
+:host-context([data-theme="dark"]) .hero-section::after {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+:host-context([data-theme="dark"]) .hero-headline,
+:host-context([data-theme="dark"]) .eib-section-title,
+:host-context([data-theme="dark"]) .industry-slider-title,
+:host-context([data-theme="dark"]) .institutional-statement,
+:host-context([data-theme="dark"]) .trust-headline {
+  color: #F9FAFB !important;
+}
+
+:host-context([data-theme="dark"]) .hero-lead,
+:host-context([data-theme="dark"]) .eib-section-subtitle,
+:host-context([data-theme="dark"]) .industry-slider-subtitle,
+:host-context([data-theme="dark"]) .institutional-short-intro,
+:host-context([data-theme="dark"]) .trust-short-intro {
+  color: #9CA3AF !important;
+}
+
+:host-context([data-theme="dark"]) .eyebrow-text,
+:host-context([data-theme="dark"]) .eib-eyebrow span:not(.eib-eyebrow-line) {
+  color: #D4D4D8 !important;
+}
+
+:host-context([data-theme="dark"]) .eib-eyebrow-line,
+:host-context([data-theme="dark"]) .industry-eyebrow-line,
+:host-context([data-theme="dark"]) .card-accent-bar,
+:host-context([data-theme="dark"]) .card-accent-rule,
+:host-context([data-theme="dark"]) .pillar-accent-rule,
+:host-context([data-theme="dark"]) .step-rule {
+  background-color: #A82E2E !important;
+}
+
+/* 01 Services Cards */
+:host-context([data-theme="dark"]) .services-section {
+  background-color: #0F1115 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:host-context([data-theme="dark"]) .service-carousel-card {
+  background-color: #1A1D24 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.06) !important;
+}
+
+:host-context([data-theme="dark"]) .service-carousel-card:hover {
+  border-color: rgba(168, 46, 46, 0.4) !important;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55), 0 0 24px rgba(168, 46, 46, 0.22) !important;
+}
+
+:host-context([data-theme="dark"]) .service-carousel-card .card-body {
+  background: transparent !important;
+}
+
+:host-context([data-theme="dark"]) .service-carousel-card .card-title {
+  color: #F9FAFB !important;
+}
+
+:host-context([data-theme="dark"]) .service-carousel-card .card-desc {
+  color: #9CA3AF !important;
+}
+
+:host-context([data-theme="dark"]) .card-badge-pill {
+  background: rgba(15, 17, 21, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #E4E4E7 !important;
+}
+
+:host-context([data-theme="dark"]) .card-badge-pill .badge-accent {
+  color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .card-link {
+  color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .link-arrow-circle {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .service-carousel-card:hover .link-arrow-circle {
+  background: #A82E2E !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 14px rgba(168, 46, 46, 0.5) !important;
+}
+
+:host-context([data-theme="dark"]) .services-arrow-btn {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #F9FAFB !important;
+}
+
+:host-context([data-theme="dark"]) .services-arrow-btn:hover {
+  background-color: #A82E2E !important;
+  border-color: #A82E2E !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 16px rgba(168, 46, 46, 0.4) !important;
+}
+
+:host-context([data-theme="dark"]) .services-nav-dot {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 02 Industries Slider */
+:host-context([data-theme="dark"]) .industry-slider-section {
+  background-color: #13161C !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:host-context([data-theme="dark"]) .industry-card {
+  background-color: #1A1D24 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.06) !important;
+}
+
+:host-context([data-theme="dark"]) .industry-card .card-editorial-body {
+  background: transparent !important;
+}
+
+:host-context([data-theme="dark"]) .industry-card .card-title {
+  color: #F9FAFB !important;
+}
+
+:host-context([data-theme="dark"]) .industry-card .card-desc {
+  color: #9CA3AF !important;
+}
+
+:host-context([data-theme="dark"]) .card-explore-link {
+  color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .card-floating-num {
+  color: rgba(255, 255, 255, 0.07) !important;
+}
+
+:host-context([data-theme="dark"]) .card-num-label {
+  color: #FFA3A3 !important;
+}
+
+/* 03 Institutional / Philosophy Cards in Dark Mode */
+:host-context([data-theme="dark"]) .institutional-section {
+  background-color: #0E1015 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:host-context([data-theme="dark"]) .stage-milestone {
+  background: linear-gradient(165deg, rgba(26, 29, 36, 0.95) 0%, rgba(18, 20, 25, 0.98) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
+  padding: 34px 28px !important;
+  box-shadow: 0 12px 36px -6px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+  overflow: hidden !important;
+  position: relative !important;
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+:host-context([data-theme="dark"]) .stage-milestone:hover {
+  border-color: rgba(168, 46, 46, 0.45) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 20px 48px -8px rgba(0, 0, 0, 0.7), 0 0 24px rgba(168, 46, 46, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Watermark Number: Subtly Contained Inside the Card */
+:host-context([data-theme="dark"]) .stage-ghost-num {
+  position: absolute !important;
+  top: 10px !important;
+  inset-inline-start: auto !important;
+  inset-inline-end: 18px !important;
+  font-size: 5rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  color: rgba(255, 255, 255, 0.035) !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  z-index: 0 !important;
+  transition: color 300ms ease, transform 300ms ease !important;
+}
+
+:host-context([data-theme="dark"]) .stage-milestone:hover .stage-ghost-num {
+  color: rgba(168, 46, 46, 0.1) !important;
+  transform: scale(1.06) !important;
+}
+
+/* Conduit Header & Sleek Progress Line */
+:host-context([data-theme="dark"]) .stage-path-conduit {
+  height: 24px !important;
+  margin-bottom: 22px !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+:host-context([data-theme="dark"]) .conduit-node {
+  background: transparent !important;
+  border: none !important;
+}
+
+:host-context([data-theme="dark"]) .node-ring {
+  background: #181B22 !important;
+  border: 1.5px solid #A82E2E !important;
+  box-shadow: 0 0 0 3px rgba(168, 46, 46, 0.22) !important;
+  transition: all 300ms ease !important;
+}
+
+:host-context([data-theme="dark"]) .node-core {
+  background: #FFA3A3 !important;
+  box-shadow: 0 0 8px rgba(255, 163, 163, 0.8) !important;
+}
+
+:host-context([data-theme="dark"]) .stage-milestone:hover .node-ring {
+  background: #A82E2E !important;
+  box-shadow: 0 0 0 4px rgba(168, 46, 46, 0.4) !important;
+}
+
+:host-context([data-theme="dark"]) .stage-milestone:hover .node-core {
+  background: #FFFFFF !important;
+}
+
+:host-context([data-theme="dark"]) .conduit-connector {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+:host-context([data-theme="dark"]) .conduit-connector.is-terminal {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.08) 0%, rgba(168, 46, 46, 0.4) 100%) !important;
+}
+
+[dir="ltr"] :host-context([data-theme="dark"]) .conduit-connector.is-terminal {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.08) 0%, rgba(168, 46, 46, 0.4) 100%) !important;
+}
+
+:host-context([data-theme="dark"]) .connector-arrow {
+  border-top-color: rgba(255, 255, 255, 0.25) !important;
+  border-inline-end-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+:host-context([data-theme="dark"]) .stage-milestone:hover .connector-arrow {
+  border-top-color: #FFA3A3 !important;
+  border-inline-end-color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .connector-terminal-joint {
+  background: #A82E2E !important;
+  box-shadow: 0 0 8px rgba(168, 46, 46, 0.7) !important;
+}
+
+/* Stage Body Content */
+:host-context([data-theme="dark"]) .stage-body {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Stage Step Pill Badge */
+:host-context([data-theme="dark"]) .stage-step-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 4px 12px !important;
+  background: rgba(168, 46, 46, 0.12) !important;
+  border: 1px solid rgba(168, 46, 46, 0.25) !important;
+  border-radius: 20px !important;
+  margin-bottom: 16px !important;
+  width: fit-content !important;
+}
+
+:host-context([data-theme="dark"]) .step-num {
+  color: #FFA3A3 !important;
+  font-size: 0.8125rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+}
+
+:host-context([data-theme="dark"]) .step-rule {
+  width: 14px !important;
+  height: 1.5px !important;
+  background: #FFA3A3 !important;
+  opacity: 0.8 !important;
+  transition: width 300ms ease !important;
+}
+
+:host-context([data-theme="dark"]) .stage-milestone:hover .step-rule {
+  width: 22px !important;
+}
+
+:host-context([data-theme="dark"]) .stage-title {
+  color: #F9FAFB !important;
+  font-size: clamp(1.2rem, 1.45vw, 1.45rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.45 !important;
+  margin: 0 0 12px 0 !important;
+  transition: color 250ms ease !important;
+}
+
+:host-context([data-theme="dark"]) .stage-milestone:hover .stage-title {
+  color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .stage-desc {
+  color: #9CA3AF !important;
+  font-size: 0.935rem !important;
+  line-height: 1.75 !important;
+  margin: 0 !important;
+}
+
+:host-context([data-theme="dark"]) .institutional-btn {
+  background-color: #A82E2E !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(168, 46, 46, 0.35) !important;
+}
+
+:host-context([data-theme="dark"]) .institutional-btn:hover {
+  background-color: #BD3535 !important;
+  box-shadow: 0 6px 26px rgba(168, 46, 46, 0.5) !important;
+}
+
+/* 04 Trust Section */
+:host-context([data-theme="dark"]) .trust-section {
+  background-color: #13161C !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:host-context([data-theme="dark"]) .trust-pillar-card {
+  background-color: #1A1D24 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.06) !important;
+}
+
+:host-context([data-theme="dark"]) .pillar-title {
+  color: #F9FAFB !important;
+}
+
+:host-context([data-theme="dark"]) .pillar-desc {
+  color: #9CA3AF !important;
+}
+
+:host-context([data-theme="dark"]) .pillar-num {
+  color: rgba(255, 255, 255, 0.12) !important;
+}
+
+:host-context([data-theme="dark"]) .pillar-num-label {
+  color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .pillar-proof-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+:host-context([data-theme="dark"]) .proof-label {
+  color: #D4D4D8 !important;
+}
+
+:host-context([data-theme="dark"]) .proof-content {
+  color: #9CA3AF !important;
+}
+
+:host-context([data-theme="dark"]) .proof-dot {
+  background-color: #FFA3A3 !important;
+  box-shadow: 0 0 8px rgba(255, 163, 163, 0.6) !important;
+}

@@ -1,0 +1,333 @@
+<article class="about-page dark:bg-[#0F1115]">
+
+  <!-- ==========================================================================
+       01 — EDITORIAL HERO SECTION WITH METRICS STRIP
+       ========================================================================== -->
+  <header class="eib-section about-hero dark:bg-[#0F1115] dark:border-white/10">
+    <div class="eib-container">
+      <!-- Breadcrumb Trail -->
+      <nav class="breadcrumb-trail dark:text-zinc-400" aria-label="Breadcrumb">
+        <a routerLink="/" class="breadcrumb-item dark:text-zinc-400 hover:dark:text-zinc-100">{{
+          languageService.t.nav.home }}</a>
+        <span class="breadcrumb-sep dark:text-zinc-600">/</span>
+        <span class="breadcrumb-current dark:text-zinc-200">{{ languageService.t.aboutPage.breadcrumbAbout }}</span>
+      </nav>
+
+      <div class="about-hero-text">
+        <div class="eib-eyebrow">
+          <span class="eib-eyebrow-line"></span>
+          <span class="eyebrow-text dark:text-[#FF7B72]">{{ languageService.t.aboutPage.eyebrow }}</span>
+        </div>
+        <h1 class="about-headline dark:text-zinc-50">
+          {{ languageService.t.aboutPage.title }}
+        </h1>
+        <p class="about-subhead dark:text-zinc-300">
+          {{ languageService.t.aboutPage.sub }}
+        </p>
+      </div>
+
+      <!-- Metrics Strip (شريط إحصائيات مصغر لتعزيز الموثوقية البصرية) -->
+      <div class="hero-metrics-strip dark:bg-[#161920] dark:border-white/10">
+        <div class="metric-card">
+          <div class="metric-head">
+            <span class="metric-val dark:text-[#FF7B72]">{{ languageService.t.aboutPage.metric1Val }}</span>
+            <span class="metric-badge dark:bg-white/5 dark:text-[#FFA198]">
+              <i class="fa-solid fa-circle-check"></i>
+            </span>
+          </div>
+          <div class="metric-body">
+            <h3 class="metric-label dark:text-zinc-100">{{ languageService.t.aboutPage.metric1Label }}</h3>
+            <p class="metric-desc dark:text-zinc-400">{{ languageService.t.aboutPage.metric1Sub }}</p>
+          </div>
+        </div>
+
+        <div class="metric-divider dark:bg-white/10" aria-hidden="true"></div>
+
+        <div class="metric-card">
+          <div class="metric-head">
+            <span class="metric-val dark:text-[#FF7B72]">{{ languageService.t.aboutPage.metric2Val }}</span>
+            <span class="metric-badge dark:bg-white/5 dark:text-[#FFA198]">
+              <i class="fa-solid fa-star"></i>
+            </span>
+          </div>
+          <div class="metric-body">
+            <h3 class="metric-label dark:text-zinc-100">{{ languageService.t.aboutPage.metric2Label }}</h3>
+            <p class="metric-desc dark:text-zinc-400">{{ languageService.t.aboutPage.metric2Sub }}</p>
+          </div>
+        </div>
+
+        <div class="metric-divider dark:bg-white/10" aria-hidden="true"></div>
+
+        <div class="metric-card">
+          <div class="metric-head">
+            <span class="metric-val dark:text-[#FF7B72]">{{ languageService.t.aboutPage.metric3Val }}</span>
+            <span class="metric-badge dark:bg-white/5 dark:text-[#FFA198]">
+              <i class="fa-solid fa-shield-halved"></i>
+            </span>
+          </div>
+          <div class="metric-body">
+            <h3 class="metric-label dark:text-zinc-100">{{ languageService.t.aboutPage.metric3Label }}</h3>
+            <p class="metric-desc dark:text-zinc-400">{{ languageService.t.aboutPage.metric3Sub }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       02 — VISION & FOUNDING PHILOSOPHY (SPLIT LAYOUT: QUOTE + NARRATIVE)
+       ========================================================================== -->
+  <section class="eib-section story-section dark:bg-[#121419] dark:border-white/10">
+    <div class="eib-container">
+      <div class="story-split-grid">
+
+        <!-- Column 1: Styled Quote Card (Right in RTL / Start) -->
+        <aside class="quote-card-container">
+          <div class="styled-quote-card dark:bg-[#181A20] dark:border-white/10 dark:border-l-[#A82E2E] dark:shadow-2xl">
+            <div class="quote-decorative-mark" aria-hidden="true">
+              <i class="fa-solid fa-quote-right"></i>
+            </div>
+
+            <div class="quote-eyebrow-tag dark:text-[#FF7B72]">
+              <span class="tag-bullet dark:bg-[#FF7B72]"></span>
+              <span>{{ languageService.t.aboutPage.mandateEyebrow }}</span>
+            </div>
+
+            <blockquote class="quote-text-content dark:text-zinc-50">
+              {{ languageService.t.aboutPage.quote }}
+            </blockquote>
+
+            <div class="quote-card-footer dark:border-white/10">
+              <div class="quote-author-signature">
+                <span class="author-name dark:text-zinc-100">{{ languageService.t.aboutPage.quoteAuthor }}</span>
+                <span class="author-role dark:text-zinc-400">{{ languageService.isRtl() ? 'الميثاق التشغيلي الموحد' :
+                  'Unified Operating Charter' }}</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Column 2: Narrative Founding Story (Left in RTL / End) -->
+        <div class="story-narrative-container">
+          <div class="eib-eyebrow">
+            <span class="eib-eyebrow-line"></span>
+            <span class="eyebrow-text dark:text-[#FF7B72]">{{ languageService.isRtl() ? 'فلسفة النشأة والنموذج' :
+              'Foundational Philosophy' }}</span>
+          </div>
+
+          <h2 class="narrative-headline dark:text-zinc-50">
+            {{ languageService.isRtl() ? 'كسر العزلة بين الاستراتيجية والتنفيذ' : 'Bridging Strategy and Execution' }}
+          </h2>
+
+          <div class="narrative-body-flow">
+            <p class="narrative-paragraph lead-p dark:text-zinc-200">
+              {{ languageService.t.aboutPage.narrative1 }}
+            </p>
+            <p class="narrative-paragraph dark:text-zinc-300">
+              {{ languageService.t.aboutPage.narrative2 }}
+            </p>
+          </div>
+
+          <div class="narrative-highlights-bar">
+            <div class="highlight-item dark:bg-[#A82E2E]/15 dark:border-[#A82E2E]/30 dark:text-[#FFA198]">
+              <span class="highlight-check dark:text-[#FF7B72]"><i class="fa-solid fa-check"></i></span>
+              <span>{{ languageService.isRtl() ? 'بناء أنظمة تشغيلية مستدامة' : 'Enduring Operating Mechanisms'
+                }}</span>
+            </div>
+            <div class="highlight-item dark:bg-[#A82E2E]/15 dark:border-[#A82E2E]/30 dark:text-[#FFA198]">
+              <span class="highlight-check dark:text-[#FF7B72]"><i class="fa-solid fa-check"></i></span>
+              <span>{{ languageService.isRtl() ? 'مواءمة مالية وتقنية محكمة' : 'Strict Fiscal & Tech Alignment'
+                }}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       03 — BRAND IDENTITY: GEOMETRIC MEANING & 3 FEATURE CARDS
+       ========================================================================== -->
+  <section class="eib-section identity-section dark:bg-[#0F1115] dark:border-white/10">
+    <div class="eib-container">
+
+      <!-- Section Header -->
+      <div class="identity-header-block">
+        <div class="eib-eyebrow">
+          <span class="eib-eyebrow-line orange"></span>
+          <span class="eyebrow-text dark:text-orange-400">{{ languageService.t.aboutPage.identityEyebrow }}</span>
+        </div>
+        <h2 class="identity-main-title dark:text-zinc-50">
+          {{ languageService.t.aboutPage.identityTitle }}
+        </h2>
+        <p class="identity-lead-desc dark:text-zinc-400">
+          {{ languageService.t.aboutPage.identityDesc }}
+        </p>
+      </div>
+
+      <!-- Main Showcase Grid: Emblem Showcase + 3 Feature Cards -->
+      <div class="identity-layout-grid">
+
+        <!-- Visual Emblem Side (Showcase Panel) -->
+        <div class="emblem-showcase-panel">
+          <div class="emblem-card-inner dark:bg-white/5 dark:border-white/10 dark:shadow-2xl">
+            <div class="emblem-halo-glow" aria-hidden="true"></div>
+
+            <div class="emblem-svg-wrap">
+              <svg viewBox="0 0 160 160" class="emblem-vector" aria-hidden="true">
+                <defs>
+                  <clipPath id="aboutEmblemOrangeClipNew">
+                    <rect x="52" y="52" width="88" height="88" rx="12" />
+                  </clipPath>
+                  <linearGradient id="emblemRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#DF362D" />
+                    <stop offset="100%" stop-color="#B71C1C" />
+                  </linearGradient>
+                  <linearGradient id="emblemOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F27227" />
+                    <stop offset="100%" stop-color="#E65100" />
+                  </linearGradient>
+                </defs>
+                <rect x="20" y="20" width="88" height="88" fill="url(#emblemRedGrad)" rx="12" />
+                <rect x="52" y="52" width="88" height="88" fill="url(#emblemOrangeGrad)" fill-opacity="0.94" rx="12" />
+                <rect x="20" y="20" width="88" height="88" fill="#8F2525" fill-opacity="0.32"
+                  clip-path="url(#aboutEmblemOrangeClipNew)" />
+              </svg>
+            </div>
+
+            <div class="emblem-meta-box">
+              <span class="emblem-tag dark:text-[#FF7B72]">{{ languageService.isRtl() ? 'التطابق والتقاطع الهندسي' :
+                'Geometric Intersection' }}</span>
+              <h3 class="emblem-meta-title dark:text-zinc-50">{{ languageService.t.aboutPage.symbolTitle }}</h3>
+              <p class="emblem-meta-sub dark:text-zinc-400">{{ languageService.t.aboutPage.symbolSub }}</p>
+            </div>
+
+            <div class="emblem-color-legend dark:border-white/10">
+              <span class="legend-chip red dark:text-zinc-300">
+                <span class="chip-color"></span>
+                <span class="chip-label">{{ languageService.isRtl() ? 'الصلابة والحوكمة' : 'Governance & Rigor'
+                  }}</span>
+              </span>
+              <span class="legend-chip orange dark:text-zinc-300">
+                <span class="chip-color"></span>
+                <span class="chip-label">{{ languageService.isRtl() ? 'الابتكار والمستقبل' : 'Innovation & Future'
+                  }}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Feature Cards Side -->
+        <div class="feature-cards-panel">
+          <div class="feature-cards-stack">
+
+            <!-- Card 1: التكامل والترابط -->
+            <div class="feature-card dark:bg-[#1A1D24] dark:border-white/10 hover:dark:border-white/20">
+              <div class="feature-card-header">
+                <div class="feature-icon-box red-tint dark:bg-[#DF362D]/15 dark:border-[#DF362D]/30">
+                  <i class="fa-solid fa-diagram-project"></i>
+                </div>
+                <span class="feature-index dark:text-white/10">01</span>
+              </div>
+              <div class="feature-card-content">
+                <h3 class="feature-title dark:text-white">{{ languageService.t.aboutPage.meaning1Title }}</h3>
+                <p class="feature-desc dark:text-zinc-400">{{ languageService.t.aboutPage.meaning1Body }}</p>
+              </div>
+            </div>
+
+            <!-- Card 2: نقطة التلاقي والاتصال -->
+            <div class="feature-card dark:bg-[#1A1D24] dark:border-white/10 hover:dark:border-white/20">
+              <div class="feature-card-header">
+                <div class="feature-icon-box orange-tint dark:bg-[#F27227]/15 dark:border-[#F27227]/30">
+                  <i class="fa-solid fa-crosshairs"></i>
+                </div>
+                <span class="feature-index dark:text-white/10">02</span>
+              </div>
+              <div class="feature-card-content">
+                <h3 class="feature-title dark:text-white">{{ languageService.t.aboutPage.meaning2Title }}</h3>
+                <p class="feature-desc dark:text-zinc-400">{{ languageService.t.aboutPage.meaning2Body }}</p>
+              </div>
+            </div>
+
+            <!-- Card 3: الانضباط التشغيلي -->
+            <div class="feature-card dark:bg-[#1A1D24] dark:border-white/10 hover:dark:border-white/20">
+              <div class="feature-card-header">
+                <div class="feature-icon-box slate-tint dark:bg-white/5 dark:border-white/10 dark:text-zinc-100">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <span class="feature-index dark:text-white/10">03</span>
+              </div>
+              <div class="feature-card-content">
+                <h3 class="feature-title dark:text-white">{{ languageService.t.aboutPage.meaning3Title }}</h3>
+                <p class="feature-desc dark:text-zinc-400">{{ languageService.t.aboutPage.meaning3Body }}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       04 — LUXURY DEEP MAROON CTA BANNER CONTAINER
+       Breaks beige monotony with high-prestige executive depth
+       ========================================================================== -->
+  <section class="eib-section about-cta-wrapper dark:bg-[#0F1115]">
+    <div class="eib-container">
+      <div class="luxury-cta-banner dark:bg-[#15171C] dark:border-[#9B2226]/40 dark:shadow-2xl">
+
+        <!-- Subtle Ambient Lighting and Mesh Background Elements -->
+        <div class="banner-ambient-glow" aria-hidden="true"></div>
+        <div class="banner-geometric-frame" aria-hidden="true">
+          <div class="frame-quadrant top-start"></div>
+          <div class="frame-quadrant bottom-end"></div>
+        </div>
+
+        <div class="banner-inner-content">
+          <div class="banner-eyebrow dark:bg-white/5 dark:border-white/10 dark:text-[#FF7B72]">
+            <span class="banner-eyebrow-dot"></span>
+            <span>{{ languageService.isRtl() ? 'خطوتك القادمة مع إيليت' : 'Strategic Engagement' }}</span>
+          </div>
+
+          <h2 class="banner-headline dark:text-white">
+            {{ languageService.isRtl() ? 'هل أنت مستعد لخفض الهدر ومضاعفة كفاءة منشأتك؟' : 'Ready to Transform Your
+            Operational Infrastructure?' }}
+          </h2>
+
+          <p class="banner-description dark:text-zinc-200">
+            {{ languageService.isRtl()
+            ? 'تواصل مباشرة مع مستشاري إيليت؛ نفحص مسارات العمل والتدفقات النقدية ونصمم لك حزمة حلول تشغيلية ومالية
+            متكاملة تحقق أهدافك وتضمن استدامة أرباحك.'
+            : 'Engage with our multidisciplinary experts: we evaluate organizational architecture, audit workflows, and
+            engineer unified operational solutions that ensure the enduring resilience of your enterprise.' }}
+          </p>
+
+          <div class="banner-actions">
+            <a routerLink="/contact"
+              class="luxury-cta-btn dark:bg-[#A82E2E] dark:text-white dark:border-white/20 dark:shadow-[0_4px_20px_rgba(168,46,46,0.4)]">
+              <span>{{ languageService.isRtl() ? 'احجز جلسة استشارية مع خبراء إيليت' : 'Request Strategic Consultation'
+                }}</span>
+              <span class="cta-arrow-icon" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+
+          <div class="banner-footnote dark:text-zinc-400">
+            <span class="lock-icon dark:text-zinc-400" aria-hidden="true">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+            <span>{{ languageService.isRtl() ? 'تخضع كافة الاستشارات والبيانات لاتفاقيات السرية وحماية بيانات الأعمال
+              (NDA) الصارمة.' : 'All consultations are governed under strict enterprise confidentiality protocols
+              (NDA).' }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</article>

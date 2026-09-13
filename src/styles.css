@@ -1,1 +1,1184 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'swiper/css';
+
+/* ==========================================================================
+   EIB (ELITE INTEGRATED BUSINESS) — SOPHISTICATED DEPTH COLOR SYSTEM
+   Art Direction: Premium International Corporate Advisory
+   Philosophy: Tonal depth · Atmospheric warmth · Editorial restraint
+   Palette: Warm Ivory · Soft Cream · Warm Sand · Deep Ink · Burgundy
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS — COMPLETE TONAL COLOR SYSTEM
+   -------------------------------------------------------------------------- */
+:root {
+  /* ==============================
+     PRIMARY TONAL SURFACE PALETTE
+     A graduated warm neutral spectrum — each step calibrated for subtle
+     atmospheric depth and distinct architectural visual rhythm.
+     ============================== */
+
+  /* Base canvas & section surfaces */
+  --eib-ivory:              #F4F1EA;
+  --eib-background:         #F4F1EA;
+
+  /* Editorial Section Surfaces (Section-to-Section Rhythm) */
+  --eib-surface-hero:       #F6F2EB;   /* Warm Ivory */
+  --eib-surface-services:   #FAF8F5;   /* Soft Off-White / Architectural Cream */
+  --eib-surface-industries: #EFE8DC;   /* Pale Warm Sand / Architectural Stone */
+  --eib-surface-philosophy: #FAF8F4;   /* Light Ivory / Almost White */
+  --eib-surface-trust:      #E6DFD0;   /* Deeper Warm Stone */
+  --eib-surface-cta:        #FAF8F5;   /* Warm Ivory / Architectural Soft Cream */
+  --eib-surface-footer:     #EFE9DF;   /* Deeper Warm Limestone / Parchment Neutral */
+
+  /* Slightly lighter / warmer surfaces */
+  --eib-cream:              #FBFAF7;
+  --eib-surface:            #FBFAF7;
+  --eib-parchment:          #F8F5EE;
+  --eib-white:              #FFFFFF;
+
+  /* Grounding warm neutrals */
+  --eib-sand:               #EAE3D6;
+  --eib-linen:              #EDE9E0;
+  --eib-surface-muted:      #EAE3D6;
+  --eib-surface-stone:      #E2DACB;
+
+  /* ==============================
+     TACTILE ARCHITECTURAL PAPER GRAIN
+     Barely visible micro-texture for organic materiality
+     ============================== */
+  --eib-paper-grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+
+  /* ==============================
+     INK & TYPOGRAPHY HIERARCHY
+     ============================== */
+  --eib-ink:                #15171A;   /* Deep authoritative ink */
+  --eib-ink-secondary:      #4A4D50;   /* Body text */
+  --eib-ink-tertiary:       #6E7174;   /* Captions, meta labels */
+  --eib-taupe:              #8A8780;   /* Muted architectural text */
+
+  /* Legacy aliases */
+  --eib-charcoal:           #15171A;
+  --eib-charcoal-pure:      #15171A;
+  --eib-charcoal-muted:     #4A4D50;
+  --eib-charcoal-light:     #8A8780;
+
+  /* ==============================
+     BRAND ACCENT SYSTEM
+     Burgundy = intentional, restrained primary accent
+     Terracotta = subtle secondary warmth
+     ============================== */
+  --eib-burgundy:           #8F2525;
+  --eib-burgundy-deep:      #781D1D;
+  --eib-burgundy-hover:     #6D1818;
+  --eib-burgundy-light:     rgba(143, 37, 37, 0.08);
+
+  --eib-terracotta:         #C05030;
+  --eib-terracotta-hover:   #A84329;
+
+  /* Legacy color aliases */
+  --eib-red:                var(--eib-burgundy);
+  --eib-red-hover:          var(--eib-burgundy-hover);
+  --eib-orange:             var(--eib-terracotta);
+  --eib-orange-hover:       var(--eib-terracotta-hover);
+
+  /* ==============================
+     DARK ENVIRONMENT (CTA + Footer)
+     ============================== */
+  --eib-dark-bg:            #121417;
+  --eib-dark-surface:       #1B1E21;
+  --eib-dark-elevated:      #232629;
+  --eib-dark-border:        rgba(255, 255, 255, 0.08);
+  --eib-dark-text:          #F5F2EC;
+  --eib-dark-muted:         #9E9A92;
+
+  /* ==============================
+     SOPHISTICATED SECTION ATMOSPHERES
+     Subtle lighting variation with matching tonal handoffs
+     ============================== */
+  --grad-hero:      linear-gradient(170deg, #F3EFE7 0%, #F6F3EC 40%, #FAF8F4 75%, #F4EFE6 100%);
+  --grad-cream:     linear-gradient(180deg, #F4EFE6 0%, #FAF8F5 18%, #FFFFFF 50%, #FAF8F5 85%, #F2ECE1 100%);
+  --grad-sand:      linear-gradient(180deg, #F2ECE1 0%, #EFE9DC 30%, #EAE3D4 70%, #F5F1E8 100%);
+  --grad-philosophy: linear-gradient(180deg, #F5F1E8 0%, #FAF8F4 35%, #FFFFFF 65%, #F1EBE0 100%);
+  --grad-trust:     linear-gradient(180deg, #F1EBE0 0%, #EAE3D4 25%, #E6DFCE 75%, #DFD7C4 100%);
+  --grad-footer:    linear-gradient(180deg, #121417 0%, #0E1012 100%);
+  --grad-cta:       #121417;
+
+  /* ==============================
+     HAIRLINE BORDERS — ARCHITECTURAL
+     ============================== */
+  --eib-border:             rgba(21, 23, 26, 0.09);
+  --eib-border-subtle:      rgba(21, 23, 26, 0.05);
+  --eib-border-warm:        rgba(176, 162, 140, 0.24);
+  --eib-border-strong:      rgba(21, 23, 26, 0.16);
+  --eib-border-sand:        rgba(155, 142, 122, 0.30);
+
+  /* ==============================
+     SHADOWS — MINIMAL, RESTRAINED
+     ============================== */
+  --shadow-none:   none;
+  --shadow-xs:     0 1px 3px rgba(21, 23, 26, 0.04);
+  --shadow-sm:     0 4px 12px rgba(21, 23, 26, 0.05);
+  --shadow-flyout: 0 16px 40px rgba(21, 23, 26, 0.08);
+
+  /* ==============================
+     ARCHITECTURAL RADII
+     ============================== */
+  --radius-none: 0px;
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+
+  /* ==============================
+     SPACING RHYTHM
+     ============================== */
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  32px;
+  --space-xl:  48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 144px;
+
+  /* ==============================
+     LAYOUT
+     ============================== */
+  --container-max:     1320px;
+  --container-reading: 880px;
+
+  /* ==============================
+     TYPOGRAPHY
+     ============================== */
+  --font-en: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-ar: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* ==============================
+     TRANSITIONS
+     ============================== */
+  --transition-fast:   160ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow:   440ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   DARK THEME TOKENS & SURFACES (EIB Corporate Standard)
+   ========================================================================== */
+[data-theme="dark"] {
+  /* ==============================
+     1. SURFACES & BACKGROUNDS (Calibrated Dark Canvas)
+     Avoiding pure dead black (#000000) for luxurious organic depth
+     ============================== */
+  --eib-ivory:              #0F1115;
+  --eib-background:         #0F1115;
+
+  /* Editorial Section Surfaces */
+  --eib-surface-hero:       #121419;
+  --eib-surface-services:   #0F1115;
+  --eib-surface-industries: #13161C;
+  --eib-surface-philosophy: #0F1115;
+  --eib-surface-trust:      #13161C;
+  --eib-surface-cta:        #121419;
+  --eib-surface-footer:     #0A0C0E;
+
+  /* Card Surfaces & Elevated Modules */
+  --eib-cream:              #1A1D24;
+  --eib-surface:            #1A1D24;
+  --eib-parchment:          #1E222A;
+  --eib-white:              #1A1D24;
+  --eib-sand:               #161920;
+  --eib-linen:              #1A1D24;
+  --eib-surface-muted:      #14171D;
+  --eib-surface-stone:      #1E222A;
+
+  /* ==============================
+     2. TYPOGRAPHY & CONTRAST (Zinc Hierarchy)
+     ============================== */
+  --eib-ink:                #F9FAFB;   /* Headings: Crisp zinc-100 */
+  --eib-ink-secondary:      #9CA3AF;   /* Body text: Calm zinc-400 */
+  --eib-ink-tertiary:       #6B7280;   /* Captions & meta labels: zinc-500 */
+  --eib-taupe:              #9CA3AF;
+
+  --eib-charcoal:           #F9FAFB;
+  --eib-charcoal-pure:      #FFFFFF;
+  --eib-charcoal-muted:     #9CA3AF;
+  --eib-charcoal-light:     #6B7280;
+
+  /* ==============================
+     3. BRAND ACCENTS (Crimson / Warm Luminous Maroon)
+     Calibrated for high visibility & warmth against dark surfaces
+     ============================== */
+  --eib-burgundy:           #A82E2E;
+  --eib-burgundy-deep:      #8F2525;
+  --eib-burgundy-hover:     #BD3535;
+  --eib-burgundy-light:     rgba(168, 46, 46, 0.16);
+
+  --eib-terracotta:         #D96543;
+  --eib-terracotta-hover:   #E07657;
+
+  /* ==============================
+     4. HAIRLINE BORDERS & ELEVATION
+     ============================== */
+  --eib-border:             rgba(255, 255, 255, 0.08);
+  --eib-border-subtle:      rgba(255, 255, 255, 0.05);
+  --eib-border-warm:        rgba(255, 255, 255, 0.10);
+  --eib-border-strong:      rgba(255, 255, 255, 0.14);
+  --eib-border-sand:        rgba(255, 255, 255, 0.08);
+
+  --shadow-xs:              0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-sm:              0 4px 14px rgba(0, 0, 0, 0.4);
+  --shadow-flyout:          0 16px 44px rgba(0, 0, 0, 0.6);
+
+  /* Sophisticated Dark Atmosphere Gradients */
+  --grad-hero:              linear-gradient(175deg, #13161C 0%, #101217 60%, #0F1115 100%);
+  --grad-cream:             linear-gradient(180deg, #0F1115 0%, #13161C 50%, #0F1115 100%);
+  --grad-sand:              linear-gradient(180deg, #13161C 0%, #161921 50%, #13161C 100%);
+  --grad-philosophy:        linear-gradient(180deg, #0F1115 0%, #13161C 50%, #0F1115 100%);
+  --grad-trust:             linear-gradient(180deg, #13161C 0%, #171B23 50%, #13161C 100%);
+  --grad-footer:            linear-gradient(180deg, #0A0C0E 0%, #07080A 100%);
+}
+
+/* ==========================================================================
+   PRO CORPORATE DARK MODE ARCHITECTURE (All Pages & Components)
+   Strictly Enforced Scope: Hero, Services, Industries, Philosophy, Trust,
+   Deliverables Slider, Contact, Footer, Cards & Controls
+   ========================================================================== */
+
+/* Universal Surface Reset */
+[data-theme="dark"] body.eib-body,
+[data-theme="dark"] .eib-main-content {
+  background-color: #0F1115 !important;
+  color: #F9FAFB !important;
+}
+
+/* 1. Hero Sections Across All Pages */
+[data-theme="dark"] .hero-section,
+[data-theme="dark"] .services-hero,
+[data-theme="dark"] .about-hero,
+[data-theme="dark"] .service-hero,
+[data-theme="dark"] .contact-section {
+  background-color: #121419 !important;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(168, 46, 46, 0.10) 0%, rgba(18, 20, 25, 0) 70%),
+    var(--eib-paper-grain) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+[data-theme="dark"] .hero-section::before,
+[data-theme="dark"] .hero-section::after {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 2. Secondary & Alternating Editorial Sections */
+[data-theme="dark"] .services-section,
+[data-theme="dark"] .services-grid-section,
+[data-theme="dark"] .methodology-section {
+  background-color: #0F1115 !important;
+  background-image: var(--eib-paper-grain) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+[data-theme="dark"] .industry-slider-section,
+[data-theme="dark"] .institutional-section,
+[data-theme="dark"] .trust-section,
+[data-theme="dark"] .deliverables-showcase-section {
+  background-color: #13161C !important;
+  background-image: var(--eib-paper-grain) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+[data-theme="dark"] .cta-section {
+  background-color: #121419 !important;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(168, 46, 46, 0.12) 0%, transparent 80%),
+    var(--eib-paper-grain) !important;
+  border-top-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+[data-theme="dark"] .eib-footer {
+  background-color: #0A0C0E !important;
+  background-image: var(--eib-paper-grain) !important;
+  border-top-color: rgba(255, 255, 255, 0.07) !important;
+  color: #F9FAFB !important;
+}
+
+/* 3. Luxury Corporate Card Surfaces & Containers */
+[data-theme="dark"] .service-carousel-card,
+[data-theme="dark"] .industry-card,
+[data-theme="dark"] .service-bento-card,
+[data-theme="dark"] .trust-pillar-card,
+[data-theme="dark"] .methodology-pillar-card,
+[data-theme="dark"] .deliverables-showcase-card,
+[data-theme="dark"] .compact-card,
+[data-theme="dark"] .eib-card,
+[data-theme="dark"] .pillar-proof-card,
+[data-theme="dark"] .about-metric-card,
+[data-theme="dark"] .leadership-card,
+[data-theme="dark"] .methodology-standard-pill {
+  background-color: #1A1D24 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.06) !important;
+  color: #F9FAFB !important;
+  transition: all 260ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Dedicated Luxury Dark Treatment for Home Stage Milestones */
+[data-theme="dark"] .stage-milestone {
+  background: linear-gradient(165deg, rgba(26, 29, 36, 0.95) 0%, rgba(18, 20, 25, 0.98) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
+  padding: 34px 28px !important;
+  box-shadow: 0 12px 36px -6px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+  overflow: hidden !important;
+  position: relative !important;
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Interactive Card Elevation & Crimson Glow */
+[data-theme="dark"] .service-carousel-card:hover,
+[data-theme="dark"] .service-bento-card:hover,
+[data-theme="dark"] .compact-card:hover,
+[data-theme="dark"] .methodology-pillar-card:hover,
+[data-theme="dark"] .stage-milestone:hover,
+[data-theme="dark"] .industry-card:hover {
+  border-color: rgba(168, 46, 46, 0.45) !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.65), 0 0 24px rgba(168, 46, 46, 0.2) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* 4. Typography & Crisp Contrast */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] .hero-headline,
+[data-theme="dark"] .eib-section-title,
+[data-theme="dark"] .industry-slider-title,
+[data-theme="dark"] .institutional-statement,
+[data-theme="dark"] .trust-headline,
+[data-theme="dark"] .services-headline,
+[data-theme="dark"] .service-title,
+[data-theme="dark"] .methodology-main-title,
+[data-theme="dark"] .deliverables-main-title,
+[data-theme="dark"] .contact-main-headline,
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .pillar-title,
+[data-theme="dark"] .stage-title,
+[data-theme="dark"] .cta-headline,
+[data-theme="dark"] .slot-primary-val {
+  color: #F9FAFB !important;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] .hero-lead,
+[data-theme="dark"] .eib-section-subtitle,
+[data-theme="dark"] .industry-slider-subtitle,
+[data-theme="dark"] .institutional-short-intro,
+[data-theme="dark"] .trust-short-intro,
+[data-theme="dark"] .services-lead-desc,
+[data-theme="dark"] .service-tagline,
+[data-theme="dark"] .methodology-lead-text,
+[data-theme="dark"] .deliverables-header-subtitle,
+[data-theme="dark"] .contact-lead-desc,
+[data-theme="dark"] .card-desc,
+[data-theme="dark"] .pillar-desc,
+[data-theme="dark"] .stage-desc,
+[data-theme="dark"] .cta-lead,
+[data-theme="dark"] .footer-statement,
+[data-theme="dark"] .pillar-text,
+[data-theme="dark"] .proof-content,
+[data-theme="dark"] .slot-label,
+[data-theme="dark"] .pill-badge-text {
+  color: #9CA3AF !important;
+}
+
+/* 5. Watermark Numbering & Chapter Identifiers (Quiet Architectural Zinc) */
+[data-theme="dark"] .journey-chapter {
+  color: #FFA3A3 !important;
+}
+
+[data-theme="dark"] .card-floating-num,
+[data-theme="dark"] .pillar-card-watermark,
+[data-theme="dark"] .stage-ghost-num,
+[data-theme="dark"] .frame-watermark {
+  color: rgba(255, 255, 255, 0.08) !important;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .pillar-num,
+[data-theme="dark"] .card-num,
+[data-theme="dark"] .step-num {
+  color: #FFA3A3 !important;
+}
+
+/* 6. Translucent Icon Slots with Warm Hover Identity */
+[data-theme="dark"] .service-icon-box,
+[data-theme="dark"] .pillar-icon-box,
+[data-theme="dark"] .card-icon-slot,
+[data-theme="dark"] .social-pill-btn,
+[data-theme="dark"] .conduit-node {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #E4E4E7 !important;
+  transition: all 250ms ease !important;
+}
+
+[data-theme="dark"] .service-bento-card:hover .service-icon-box,
+[data-theme="dark"] .methodology-pillar-card:hover .pillar-icon-box,
+[data-theme="dark"] .compact-card:hover .card-icon-slot,
+[data-theme="dark"] .social-pill-btn:hover {
+  background: rgba(168, 46, 46, 0.16) !important;
+  border-color: rgba(168, 46, 46, 0.45) !important;
+  color: #FFA3A3 !important;
+  box-shadow: 0 0 16px rgba(168, 46, 46, 0.28) !important;
+}
+
+/* 7. Action Buttons & Glowing Primary CTAs */
+[data-theme="dark"] .eib-btn-primary,
+[data-theme="dark"] .primary-consult-btn,
+[data-theme="dark"] .institutional-btn,
+[data-theme="dark"] .eib-nav-cta,
+[data-theme="dark"] .eib-capsule-cta,
+[data-theme="dark"] .drawer-cta-btn,
+[data-theme="dark"] .mobile-panel-cta {
+  background-color: #A82E2E !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(168, 46, 46, 0.35) !important;
+  border: none !important;
+}
+
+[data-theme="dark"] .eib-btn-primary:hover,
+[data-theme="dark"] .primary-consult-btn:hover,
+[data-theme="dark"] .institutional-btn:hover,
+[data-theme="dark"] .eib-nav-cta:hover,
+[data-theme="dark"] .eib-capsule-cta:hover,
+[data-theme="dark"] .mobile-panel-cta:hover {
+  background-color: #BD3535 !important;
+  box-shadow: 0 6px 26px rgba(168, 46, 46, 0.5) !important;
+  transform: translateY(-1px);
+}
+
+[data-theme="dark"] .eib-editorial-link,
+[data-theme="dark"] .card-explore-link,
+[data-theme="dark"] .card-link {
+  color: #FFA3A3 !important;
+}
+
+[data-theme="dark"] .eib-editorial-link:hover,
+[data-theme="dark"] .card-explore-link:hover,
+[data-theme="dark"] .card-link:hover {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .services-arrow-btn {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .services-arrow-btn:hover {
+  background-color: #A82E2E !important;
+  border-color: #A82E2E !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 16px rgba(168, 46, 46, 0.4) !important;
+}
+
+/* 8. Eyebrows, Badges, Datum Lines & Breadcrumbs */
+[data-theme="dark"] .breadcrumb-trail,
+[data-theme="dark"] .breadcrumb-item {
+  color: #9CA3AF !important;
+}
+
+[data-theme="dark"] .breadcrumb-item:hover {
+  color: #FFA3A3 !important;
+}
+
+[data-theme="dark"] .breadcrumb-current {
+  color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.18) !important;
+}
+
+[data-theme="dark"] .eib-eyebrow,
+[data-theme="dark"] .industry-slider-eyebrow,
+[data-theme="dark"] .eyebrow-text {
+  color: #D4D4D8 !important;
+}
+
+[data-theme="dark"] .eib-eyebrow-line,
+[data-theme="dark"] .industry-eyebrow-line,
+[data-theme="dark"] .card-accent-bar,
+[data-theme="dark"] .card-accent-rule,
+[data-theme="dark"] .pillar-accent-rule,
+[data-theme="dark"] .step-rule {
+  background-color: #A82E2E !important;
+}
+
+[data-theme="dark"] .card-badge-pill,
+[data-theme="dark"] .pillar-step-badge,
+[data-theme="dark"] .track-indicator-badge,
+[data-theme="dark"] .track-framework-tag,
+[data-theme="dark"] .stage-step-tag,
+[data-theme="dark"] .mini-pill-btn {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #E4E4E7 !important;
+}
+
+[data-theme="dark"] .badge-accent,
+[data-theme="dark"] .indicator-dot,
+[data-theme="dark"] .pill-badge-dot {
+  color: #FFA3A3 !important;
+}
+
+[data-theme="dark"] .indicator-dot,
+[data-theme="dark"] .pill-badge-dot {
+  background-color: #FFA3A3 !important;
+  box-shadow: 0 0 8px rgba(255, 163, 163, 0.6) !important;
+}
+
+/* 9. Deliverables Showcase Slider & Media Vignettes */
+[data-theme="dark"] .deliverables-swiper-wrapper {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .card-img-vignette,
+[data-theme="dark"] .card-image-vignette {
+  background: linear-gradient(180deg, rgba(15, 17, 21, 0) 40%, rgba(15, 17, 21, 0.85) 100%) !important;
+}
+
+[data-theme="dark"] .deliverables-photo-side {
+  border-inline-start-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 10. Footer Dividers & Legal Bar */
+[data-theme="dark"] .footer-three-grid {
+  border-bottom-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+[data-theme="dark"] .footer-heading {
+  color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .footer-link {
+  color: #9CA3AF !important;
+}
+
+[data-theme="dark"] .footer-link:hover {
+  color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .footer-bottom-bar,
+[data-theme="dark"] .footer-copyright {
+  color: #6B7280 !important;
+  border-top-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+[data-theme="dark"] .blueprint-single-motif rect {
+  stroke: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 11. Brand Logo Global Inversion in Dark Mode */
+[data-theme="dark"] .eib-logo-acronym {
+  color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .eib-logo-descriptor {
+  color: #9CA3AF !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. BILINGUAL BRAND IDENTITY
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .ar-desc { display: block; }
+[dir="rtl"] .en-desc { display: none; }
+[dir="ltr"] .ar-desc { display: none; }
+[dir="ltr"] .en-desc { display: block; }
+
+/* --------------------------------------------------------------------------
+   3. CSS RESET & FOUNDATION
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+body.eib-body {
+  background-color: var(--eib-ivory);
+  color: var(--eib-ink);
+  font-family: var(--font-en);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip;
+  max-width: 100%;
+  transition: background-color 280ms cubic-bezier(0.16, 1, 0.3, 1), color 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[dir="rtl"] body.eib-body,
+[lang="ar"] body.eib-body {
+  font-family: var(--font-ar);
+  line-height: 1.85;
+}
+
+.eib-main-content {
+  flex: 1 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   4. REFINED EDITORIAL TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+.eib-display {
+  font-size: clamp(2.75rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--eib-ink);
+}
+
+h1, .eib-h1 {
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--eib-ink);
+}
+
+h2, .eib-h2 {
+  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--eib-ink);
+}
+
+h3, .eib-h3 {
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--eib-ink);
+}
+
+h4, .eib-h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--eib-ink);
+}
+
+h5, .eib-h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--eib-ink);
+}
+
+h6, .eib-h6 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--eib-ink);
+}
+
+/* Arabic Leading & Tracking Reset */
+[dir="rtl"] h1, [dir="rtl"] .eib-h1,
+[dir="rtl"] h2, [dir="rtl"] .eib-h2,
+[dir="rtl"] h3, [dir="rtl"] .eib-h3,
+[dir="rtl"] h4, [dir="rtl"] .eib-h4,
+[dir="rtl"] h5, [dir="rtl"] .eib-h5,
+[dir="rtl"] h6, [dir="rtl"] .eib-h6,
+[dir="rtl"] .eib-display {
+  letter-spacing: 0 !important;
+  line-height: 1.35;
+}
+
+p, .eib-body-text {
+  color: var(--eib-ink-secondary);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.eib-lead {
+  font-size: clamp(1.0625rem, 1.3vw, 1.25rem);
+  color: var(--eib-ink-secondary);
+  line-height: 1.7;
+}
+
+.eib-body-sm {
+  font-size: 0.875rem;
+  color: var(--eib-ink-secondary);
+  line-height: 1.65;
+}
+
+.eib-caption {
+  font-size: 0.8125rem;
+  color: var(--eib-taupe);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   5. EDITORIAL LABELS & THIN ACCENTS
+   -------------------------------------------------------------------------- */
+.eib-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--eib-taupe);
+  margin-bottom: 20px;
+}
+
+[dir="rtl"] .eib-eyebrow {
+  letter-spacing: 0.04em;
+}
+
+.eib-eyebrow-line {
+  width: 24px;
+  height: 1.5px;
+  background-color: var(--eib-burgundy);
+  flex-shrink: 0;
+}
+
+.eib-eyebrow-line.terracotta,
+.eib-eyebrow-line.orange {
+  background-color: var(--eib-terracotta);
+}
+
+.eib-eyebrow-line.charcoal {
+  background-color: var(--eib-ink);
+}
+
+/* --------------------------------------------------------------------------
+   6. CONTAINERS & SPACING RHYTHM
+   -------------------------------------------------------------------------- */
+.eib-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 24px);
+}
+
+@media (min-width: 768px) {
+  .eib-container {
+    padding-inline: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .eib-container {
+    padding-inline: 56px;
+  }
+}
+
+.eib-container-reading {
+  max-width: var(--container-reading);
+}
+
+/* BASE SECTION */
+.eib-section {
+  padding-block: clamp(72px, 9vw, 144px);
+  position: relative;
+  background: var(--eib-ivory);
+}
+
+/* Tonal section variants — each creates a different atmospheric warmth */
+.eib-section-hero {
+  background: var(--grad-hero);
+}
+
+.eib-section-cream,
+.eib-section-white {
+  background: var(--grad-cream);
+}
+
+.eib-section-stone,
+.eib-section-sand {
+  background: var(--grad-sand);
+}
+
+.eib-section-warm {
+  background: var(--grad-ivory);
+}
+
+.eib-section-dark {
+  background: var(--grad-footer);
+  color: var(--eib-dark-text);
+}
+
+.eib-section-cta {
+  background: var(--grad-cta);
+  color: var(--eib-dark-text);
+}
+
+/* --------------------------------------------------------------------------
+   7. ARCHITECTURAL DIVIDERS — WARM NEUTRAL TONE
+   -------------------------------------------------------------------------- */
+.eib-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--eib-border-warm);
+  border: none;
+}
+
+.eib-divider-strong {
+  width: 100%;
+  height: 1px;
+  background-color: var(--eib-border-strong);
+  border: none;
+}
+
+/* --------------------------------------------------------------------------
+   8. BUTTON SYSTEM — GRADIENT DEPTH, REFINED WARMTH
+   -------------------------------------------------------------------------- */
+.eib-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 13px 30px;
+  border-radius: var(--radius-xs);
+  border: 1px solid transparent;
+  transition:
+    background var(--transition-smooth),
+    border-color var(--transition-smooth),
+    color var(--transition-smooth),
+    box-shadow var(--transition-smooth);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+[dir="rtl"] .eib-btn {
+  letter-spacing: 0;
+}
+
+/* PRIMARY — Restrained Burgundy Corporate Advisory Button */
+.eib-btn-primary,
+.eib-btn-red {
+  background-color: var(--eib-burgundy);
+  color: #FAF8F5;
+  border-color: var(--eib-burgundy-deep);
+  box-shadow: 0 1px 3px rgba(143, 37, 37, 0.16);
+  border-radius: var(--radius-xs);
+}
+
+.eib-btn-primary:hover,
+.eib-btn-red:hover {
+  background-color: var(--eib-burgundy-deep);
+  border-color: #621414;
+  box-shadow: 0 3px 10px rgba(143, 37, 37, 0.24);
+  color: #FAF8F5;
+  transform: translateY(-1px);
+}
+
+/* CHARCOAL — deep ink gradient */
+.eib-btn-charcoal {
+  background: linear-gradient(155deg, #1E2122 0%, #2C2F31 100%);
+  color: var(--eib-cream);
+  border-color: #181A1B;
+  box-shadow: 0 2px 8px rgba(24, 26, 27, 0.20);
+}
+
+.eib-btn-charcoal:hover {
+  background: linear-gradient(155deg, var(--eib-burgundy-deep) 0%, var(--eib-burgundy) 100%);
+  border-color: var(--eib-burgundy-deep);
+  color: #F5F0E8;
+  box-shadow: 0 4px 16px rgba(116, 29, 34, 0.28);
+}
+
+/* TERRACOTTA — warm secondary */
+.eib-btn-terracotta,
+.eib-btn-orange {
+  background: linear-gradient(155deg, #A84329 0%, var(--eib-terracotta) 100%);
+  color: #F5F0E8;
+  border-color: #A84329;
+  box-shadow: 0 2px 8px rgba(192, 80, 48, 0.20);
+}
+
+.eib-btn-terracotta:hover,
+.eib-btn-orange:hover {
+  background: linear-gradient(155deg, #8F3922 0%, #A84329 100%);
+  border-color: #8F3922;
+  color: #F5F0E8;
+}
+
+/* OUTLINE — warm editorial border */
+.eib-btn-outline {
+  background-color: transparent;
+  color: var(--eib-ink);
+  border-color: var(--eib-border-warm);
+}
+
+.eib-btn-outline:hover {
+  background-color: var(--eib-cream);
+  border-color: var(--eib-border-strong);
+  color: var(--eib-ink);
+}
+
+/* OUTLINE WHITE — for dark backgrounds */
+.eib-btn-outline-white {
+  background-color: transparent;
+  color: var(--eib-dark-text);
+  border-color: rgba(240, 237, 230, 0.30);
+}
+
+.eib-btn-outline-white:hover {
+  background-color: rgba(240, 237, 230, 0.10);
+  border-color: rgba(240, 237, 230, 0.55);
+  color: var(--eib-dark-text);
+}
+
+.eib-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* --------------------------------------------------------------------------
+   9. EDITORIAL LINK SYSTEM
+   -------------------------------------------------------------------------- */
+.eib-editorial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--eib-ink);
+  transition: all var(--transition-fast);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  text-decoration: none;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.eib-editorial-link:hover {
+  color: var(--eib-burgundy);
+  border-bottom-color: var(--eib-burgundy);
+}
+
+.eib-editorial-link svg,
+.eib-editorial-link i {
+  transition: transform var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eib-editorial-link:hover svg,
+.eib-editorial-link:hover i {
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .eib-editorial-link:hover svg:not(.fa-arrow-down),
+[dir="rtl"] .eib-editorial-link:hover i:not(.fa-arrow-down) {
+  transform: translateX(-4px) rotate(180deg);
+}
+
+[dir="rtl"] .eib-editorial-link svg:not(.fa-arrow-down),
+[dir="rtl"] .eib-editorial-link i:not(.fa-arrow-down) {
+  transform: rotate(180deg);
+}
+
+/* Vertical down arrows: always point down and glide downwards on hover */
+.eib-editorial-link svg.fa-arrow-down,
+.eib-editorial-link i.fa-arrow-down,
+[dir="rtl"] .eib-editorial-link svg.fa-arrow-down,
+[dir="rtl"] .eib-editorial-link i.fa-arrow-down {
+  transform: none !important;
+}
+
+.eib-editorial-link:hover svg.fa-arrow-down,
+.eib-editorial-link:hover i.fa-arrow-down,
+[dir="rtl"] .eib-editorial-link:hover svg.fa-arrow-down,
+[dir="rtl"] .eib-editorial-link:hover i.fa-arrow-down {
+  transform: translateY(4px) !important;
+}
+
+/* Global Font Awesome Alignment & Centering */
+i.fa-solid,
+i.fa-brands,
+i.fa-regular {
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* --------------------------------------------------------------------------
+   10. GLOBAL FORM SYSTEM
+   -------------------------------------------------------------------------- */
+.eib-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.eib-field-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--eib-ink);
+  letter-spacing: -0.01em;
+}
+
+.eib-input,
+.eib-select,
+.eib-textarea {
+  width: 100%;
+  padding: 13px 16px;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  color: var(--eib-ink);
+  background-color: var(--eib-cream);
+  border: 1px solid var(--eib-border-warm);
+  border-radius: var(--radius-xs);
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.eib-input::placeholder,
+.eib-textarea::placeholder {
+  color: var(--eib-taupe);
+  opacity: 0.7;
+}
+
+.eib-input:focus,
+.eib-select:focus,
+.eib-textarea:focus {
+  background-color: var(--eib-white);
+  border-color: var(--eib-ink);
+  box-shadow: 0 0 0 1px var(--eib-ink);
+}
+
+.eib-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* --------------------------------------------------------------------------
+   11. ARCHITECTURAL IMAGE TREATMENT — WARM BORDERS
+   -------------------------------------------------------------------------- */
+.eib-img-frame {
+  position: relative;
+  border: 1px solid var(--eib-border-warm);
+  background-color: var(--eib-cream);
+  padding: 10px;
+}
+
+.eib-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   12. ACCESSIBILITY & FOCUS
+   -------------------------------------------------------------------------- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--eib-burgundy);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+/* --------------------------------------------------------------------------
+   13. SECTION-LEVEL TYPOGRAPHY HELPERS
+   -------------------------------------------------------------------------- */
+.eib-section-title {
+  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--eib-ink);
+  margin-bottom: 16px;
+}
+
+.eib-section-subtitle {
+  font-size: clamp(1.0625rem, 1.3vw, 1.2rem);
+  color: var(--eib-ink-secondary);
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+[dir="rtl"] .eib-section-title {
+  letter-spacing: 0;
+}
+
+/* --------------------------------------------------------------------------
+   14. ATMOSPHERIC DEPTH — VERY SUBTLE RADIAL LIGHT
+   -------------------------------------------------------------------------- */
+
+/* Warm radial glow — used on hero, major content areas */
+.eib-glow-warm {
+  position: relative;
+  overflow: hidden;
+}
+
+.eib-glow-warm::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  right: -8%;
+  width: 60%;
+  height: 75%;
+  background: radial-gradient(ellipse at center,
+    rgba(244, 238, 222, 0.60) 0%,
+    transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.eib-glow-warm > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   15. UTILITY CLASSES
+   -------------------------------------------------------------------------- */
+.eib-text-burgundy   { color: var(--eib-burgundy); }
+.eib-text-terracotta { color: var(--eib-terracotta); }
+.eib-text-ink        { color: var(--eib-ink); }
+.eib-text-muted      { color: var(--eib-ink-secondary); }
+.eib-text-taupe      { color: var(--eib-taupe); }
+.eib-text-dark-muted { color: var(--eib-dark-muted); }
+
+.eib-bg-ivory  { background-color: var(--eib-ivory); }
+.eib-bg-cream  { background-color: var(--eib-cream); }
+.eib-bg-sand   { background-color: var(--eib-sand); }
+.eib-bg-dark   { background-color: var(--eib-dark-bg); }

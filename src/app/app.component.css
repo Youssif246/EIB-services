@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--eib-ivory);
+}
+
+app-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: block;
+  width: 100%;
+  padding-top: 16px;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+@media (max-width: 991px) {
+  app-navbar {
+    padding-top: 12px;
+  }
+}
+
+.eib-main-content {
+  flex: 1 0 auto;
+}
+
+:host-context([data-theme="dark"]) {
+  background-color: #0F1115;
+}
+

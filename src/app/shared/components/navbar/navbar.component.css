@@ -1,0 +1,677 @@
+/* ==========================================================================
+   EIB Floating Glassmorphic Island / Pill Navbar (Global Corporate Standard)
+   Design Philosophy: Apple, Linear & Stripe Luxury Architecture
+   Key Behaviors:
+     - Floating Pill Capsule with margins (not full-width)
+     - Ultra-refined Glassmorphism (blur-20px + specular light highlight)
+     - Sticky top-4 floating elevation with scroll depth
+     - Mobile Floating Island with drop-down glass expansion card
+   ========================================================================== */
+
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  padding-top: 16px;
+  box-sizing: border-box;
+  pointer-events: none;
+  transition: padding-top 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:host.menu-open {
+  pointer-events: auto !important;
+}
+
+@media (max-width: 991px) {
+  :host {
+    padding-top: 12px;
+  }
+}
+
+/* Outer Wrapper (Handles spacing and center containment) */
+.eib-floating-nav-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+:host.menu-open .eib-floating-nav-wrapper {
+  pointer-events: auto !important;
+}
+
+@media (min-width: 992px) {
+  .eib-floating-nav-wrapper {
+    padding: 0 28px;
+  }
+}
+
+/* ==========================================================================
+   1. The Floating Island Capsule (Main Pill Container)
+   ========================================================================== */
+.eib-floating-capsule {
+  pointer-events: auto;
+  position: relative;
+  z-index: 1002;
+  width: 100%;
+  max-width: 1180px;
+  height: 66px;
+  margin: 0 auto;
+  background: rgba(251, 249, 245, 0.82);
+  backdrop-filter: blur(22px) saturate(190%);
+  -webkit-backdrop-filter: blur(22px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 9999px;
+  box-shadow:
+    0 8px 30px rgba(21, 23, 26, 0.045),
+    0 1px 2px rgba(21, 23, 26, 0.03),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  transition:
+    height 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[dir="rtl"] .eib-floating-capsule {
+  padding: 0 22px 0 14px;
+}
+
+/* Scrolled State: Slightly more compact, denser glass, deeper shadow */
+.eib-floating-nav-wrapper.is-scrolled .eib-floating-capsule {
+  height: 60px;
+  background: rgba(251, 249, 245, 0.92);
+  border-color: rgba(255, 255, 255, 0.88);
+  box-shadow:
+    0 14px 40px rgba(21, 23, 26, 0.08),
+    0 2px 6px rgba(21, 23, 26, 0.04),
+    inset 0 1px 1px rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 991px) {
+  .eib-floating-capsule {
+    height: 58px;
+    padding: 0 10px 0 16px;
+  }
+
+  [dir="rtl"] .eib-floating-capsule {
+    padding: 0 16px 0 10px;
+  }
+
+  .eib-floating-nav-wrapper.is-scrolled .eib-floating-capsule {
+    height: 56px;
+  }
+}
+
+/* ==========================================================================
+   2. Brand Identity Logo (Right / Start in RTL)
+   ========================================================================== */
+.eib-capsule-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.eib-capsule-logo:hover {
+  opacity: 0.92;
+  transform: translateY(-0.5px);
+}
+
+/* ==========================================================================
+   3. Centered Desktop Navigation Links
+   ========================================================================== */
+.eib-capsule-menu {
+  display: none;
+  align-items: center;
+  gap: 2px;
+  background: rgba(21, 23, 26, 0.025);
+  border: 1px solid rgba(21, 23, 26, 0.04);
+  padding: 4px 6px;
+  border-radius: 9999px;
+}
+
+@media (min-width: 992px) {
+  .eib-capsule-menu {
+    display: flex;
+  }
+}
+
+.eib-capsule-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #383B3E;
+  text-decoration: none;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.eib-capsule-link:hover {
+  color: var(--eib-burgundy, #8F2525);
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 1px 3px rgba(21, 23, 26, 0.03);
+}
+
+.eib-capsule-link.is-active {
+  color: var(--eib-burgundy, #8F2525);
+  background: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(21, 23, 26, 0.06);
+}
+
+
+/* ==========================================================================
+   4. Actions & CTA (Left / End in RTL)
+   ========================================================================== */
+.eib-capsule-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Style / Theme Mode Switcher (Desktop) */
+.eib-capsule-theme {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 9999px;
+  background: rgba(21, 23, 26, 0.035);
+  border: 1px solid rgba(21, 23, 26, 0.06);
+  color: #4A4D50;
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  touch-action: manipulation;
+}
+
+@media (min-width: 992px) {
+  .eib-capsule-theme {
+    display: inline-flex;
+  }
+}
+
+.eib-capsule-theme:hover {
+  color: var(--eib-burgundy, #8F2525);
+  background: #FFFFFF;
+  border-color: rgba(143, 37, 37, 0.2);
+  transform: rotate(15deg);
+  box-shadow: 0 2px 8px rgba(21, 23, 26, 0.06);
+}
+
+.theme-icon {
+  display: inline-flex;
+  transition: transform 220ms ease;
+}
+
+.sun-icon {
+  color: #D48C18;
+}
+
+.moon-icon {
+  color: #4A4D50;
+}
+
+/* Understated Text Language Switcher */
+.eib-capsule-lang {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 9999px;
+  background: transparent;
+  border: none;
+  color: #4A4D50;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 180ms ease;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+@media (min-width: 992px) {
+  .eib-capsule-lang {
+    display: inline-flex;
+  }
+}
+
+.eib-capsule-lang:hover {
+  color: var(--eib-burgundy, #8F2525);
+  background: rgba(21, 23, 26, 0.04);
+}
+
+.lang-globe-icon {
+  display: inline-flex;
+  color: #7A756D;
+  transition: color 180ms ease;
+}
+
+.eib-capsule-lang:hover .lang-globe-icon {
+  color: var(--eib-burgundy, #8F2525);
+}
+
+/* Pill Shaped Advisory CTA in Signature Maroon */
+.eib-capsule-cta {
+  display: none;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 20px;
+  border-radius: 9999px;
+  background-color: var(--eib-burgundy, #8F2525);
+  color: #FFFFFF;
+  font-size: 0.84375rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(143, 37, 37, 0.22);
+  transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+@media (min-width: 992px) {
+  .eib-capsule-cta {
+    display: inline-flex;
+  }
+}
+
+.eib-capsule-cta:hover {
+  background-color: var(--eib-burgundy-hover, #6D1818);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(143, 37, 37, 0.3);
+}
+
+[dir="rtl"] .capsule-cta-arrow {
+  transform: rotate(180deg);
+}
+
+/* Minimalist Animated Toggle (Mobile) */
+.eib-capsule-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 9999px;
+  border: 1px solid rgba(21, 23, 26, 0.08);
+  background: rgba(21, 23, 26, 0.03);
+  cursor: pointer;
+  padding: 8px;
+  transition: all 200ms ease;
+  touch-action: manipulation;
+  position: relative;
+  z-index: 1003;
+  pointer-events: auto;
+}
+
+@media (min-width: 992px) {
+  .eib-capsule-toggle {
+    display: none;
+  }
+}
+
+.eib-capsule-toggle:hover {
+  background: rgba(21, 23, 26, 0.07);
+}
+
+.toggle-bar {
+  width: 18px;
+  height: 2px;
+  background-color: #15171A;
+  border-radius: 2px;
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), opacity 240ms ease;
+  pointer-events: none;
+}
+
+.toggle-bar.bar-1.open {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.toggle-bar.bar-2.open {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   5. Mobile Modern Floating Island Expansion Card
+   ========================================================================== */
+.eib-mobile-overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(18, 20, 24, 0.50);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 998;
+  pointer-events: auto;
+  touch-action: none;
+  animation: backdropFade 200ms ease;
+}
+
+@keyframes backdropFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.eib-mobile-floating-panel {
+  pointer-events: auto;
+  position: fixed;
+  top: 76px;
+  left: 16px;
+  right: 16px;
+  margin: 0 auto;
+  max-width: 540px;
+  width: calc(100% - 32px);
+  z-index: 1001;
+  background: rgba(251, 249, 245, 0.98);
+  backdrop-filter: blur(26px) saturate(190%);
+  -webkit-backdrop-filter: blur(26px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 16px 14px 18px;
+  box-shadow:
+    0 24px 60px rgba(21, 23, 26, 0.22),
+    0 2px 6px rgba(21, 23, 26, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.95);
+  max-height: calc(100vh - 92px);
+  max-height: calc(100dvh - 92px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  animation: panelSlideDown 240ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+@keyframes panelSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (min-width: 992px) {
+
+  .eib-mobile-floating-panel,
+  .eib-mobile-overlay-backdrop {
+    display: none !important;
+  }
+}
+
+/* Mobile Panel Links */
+.mobile-panel-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mobile-panel-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 14px;
+  border-radius: 12px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #15171A;
+  text-decoration: none;
+  min-height: 44px;
+  transition: all 180ms ease;
+}
+
+.mobile-panel-link:hover,
+.mobile-panel-link.is-active {
+  background: rgba(143, 37, 37, 0.06);
+  color: var(--eib-burgundy, #8F2525);
+}
+
+.panel-services-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel-services-badge {
+  font-size: 0.71875rem;
+  font-weight: 700;
+  color: var(--eib-burgundy, #8F2525);
+  background: rgba(143, 37, 37, 0.08);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  border: 1px solid rgba(143, 37, 37, 0.12);
+}
+
+.panel-arrow {
+  color: #8A8780;
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+[dir="rtl"] .panel-arrow {
+  transform: rotate(180deg);
+}
+
+.mobile-panel-link:hover .panel-arrow,
+.mobile-panel-link.is-active .panel-arrow {
+  color: var(--eib-burgundy, #8F2525);
+}
+
+[dir="rtl"] .mobile-panel-link:hover .panel-arrow,
+[dir="rtl"] .mobile-panel-link.is-active .panel-arrow {
+  transform: translateX(-4px) rotate(180deg);
+}
+
+/* Mobile Panel Footer */
+.mobile-panel-footer {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(21, 23, 26, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-panel-cta {
+  width: 100%;
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--eib-burgundy, #8F2525);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(143, 37, 37, 0.22);
+  transition: all 180ms ease;
+}
+
+.mobile-panel-cta:hover {
+  background-color: var(--eib-burgundy-hover, #6D1818);
+}
+
+[dir="rtl"] .panel-cta-arrow {
+  transform: rotate(180deg);
+}
+
+.mobile-panel-tools-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.mobile-panel-lang,
+.mobile-panel-theme {
+  width: 100%;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: rgba(21, 23, 26, 0.035);
+  border: 1px solid rgba(21, 23, 26, 0.06);
+  border-radius: 9999px;
+  color: #15171A;
+  font-size: 0.84375rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 180ms ease;
+  touch-action: manipulation;
+}
+
+.mobile-panel-lang:hover,
+.mobile-panel-theme:hover {
+  background: #FFFFFF;
+  color: var(--eib-burgundy, #8F2525);
+}
+
+/* ==========================================================================
+   Dark Theme Variant (when html has [data-theme="dark"])
+   ========================================================================== */
+:host-context([data-theme="dark"]) .eib-floating-capsule {
+  background: rgba(18, 20, 24, 0.85);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 10px 32px rgba(0, 0, 0, 0.45),
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+:host-context([data-theme="dark"]) .eib-floating-nav-wrapper.is-scrolled .eib-floating-capsule {
+  background: rgba(18, 20, 24, 0.95);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 16px 44px rgba(0, 0, 0, 0.6),
+    0 2px 6px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+:host-context([data-theme="dark"]) .eib-capsule-menu {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:host-context([data-theme="dark"]) .eib-capsule-link {
+  color: #C8C5BC;
+}
+
+:host-context([data-theme="dark"]) .eib-capsule-link:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+:host-context([data-theme="dark"]) .eib-capsule-link.is-active {
+  color: #FFFFFF;
+  background: rgba(143, 37, 37, 0.75);
+}
+
+:host-context([data-theme="dark"]) .eib-capsule-theme,
+:host-context([data-theme="dark"]) .eib-capsule-toggle {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #E2DFD7;
+}
+
+:host-context([data-theme="dark"]) .eib-capsule-theme:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+:host-context([data-theme="dark"]) .toggle-bar {
+  background-color: #F4F1EA;
+}
+
+:host-context([data-theme="dark"]) .eib-capsule-lang {
+  color: #B2ADA3;
+}
+
+:host-context([data-theme="dark"]) .eib-capsule-lang:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+:host-context([data-theme="dark"]) .eib-mobile-floating-panel {
+  background: rgba(20, 23, 27, 0.96);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.18);
+}
+
+:host-context([data-theme="dark"]) .mobile-panel-link {
+  color: #F4F1EA;
+}
+
+:host-context([data-theme="dark"]) .mobile-panel-link:hover,
+:host-context([data-theme="dark"]) .mobile-panel-link.is-active {
+  background: rgba(143, 37, 37, 0.2);
+  color: #FFFFFF;
+}
+
+:host-context([data-theme="dark"]) .mobile-panel-lang,
+:host-context([data-theme="dark"]) .mobile-panel-theme {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #F4F1EA;
+}
+
+:host-context([data-theme="dark"]) .mobile-panel-lang:hover,
+:host-context([data-theme="dark"]) .mobile-panel-theme:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+:host-context([data-theme="dark"]) .mobile-panel-footer {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+:host-context([data-theme="dark"]) .panel-services-badge {
+  color: #FF7B72;
+  background: rgba(168, 46, 46, 0.18);
+  border-color: rgba(168, 46, 46, 0.32);
+}
+
+:host-context([data-theme="dark"]) .panel-arrow {
+  color: #9CA3AF;
+}
+
+:host-context([data-theme="dark"]) .eib-capsule-cta {
+  background-color: #A82E2E;
+  box-shadow: 0 4px 18px rgba(168, 46, 46, 0.4);
+}
+
+:host-context([data-theme="dark"]) .eib-capsule-cta:hover {
+  background-color: #BD3535;
+  box-shadow: 0 6px 22px rgba(168, 46, 46, 0.6);
+}

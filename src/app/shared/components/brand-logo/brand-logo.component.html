@@ -1,0 +1,25 @@
+<div class="eib-logo-wrapper" [class.eib-logo-dark]="theme === 'dark'" [class.size-sm]="size === 'sm'"
+  [class.size-lg]="size === 'lg'">
+  <!-- Brand Geometric Emblem (Overlapping Red & Orange Squares) -->
+  <svg class="eib-logo-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <clipPath id="eib-logo-orange-clip">
+        <rect x="34" y="34" width="56" height="56" rx="8" />
+      </clipPath>
+    </defs>
+    <!-- Red Square (Top-Left) -->
+    <rect x="10" y="10" width="56" height="56" rx="8" fill="#DF362D" />
+    <!-- Orange Square (Bottom-Right with Overlap) -->
+    <rect x="34" y="34" width="56" height="56" rx="8" fill="#F27227" fill-opacity="0.94" />
+    <!-- Intersection Plane (Subtle multiplication deepening, seamlessly bounded) -->
+    <rect x="10" y="10" width="56" height="56" rx="8" fill="#B3281E" fill-opacity="0.22"
+      clip-path="url(#eib-logo-orange-clip)" />
+  </svg>
+
+  <!-- Brand Wordmark & Descriptor -->
+  <div class="eib-logo-text">
+    <span class="eib-logo-acronym">EIB</span>
+    <span class="eib-logo-descriptor en-desc">ELITE</span>
+    <span class="eib-logo-descriptor ar-desc">إيليت</span>
+  </div>
+</div>

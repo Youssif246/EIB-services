@@ -1,0 +1,105 @@
+:host {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.eib-logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+
+.eib-logo-mark {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+:host:hover .eib-logo-mark {
+  transform: scale(1.02);
+}
+
+.eib-logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+}
+
+.eib-logo-acronym {
+  font-family: var(--font-en);
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--eib-charcoal);
+  line-height: 1;
+}
+
+.eib-logo-descriptor {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--eib-charcoal);
+  margin-top: 4px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.ar-desc {
+  display: none;
+  font-family: var(--font-ar);
+  letter-spacing: 0.02em;
+  font-size: 0.65rem;
+}
+
+.en-desc {
+  display: block;
+}
+
+:host-context([dir="rtl"]) .ar-desc {
+  display: block;
+}
+
+:host-context([dir="rtl"]) .en-desc {
+  display: none;
+}
+
+/* Dark Theme Variant */
+.eib-logo-dark .eib-logo-acronym,
+:host-context([data-theme="dark"]) .eib-logo-acronym {
+  color: #F9FAFB !important;
+}
+
+.eib-logo-dark .eib-logo-descriptor,
+:host-context([data-theme="dark"]) .eib-logo-descriptor {
+  color: #9CA3AF !important;
+}
+
+/* Sizes */
+.size-sm .eib-logo-mark {
+  width: 34px;
+  height: 34px;
+}
+
+.size-sm .eib-logo-acronym {
+  font-size: 1.25rem;
+}
+
+.size-sm .eib-logo-descriptor {
+  font-size: 0.5rem;
+}
+
+.size-lg .eib-logo-mark {
+  width: 56px;
+  height: 56px;
+}
+
+.size-lg .eib-logo-acronym {
+  font-size: 1.95rem;
+}
+
+.size-lg .eib-logo-descriptor {
+  font-size: 0.7rem;
+}

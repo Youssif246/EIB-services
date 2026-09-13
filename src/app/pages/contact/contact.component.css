@@ -1,0 +1,551 @@
+/* ==========================================================================
+   EIB Contact Page — Compact Minimalist Horizontal Directory Stylesheet
+   Design Philosophy: Clean Flow, Compact Height, Architectural Density
+   Palette: Pure White Cards (#FFFFFF) over Warm Ivory Surface (#FAF8F5)
+   ========================================================================== */
+
+.contact-page {
+  display: block;
+}
+
+/* ==========================================================================
+   Main Section Canvas
+   ========================================================================== */
+.contact-section {
+  background-color: var(--eib-surface-hero, #FAF8F5);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 10%, rgba(255, 255, 255, 0.95) 0%, transparent 80%),
+    var(--eib-paper-grain);
+  padding-top: clamp(36px, 4.5vw, 56px);
+  padding-bottom: clamp(70px, 8vw, 110px);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(21, 23, 26, 0.08);
+}
+
+/* ==========================================================================
+   Breadcrumb Trail
+   ========================================================================== */
+.breadcrumb-trail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: #7E7A72;
+  margin-bottom: clamp(20px, 2.8vw, 36px);
+  position: relative;
+  z-index: 1;
+}
+
+.breadcrumb-item {
+  color: #5C5A56;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.breadcrumb-item:hover {
+  color: #8F2525;
+}
+
+.breadcrumb-sep {
+  color: rgba(21, 23, 26, 0.25);
+}
+
+.breadcrumb-current {
+  color: #15171A;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Section Header Block
+   ========================================================================== */
+.contact-header-block {
+  margin-bottom: clamp(36px, 4.5vw, 52px);
+  position: relative;
+  z-index: 1;
+}
+
+.header-main-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 992px) {
+  .header-main-flex {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .header-text-pane {
+    max-width: 760px;
+  }
+
+  .header-action-pane {
+    flex-shrink: 0;
+    margin-bottom: 6px;
+  }
+}
+
+.contact-main-headline {
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.16;
+  color: #15171A;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px 0;
+}
+
+[dir="rtl"] .contact-main-headline {
+  letter-spacing: normal;
+  line-height: 1.34;
+}
+
+.contact-lead-desc {
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.8;
+  color: #52504C;
+  margin: 0;
+  max-width: 62ch;
+}
+
+/* Primary Strategic Consultation Button */
+.primary-consult-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #8F2525;
+  color: #FAF8F5;
+  padding: 14px 28px;
+  border-radius: 4px;
+  font-size: 0.925rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(143, 37, 37, 0.3);
+  box-shadow: 0 2px 8px rgba(143, 37, 37, 0.14);
+  transition: background-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  white-space: nowrap;
+}
+
+.primary-consult-btn:hover {
+  background-color: #781D1D;
+  box-shadow: 0 6px 18px rgba(143, 37, 37, 0.24);
+  transform: translateY(-2px);
+}
+
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[dir="rtl"] .btn-arrow svg,
+[dir="rtl"] .btn-arrow i {
+  transform: rotate(180deg);
+}
+
+.primary-consult-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .primary-consult-btn:hover .btn-arrow {
+  transform: translateX(-4px);
+}
+
+/* ==========================================================================
+   Compact Minimalist Grid (2x2 Balanced Layout)
+   ========================================================================== */
+.contact-compact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(14px, 1.8vw, 20px);
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .contact-compact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Horizontal Compact Card (Clean Flow Architecture)
+   ========================================================================== */
+.compact-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(21, 23, 26, 0.08);
+  border-radius: 12px;
+  padding: 18px 22px;
+  min-height: 92px;
+  box-shadow: 0 2px 8px rgba(21, 23, 26, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-sizing: border-box;
+  transition:
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.compact-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(143, 37, 37, 0.3);
+  box-shadow: 0 8px 22px -4px rgba(143, 37, 37, 0.08);
+}
+
+.compact-card.wa-compact-card:hover {
+  border-color: rgba(37, 211, 102, 0.38);
+  box-shadow: 0 8px 22px -4px rgba(37, 211, 102, 0.1);
+}
+
+/* --------------------------------------------------------------------------
+   Slot 1: Right Icon Container (Soft Rounded)
+   -------------------------------------------------------------------------- */
+.card-icon-slot {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(143, 37, 37, 0.05);
+  color: #8F2525;
+  border: 1px solid rgba(143, 37, 37, 0.1);
+  flex-shrink: 0;
+  transition: background-color 220ms ease, color 220ms ease, transform 220ms ease;
+}
+
+.compact-card:hover .card-icon-slot {
+  background-color: #8F2525;
+  color: #FAF8F5;
+  transform: scale(1.04);
+}
+
+.card-icon-slot.wa-slot {
+  background-color: rgba(37, 211, 102, 0.08);
+  color: #0d8349;
+  border-color: rgba(37, 211, 102, 0.2);
+}
+
+.compact-card:hover .card-icon-slot.wa-slot {
+  background-color: #25D366;
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   Slot 2: Center Info (Title + Bold Primary Value)
+   -------------------------------------------------------------------------- */
+.card-info-slot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.slot-label {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #7A756D;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+[dir="rtl"] .slot-label {
+  letter-spacing: normal;
+}
+
+.slot-primary-val {
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  font-weight: 700;
+  color: #15171A;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slot-primary-val.link-val {
+  text-decoration: none;
+  transition: color 200ms ease;
+  width: fit-content;
+}
+
+.slot-primary-val.link-val:hover {
+  color: #8F2525;
+}
+
+.phone-dual-val {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dual-sep {
+  color: rgba(21, 23, 26, 0.25);
+  font-size: 0.8rem;
+}
+
+.ltr-dir {
+  direction: ltr;
+  unicode-bidi: embed;
+  font-family: var(--font-en);
+}
+
+/* --------------------------------------------------------------------------
+   Slot 3: Left Action (Mini Pill Button or Coverage Badge)
+   -------------------------------------------------------------------------- */
+.card-action-slot {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Mini Pill Button */
+.mini-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  border-radius: 6px;
+  background-color: rgba(143, 37, 37, 0.06);
+  color: #8F2525;
+  border: 1px solid rgba(143, 37, 37, 0.16);
+  font-size: 0.835rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.mini-pill-btn:hover {
+  background-color: #8F2525;
+  color: #FAF8F5;
+  border-color: #8F2525;
+  box-shadow: 0 4px 12px rgba(143, 37, 37, 0.2);
+  transform: translateY(-1px);
+}
+
+/* WhatsApp Mini Pill Button */
+.mini-pill-btn.wa-pill-btn {
+  background-color: rgba(37, 211, 102, 0.08);
+  color: #0d8349;
+  border-color: rgba(37, 211, 102, 0.22);
+}
+
+.mini-pill-btn.wa-pill-btn:hover {
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-color: #25D366;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+/* Directional Pill Arrow */
+.pill-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 200ms ease;
+}
+
+[dir="rtl"] .pill-arrow svg,
+[dir="rtl"] .pill-arrow i {
+  transform: rotate(180deg);
+}
+
+.mini-pill-btn:hover .pill-arrow {
+  transform: translateX(2px);
+}
+
+[dir="rtl"] .mini-pill-btn:hover .pill-arrow {
+  transform: translateX(-2px) rotate(180deg);
+}
+
+/* Coverage Badge */
+.compact-coverage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: rgba(21, 23, 26, 0.035);
+  border: 1px solid rgba(21, 23, 26, 0.08);
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #555149;
+  white-space: nowrap;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #8F2525;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px rgba(143, 37, 37, 0.15);
+}
+
+/* ==========================================================================
+   Mobile Responsive Behavior
+   ========================================================================== */
+@media (max-width: 600px) {
+  .compact-card {
+    padding: 16px;
+    flex-wrap: wrap;
+  }
+
+  .card-action-slot {
+    width: 100%;
+    margin-top: 4px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(21, 23, 26, 0.05);
+    justify-content: flex-end;
+  }
+
+  .primary-consult-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   CONTACT COMPONENT DARK THEME SPECIFIC OVERRIDES (:host-context)
+   ========================================================================== */
+:host-context([data-theme="dark"]) .contact-page {
+  background-color: #0F1115 !important;
+}
+
+:host-context([data-theme="dark"]) .contact-section {
+  background-color: #121419 !important;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(168, 46, 46, 0.12) 0%, rgba(18, 20, 25, 0) 70%),
+    var(--eib-paper-grain) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:host-context([data-theme="dark"]) .contact-main-headline {
+  color: #F9FAFB !important;
+}
+
+:host-context([data-theme="dark"]) .contact-lead-desc {
+  color: #9CA3AF !important;
+}
+
+:host-context([data-theme="dark"]) .breadcrumb-item {
+  color: #9CA3AF !important;
+}
+
+:host-context([data-theme="dark"]) .breadcrumb-item:hover {
+  color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .breadcrumb-current {
+  color: #F9FAFB !important;
+}
+
+:host-context([data-theme="dark"]) .breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.18) !important;
+}
+
+:host-context([data-theme="dark"]) .primary-consult-btn {
+  background-color: #A82E2E !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(168, 46, 46, 0.35) !important;
+}
+
+:host-context([data-theme="dark"]) .primary-consult-btn:hover {
+  background-color: #BD3535 !important;
+  box-shadow: 0 6px 26px rgba(168, 46, 46, 0.5) !important;
+}
+
+:host-context([data-theme="dark"]) .compact-card {
+  background-color: #1A1D24 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.06) !important;
+}
+
+:host-context([data-theme="dark"]) .compact-card:hover {
+  border-color: rgba(168, 46, 46, 0.4) !important;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55), 0 0 24px rgba(168, 46, 46, 0.22) !important;
+  transform: translateY(-2px);
+}
+
+:host-context([data-theme="dark"]) .card-icon-slot {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #E4E4E7 !important;
+}
+
+:host-context([data-theme="dark"]) .compact-card:hover .card-icon-slot {
+  background: rgba(168, 46, 46, 0.16) !important;
+  border-color: rgba(168, 46, 46, 0.45) !important;
+  color: #FFA3A3 !important;
+  box-shadow: 0 0 16px rgba(168, 46, 46, 0.3) !important;
+}
+
+:host-context([data-theme="dark"]) .card-icon-slot.wa-slot {
+  background: rgba(37, 211, 102, 0.1) !important;
+  border-color: rgba(37, 211, 102, 0.25) !important;
+  color: #25D366 !important;
+}
+
+:host-context([data-theme="dark"]) .compact-card:hover .wa-slot {
+  background: rgba(37, 211, 102, 0.2) !important;
+  box-shadow: 0 0 16px rgba(37, 211, 102, 0.35) !important;
+}
+
+:host-context([data-theme="dark"]) .slot-label {
+  color: #9CA3AF !important;
+}
+
+:host-context([data-theme="dark"]) .slot-primary-val {
+  color: #F9FAFB !important;
+}
+
+:host-context([data-theme="dark"]) .slot-primary-val.link-val:hover {
+  color: #FFA3A3 !important;
+}
+
+:host-context([data-theme="dark"]) .dual-sep {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+:host-context([data-theme="dark"]) .mini-pill-btn {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #E4E4E7 !important;
+}
+
+:host-context([data-theme="dark"]) .mini-pill-btn:hover {
+  background: #A82E2E !important;
+  border-color: #A82E2E !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 14px rgba(168, 46, 46, 0.4) !important;
+}
+
+:host-context([data-theme="dark"]) .mini-pill-btn.wa-pill-btn {
+  background: rgba(37, 211, 102, 0.12) !important;
+  border-color: rgba(37, 211, 102, 0.25) !important;
+  color: #25D366 !important;
+}
+
+:host-context([data-theme="dark"]) .mini-pill-btn.wa-pill-btn:hover {
+  background: #25D366 !important;
+  color: #0A0C0E !important;
+  box-shadow: 0 0 14px rgba(37, 211, 102, 0.4) !important;
+}
+
+:host-context([data-theme="dark"]) .card-action-slot {
+  border-top-color: rgba(255, 255, 255, 0.06) !important;
+}

@@ -1,0 +1,1021 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "initiateConsultation": "Initiate Consultation",
+    "switchLang": "العربية",
+    "coreCapabilities": "EIB Core Capabilities",
+    "allServices": "Core Services"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "INTEGRATED BUSINESS ARCHITECTURE & ENTERPRISE SOLUTIONS",
+      "title": "Unifying Capabilities. Engineering Sustainable Enterprise Value.",
+      "description": "Elite Integrated Business integrates management consulting, financial architecture, ISO excellence, and enterprise technology into a coherent operational reality that enables organizations to lead and scale with discipline.",
+      "primaryCta": "Initiate Consultation",
+      "secondaryCta": "Explore Core Services",
+      "tagLabel": "EIB ECOSYSTEM",
+      "tagSub": "Integrated Solutions",
+      "pillar1Title": "Multidisciplinary Synergy",
+      "pillar1Sub": "Bridging strategy, finance, ISO and tech",
+      "pillar2Title": "Rigorous Governance",
+      "pillar2Sub": "Strict alignment with regulatory standards"
+    },
+    "services": {
+      "eyebrow": "Core Capabilities",
+      "title": "The Eight Core Enterprise Services",
+      "subtitle": "An integrated service architecture structured to support the complete enterprise lifecycle—from strategy and governance to technology and reputation.",
+      "coreBadge": "Core Service",
+      "specializations": "Structured Specializations:",
+      "viewMandate": "View Service Mandate & Approach"
+    },
+    "industries": {
+      "eyebrow": "WHERE WE APPLY OUR EXPERTISE",
+      "title": "Domain Mastery Across Regulated Industries",
+      "subtitle": "Strategic consulting is meaningless without industry context. We adapt our capabilities to the regulatory, technological, and operational demands of critical sectors.",
+      "appliedFrameworks": "Applied Regulatory & Industry Frameworks:",
+      "operationalSolutions": "Operational Solutions Deployed:",
+      "cta": "Explore Our Expertise"
+    },
+    "about": {
+      "eyebrow": "The Integration Philosophy",
+      "title": "Beyond Fragmented Advisory: The Architecture of Integration",
+      "shortIntro": "We architect interconnected operating systems—transitioning enterprises from fragmented advisory to enduring institutional integration.",
+      "lead": "Elite Integrated Business was established to solve a critical enterprise challenge: fragmented advisory. Too often, strategy is detached from fiscal modeling, quality standards are isolated from operations, and technology is deployed without governance.",
+      "body": "Our brand mark—the intersection of disciplined geometric forms—embodies this exact conviction: that true enterprise resilience occurs at the intersection of business capabilities. We do not deliver abstract recommendations; we architect interconnected operating systems.",
+      "readMore": "Discover the Full EIB Story & Governance",
+      "pillar1Num": "01",
+      "pillar1Title": "Structural Diagnostics",
+      "pillar1Text": "Objective operational and fiscal diagnostics establishing an unvarnished baseline of enterprise capabilities.",
+      "pillar2Num": "02",
+      "pillar2Title": "Integrated Execution",
+      "pillar2Text": "Synchronized deployment uniting governance policies, financial controls, ISO systems, and technology workflows.",
+      "pillar3Num": "03",
+      "pillar3Title": "Capability Institutionalization",
+      "pillar3Text": "Direct knowledge transfer and internal capacity building ensuring systems endure without perpetual external reliance.",
+      "resultLabel": "The Sustainable Outcome",
+      "resultText": "From structural diagnostics to a self-sustaining, integrated enterprise operating model."
+    },
+    "trust": {
+      "eyebrow": "Enterprise Value Drivers",
+      "title": "Why Executive Leadership Chooses EIB",
+      "subtitle": "Institutional pillars delivering regulatory sovereignty, operational resilience, and competitive parity.",
+      "driver1Title": "Regulatory Sovereignty",
+      "driver1Desc": "Comprehensive fluency in Saudi and regional regulatory mandates—from SFDA healthcare and cold chain licensing to civil defense, port authorities, and municipal codes.",
+      "driver1Detail": "Regulatory Fluency · Critical Mandates · Audit Readiness",
+      "driver2Title": "Verified ISO Frameworks",
+      "driver2Desc": "Rigorous alignment with recognized international bodies across ISO 9001, 14001, 45001, 50001, 22000, and 21001, ensuring audit-readiness and global competitive parity.",
+      "driver2Detail": "Accredited ISO Bodies · Global Audits · Institutional Excellence",
+      "driver3Title": "Executable Architectures",
+      "driver3Desc": "We eschew theoretical decks in favor of actionable operational architectures, pragmatic standard operating procedures, and measurable performance transfers.",
+      "driver3Detail": "Pragmatic Frameworks · Standard SOPs · Measurable Capacity"
+    }
+  },
+  "serviceDetail": {
+    "breadcrumbHome": "Home",
+    "breadcrumbServices": "Services",
+    "coreCapabilityBadge": "Core Advisory Capability",
+    "primaryCta": "Initiate Consultation",
+    "methodologyCta": "Service Methodology",
+    "methodologyEyebrow": "STRATEGIC FOUNDATIONS",
+    "methodologyTitle": "Strategic Mandate & Delivery Approach",
+    "workstreamsEyebrow": "SPECIALIZED SERVICE WORKSTREAMS",
+    "workstreamsTitle": "Structured Execution Workstreams",
+    "workstreamsSubtitle": "Explore the dedicated operational workstreams, compliance standards, and concrete deliverables embedded in this capability.",
+    "coreOperationalFocus": "Core Operational Focus:",
+    "nextCapability": "Next Capability",
+    "notFoundTitle": "Service Not Found",
+    "notFoundDesc": "Please return to the main services directory.",
+    "returnHome": "Return to Home",
+    "prevSlide": "Previous Slide",
+    "nextSlide": "Next Slide"
+  },
+  "aboutPage": {
+    "breadcrumbAbout": "About EIB",
+    "eyebrow": "THE INSTITUTION & VISION",
+    "title": "Architecting Enterprise Resilience Through Integrated Capability",
+    "sub": "Elite Integrated Business (EIB): A progressive advisory house uniting administrative strategy, fiscal structuring, international quality standards, and enterprise technology into a coherent operational ecosystem.",
+    "metric1Val": "ISO",
+    "metric1Label": "Accredited Global Standards",
+    "metric1Sub": "Full Audit & Regulatory Readiness",
+    "metric2Val": "100%",
+    "metric2Label": "Integrated Solutions",
+    "metric2Sub": "Unified Execution Capabilities",
+    "metric3Val": "Enduring",
+    "metric3Label": "Operational Efficiency",
+    "metric3Sub": "Strict Governance & Risk Control",
+    "mandateEyebrow": "Strategic Mandate",
+    "quote": "“The greatest strategies falter when corporate direction is divorced from fiscal models, operational quality, and technology execution.”",
+    "quoteAuthor": "EIB Founding Philosophy",
+    "narrative1": "In today’s demanding commercial landscape, modern enterprises cannot afford disjointed advisory. Traditional advisory separates strategy from financial engineering, treats ISO compliance as an administrative checkbox, and deploys technology without operational alignment. The result is chronic operational friction and unrealized capital.",
+    "narrative2": "EIB was founded to eliminate these operational silos. Our delivery model ensures that strategic ambition is fortified by financial rigor, anchored by international quality standards (ISO), and scaled through enterprise technology. We do not deliver abstract slide decks; we build operating mechanisms that endure.",
+    "symbolTitle": "The Principle of Intersection",
+    "symbolSub": "Convergence of Strategic Capabilities",
+    "identityEyebrow": "Brand Identity Meaning",
+    "identityTitle": "The Geometric Meaning of the EIB Emblem",
+    "identityDesc": "The EIB emblem consists of intersecting geometric squares in disciplined red and orange tones. This intersection is not merely an aesthetic choice; it is the visual foundation of our operational philosophy:",
+    "meaning1Title": "Integration",
+    "meaning1Body": "Uniting distinct disciplines into a unified solution that eliminates organizational friction.",
+    "meaning2Title": "Connection & Intersection",
+    "meaning2Body": "Engineering vital intersections between executive strategy, operational teams, and regulatory mandates.",
+    "meaning3Title": "Operational Discipline",
+    "meaning3Body": "Instituting governance policies that safeguard the enterprise against operational leakage and regulatory risk.",
+    "valueModelEyebrow": "Value Creation Model",
+    "valueModelTitle": "How EIB Generates Tangible Enterprise Value",
+    "step1Title": "Evidence-Based Baseline",
+    "step1Text": "Thorough, uncompromised auditing of operational gaps, compliance standing, and fiscal structures establishing an honest baseline.",
+    "step2Title": "Standardized Engineering",
+    "step2Text": "Documenting standard operating procedures, governance charters, and quality architectures certified to international ISO standards.",
+    "step3Title": "Digital & Process Enablement",
+    "step3Text": "Automating operational handshakes and deploying enterprise software architectures to secure real-time visibility and zero-loss execution.",
+    "step4Title": "Capability Institutionalization",
+    "step4Text": "Systematic coaching and internal capacity building ensuring leadership and operational teams maintain and evolve systems autonomously."
+  },
+  "servicesPage": {
+    "breadcrumbServices": "Services",
+    "eyebrow": "OUR SERVICES",
+    "title": "Corporate Services & Integrated Solutions | Elite",
+    "desc": "Explore Elite's core service spectrum: management consulting, financial restructuring, ISO certifications, and digital enterprise systems.",
+    "exploreService": "Service Details",
+    "requestService": "Request Consultation",
+    "pillarsTitle": "Core Execution Pillars:",
+    "allServicesCount": "9 Integrated Capabilities & Advisory Domains"
+  },
+  "contactPage": {
+    "breadcrumbContact": "Corporate Contact",
+    "eyebrow": "CORPORATE ENGAGEMENT",
+    "title": "Contact Elite | Schedule Your Corporate Advisory Session",
+    "desc": "Connect with Elite's senior consultants to evaluate your operational challenges and explore enterprise solutions. Complete confidentiality assured.",
+    "directoryTitle": "Verified Contact Directory",
+    "directorySubtitle": "Official direct channels to engage with senior practice leadership and executive advisors.",
+    "col1Title": "Service Scope & Practice",
+    "col1Country": "Integrated Advisory Practice",
+    "col1City": "Field & Digital Readiness",
+    "col1CoverageBadge": "Comprehensive Enterprise Coverage",
+    "col1CoverageDesc": "Comprehensive advisory and operational solutions for enterprises across all sectors.",
+    "col2Title": "Verified Corporate Email",
+    "col2Email": "info@eliteintegrated.sa",
+    "col2Note": "Official mandates, documentation & project briefings",
+    "col3Title": "Direct Advisory Lines",
+    "col3Phone1": "+966 55 171 5783",
+    "col3Phone2": "+966 58 202 6325",
+    "col3Note": "Available Sunday through Thursday during office hours",
+    "howToReach": "Connect with us through the channel best suited to you.",
+    "viewLocation": "View Location",
+    "sendEmail": "Send an Email",
+    "callDirect": "Call Us Directly",
+    "chatWhatsApp": "Chat on WhatsApp",
+    "phoneTitle": "Telephone",
+    "waTitle": "WhatsApp",
+    "waActionText": "Connect with us via WhatsApp",
+    "waNote": "Direct advisory messaging & client coordination",
+    "formBadge": "Direct Inquiry Form",
+    "formTitle": "Send Us an Inquiry or RFP",
+    "formSubtitle": "Complete the form below and our multidisciplinary engineering & advisory practice will connect with you within 24 hours.",
+    "fieldName": "Full Name",
+    "placeholderName": "Enter your full name or organization",
+    "fieldEmail": "Work Email",
+    "placeholderEmail": "name@company.com",
+    "fieldPhone": "Phone / Mobile Number",
+    "placeholderPhone": "+966 5X XXX XXXX",
+    "fieldService": "Service Practice / Area of Interest",
+    "selectServicePlaceholder": "Select required advisory service...",
+    "optService1": "Management Consulting & Operational Models",
+    "optService2": "Financial Solutions & Capital Advisory",
+    "optService3": "ISO Certification & Quality Systems",
+    "optService4": "Corporate Communications & Public Relations",
+    "optService5": "Exhibitions & Conferences Management",
+    "optService6": "Business Technology & Enterprise Software",
+    "optService7": "Professional Development & Capacity Building",
+    "optService8": "Digital Marketing & Targeted Advertising",
+    "fieldMessage": "Project Overview / Consultation Brief",
+    "placeholderMessage": "Provide a brief description of project requirements, timeline, or objectives...",
+    "btnSubmit": "Submit Consultation Request",
+    "btnSubmitting": "Transmitting...",
+    "successTitle": "Your Message Has Been Received",
+    "successDesc": "Thank you for reaching out to Elite Integrated Business (EIB). Our advisory team will review your mandate and respond promptly.",
+    "ndaNote": "We adhere to strict professional standards and non-disclosure agreements (NDA) across all communications.",
+    "waQuickAction": "Chat Now",
+    "waStatus": "Available for quick response on WhatsApp",
+    "callDirectAction": "Call Directly",
+    "emailDirectAction": "Send Email",
+    "mapDirectAction": "View on Map",
+    "primaryAction": "Request Strategic Consultation",
+    "actionEmail": "Email Our Office",
+    "actionCall": "Call Us Directly",
+    "hqTitle": "Advisory Practice & Scope",
+    "hqCountry": "Integrated Strategic Practice",
+    "hqAddress": "Multidisciplinary enterprise coverage across sectors and markets",
+    "hqHours": "Sunday – Thursday: 8:30 AM – 5:30 PM",
+    "hqNote": "Executive briefings and strategic consultations hosted by prior appointment",
+    "advisoryEmailLabel": "Advisory Email",
+    "headquartersLabel": "Service Scope",
+    "headquartersVal": "Integrated Advisory & Operational Practice for Enterprises",
+    "confidentialNote": "All consultations and disclosures are governed under strict non-disclosure (NDA) and enterprise confidentiality protocols."
+  },
+  "cta": {
+    "eyebrow": "STRATEGIC ENGAGEMENT",
+    "title": "Ready to Transform Your Operational Infrastructure?",
+    "statement": "Engage with our multidisciplinary advisory teams. We assess organizational architecture, evaluate regulatory requirements, and design tailored enterprise execution roadmaps.",
+    "primaryBtn": "Request Strategic Consultation",
+    "secondaryBtn": "Explore Core Capabilities",
+    "confidentialNotice": "Strict Confidentiality & NDA Protocols Enforced Across All Engagements."
+  },
+  "footer": {
+    "tagline": "Elite Integrated Business integrates management consulting, financial architecture, ISO excellence, and enterprise technology into a unified operational standard.",
+    "navHeading": "Navigation",
+    "servicesHeading": "Core Services",
+    "contactHeading": "Direct Communication",
+    "home": "Home",
+    "about": "About EIB",
+    "services": "All Services & Capabilities",
+    "contact": "Contact & Advisory",
+    "allRights": "All rights reserved.",
+    "privacy": "Privacy Charter",
+    "terms": "Terms of Engagement",
+    "governance": "Governance & Compliance"
+  },
+  "services": [
+    {
+      "id": "01",
+      "slug": "management-consulting",
+      "accentColor": "orange",
+      "imageUrl": "services-images/management_consulting_service.webp",
+      "title": "Management Consulting",
+      "shortDesc": "Strategic architecture, institutional governance, operating model engineering, and disciplined execution advisory.",
+      "pills": [
+        "Corporate Governance & Operating Models",
+        "Strategic Architecture & Change Management",
+        "Expenditure Restructuring",
+        "Process Operations & SOPs"
+      ],
+      "heroTagline": "Bridging high-level strategy with operational reality through rigorous organizational architecture.",
+      "overview": {
+        "what": {
+          "title": "What It Is",
+          "text": "Our Management Consulting practice helps enterprise leaders navigate systemic transformation, institutionalize sound governance, and design agile operating models that endure market volatility."
+        },
+        "why": {
+          "title": "Why It Matters",
+          "text": "Without a coherent operating model, strategies stall at the implementation barrier. EIB ensures that organizational structures, decision rights, and performance systems remain tightly coupled with business objectives."
+        },
+        "how": {
+          "title": "How EIB Approaches It",
+          "text": "We apply structured diagnostic audits, benchmark against national and international standards, engineer tailored roadmaps, and provide hands-on capability transfer to internal teams."
+        }
+      },
+      "subServices": [
+        {
+          "num": "01",
+          "title": "Institutional Governance & Operating Models",
+          "desc": "Designing organizational hierarchies, board charter frameworks, delegated authority matrices, and accountability protocols.",
+          "focusPoints": [
+            "Delegation of Authority (DoA)",
+            "Committee Charters",
+            "Functional Mandates"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Strategic Roadmaps & Transformation Execution",
+          "desc": "Translating strategic mandates into multi-phase transformation programs with clear ownership and risk mitigation.",
+          "focusPoints": [
+            "Milestone Roadmapping",
+            "Resource Allocation Plans",
+            "Change Architecture"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Performance Architecture & KPI Orchestration",
+          "desc": "Developing cascading KPI frameworks, dashboard governance, and performance review rhythms across enterprise tiers.",
+          "focusPoints": [
+            "Cascaded Scorecards",
+            "Operational Health Metrics",
+            "Executive Dashboards"
+          ]
+        },
+        {
+          "num": "04",
+          "title": "Process Re-engineering & Workflow Optimization",
+          "desc": "Streamlining cross-functional workflows, eliminating redundancies, and establishing standard operating procedures (SOPs).",
+          "focusPoints": [
+            "Value Stream Mapping",
+            "SOP Documentation",
+            "Cross-Functional Handshakes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "financial-solutions",
+      "accentColor": "red",
+      "imageUrl": "services-images/financial_solutions_service.webp",
+      "title": "Financial Solutions",
+      "shortDesc": "Corporate financial structuring, capital advisory, feasibility assessment, and fiscal governance models.",
+      "pills": [
+        "Corporate Financial Structuring",
+        "Capital & Investment Advisory",
+        "Economic Feasibility Studies",
+        "Liquidity & Fiscal Governance"
+      ],
+      "heroTagline": "Delivering fiscal discipline and capital clarity for complex commercial investments and restructuring.",
+      "overview": {
+        "what": {
+          "title": "What It Is",
+          "text": "Our Financial Solutions practice provides rigorous analytical and strategic financial advisory, from multi-scenario feasibility studies to corporate restructuring and working capital optimization."
+        },
+        "why": {
+          "title": "Why It Matters",
+          "text": "Capital misallocation and opaque financial visibility threaten enterprise resilience. EIB provides the quantitative foundation needed for prudent capital allocation and stakeholder confidence."
+        },
+        "how": {
+          "title": "How EIB Approaches It",
+          "text": "We build stress-tested financial models, conduct verifiable market validation, evaluate fiscal risk sensitivities, and establish sustainable internal control frameworks."
+        }
+      },
+      "subServices": [
+        {
+          "num": "01",
+          "title": "Feasibility Studies & Market Viability",
+          "desc": "Comprehensive financial projections, capital expenditure planning, and sensitivity analyses for new ventures.",
+          "focusPoints": [
+            "CapEx & OpEx Modeling",
+            "IRR & NPV Calculation",
+            "Downside Sensitivity Testing"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Corporate Financial Modeling & Valuation",
+          "desc": "Dynamic financial forecasting models for strategic decision-making, investor presentations, and liquidity planning.",
+          "focusPoints": [
+            "3-Statement Integrated Models",
+            "Cash Flow Forecasting",
+            "Valuation Multiples"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Capital Structuring & Restructuring Advisory",
+          "desc": "Debt optimization, capital stack re-balancing, and financial turnaround strategies for distressed or expanding operations.",
+          "focusPoints": [
+            "Debt Capacity Analysis",
+            "Working Capital Optimization",
+            "Cost Rationalization"
+          ]
+        },
+        {
+          "num": "04",
+          "title": "Fiscal Governance & Internal Controls",
+          "desc": "Establishing financial compliance procedures, expenditure authorities, and audit-ready internal accounting policies.",
+          "focusPoints": [
+            "Segregation of Duties",
+            "Expenditure Approval Policies",
+            "Audit Readiness Review"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "quality-iso-excellence",
+      "accentColor": "orange",
+      "imageUrl": "services-images/iso-service.webp",
+      "title": "Quality, ISO & Excellence",
+      "shortDesc": "International standards certification readiness, quality management architectures, and institutional excellence models.",
+      "pills": [
+        "International ISO Accreditation",
+        "Quality Systems Architecture",
+        "Institutional Excellence Models",
+        "Audit Readiness & Compliance"
+      ],
+      "heroTagline": "Embedding systemic quality assurance and compliance into the daily operational heartbeat of the organization.",
+      "overview": {
+        "what": {
+          "title": "What It Is",
+          "text": "We qualify organizations to meet rigorous international standards (ISO) and national institutional excellence models, converting compliance into a lasting competitive moat."
+        },
+        "why": {
+          "title": "Why It Matters",
+          "text": "Standardized operations reduce defect rates, ensure customer satisfaction, open access to international markets, and fulfill stringent regulatory mandates."
+        },
+        "how": {
+          "title": "How EIB Approaches It",
+          "text": "We conduct gap assessments, draft practical documentation architectures, train internal auditors, run mock audits, and accompany clients through final certification audits."
+        }
+      },
+      "subServices": [
+        {
+          "num": "01",
+          "title": "Quality Management Systems (ISO 9001)",
+          "desc": "End-to-end qualification, policy drafting, manual creation, and procedure standardization for quality assurance.",
+          "framework": "ISO 9001:2015",
+          "focusPoints": [
+            "Context Analysis & Scope",
+            "Risk-Based Thinking",
+            "Internal Audit Coaching"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Environmental & Energy Management (ISO 14001 / ISO 50001)",
+          "desc": "Architecting environmental impact controls, regulatory environmental compliance, and energy baseline efficiency systems.",
+          "framework": "ISO 14001 / ISO 50001",
+          "focusPoints": [
+            "Aspect & Impact Registers",
+            "Energy Baseline Verification",
+            "Regulatory Environmental Filing"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Occupational Health & Safety (ISO 45001)",
+          "desc": "Establishing hazard identification, operational safety controls, incident investigation systems, and emergency preparedness.",
+          "framework": "ISO 45001:2018",
+          "focusPoints": [
+            "Hazard Identification & Risk Assessment (HIRA)",
+            "Safety SOPs",
+            "Emergency Drills"
+          ]
+        },
+        {
+          "num": "04",
+          "title": "Institutional Excellence & Maturity Models",
+          "desc": "Advisory on national and international excellence awards (EFQM, King Abdulaziz Quality Award) and organizational maturity assessments.",
+          "focusPoints": [
+            "Criteria Mapping",
+            "Evidence Portfolio Building",
+            "Self-Assessment Guidance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "pr-media",
+      "accentColor": "red",
+      "imageUrl": "services-images/media_service.webp",
+      "title": "PR & Media",
+      "shortDesc": "Strategic corporate communications, institutional reputation stewardship, and executive media positioning.",
+      "pills": [
+        "Corporate & Executive Communications",
+        "Reputation Management & Protocol",
+        "Internal Media Campaigns",
+        "Crisis Communication Protocols"
+      ],
+      "heroTagline": "Protecting and projecting institutional credibility across key stakeholder, industry, and public arenas.",
+      "overview": {
+        "what": {
+          "title": "What It Is",
+          "text": "Our PR & Media practice crafts coherent institutional narratives, builds proactive stakeholder relationships, and establishes resilient crisis communications frameworks."
+        },
+        "why": {
+          "title": "Why It Matters",
+          "text": "Enterprise value is inseparable from reputation. Proactive and disciplined public positioning establishes market trust, mitigates regulatory friction, and attracts strategic partnerships."
+        },
+        "how": {
+          "title": "How EIB Approaches It",
+          "text": "We establish narrative pillars, develop clear message houses, prepare crisis response playbooks, and manage high-level executive communication touchpoints."
+        }
+      },
+      "subServices": [
+        {
+          "num": "01",
+          "title": "Strategic Corporate Narrative & Messaging",
+          "desc": "Formulating the master narrative architecture, core corporate values, and tailored messaging matrices for distinct stakeholder groups.",
+          "focusPoints": [
+            "Corporate Message House",
+            "Tone of Voice Guide",
+            "Key Talking Points"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Reputation Stewardship & Crisis Playbooks",
+          "desc": "Developing response protocols, escalation tiers, spokesperson guidelines, and holding statements for operational contingencies.",
+          "focusPoints": [
+            "Risk Escalation Matrices",
+            "Approved Holding Statements",
+            "Spokesperson Protocols"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Executive Thought Leadership & Media Relations",
+          "desc": "Positioning enterprise executives as recognized subject matter authorities through targeted editorial placements and industry forums.",
+          "focusPoints": [
+            "Op-Ed Placement Architecture",
+            "Media Briefing Packs",
+            "Interview Preparation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "slug": "exhibitions-events",
+      "accentColor": "orange",
+      "imageUrl": "services-images/events_service.webp",
+      "title": "Exhibitions & Events",
+      "shortDesc": "End-to-end enterprise summits, official protocol management, exhibition infrastructure, and visitor journey architecture.",
+      "pills": [
+        "Major Conference & Expo Management",
+        "VIP Protocols & Delegation Hosting",
+        "Visitor Experience Engineering",
+        "Permits & Regulatory Coordination"
+      ],
+      "heroTagline": "Orchestrating high-stakes commercial summits and institutional ceremonies with precision logistics and regulatory compliance.",
+      "overview": {
+        "what": {
+          "title": "What It Is",
+          "text": "We provide full turnkey event management for corporate and institutional conferences, business exhibitions, ceremonies, and forums, covering licensing, technical production, and audience flow."
+        },
+        "why": {
+          "title": "Why It Matters",
+          "text": "Institutional gatherings serve as the live public face of enterprise leadership. Meticulous execution protects brand dignity, satisfies security mandates, and delivers verifiable stakeholder value."
+        },
+        "how": {
+          "title": "How EIB Approaches It",
+          "text": "We handle regulatory licensing, venue spatial design, crowd safety engineering, AV production oversight, VIP protocol protocols, and digital attendee measurement."
+        }
+      },
+      "subServices": [
+        {
+          "num": "01",
+          "title": "Licensing, Permitting & Regulatory Coordination",
+          "desc": "Securing official event permits, coordinating with governmental authorities, and ensuring strict compliance with local regulatory codes.",
+          "focusPoints": [
+            "Official Permits Filing",
+            "Municipal & Civil Defense Clearance",
+            "Compliance Audits"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Venue Architecture & Technical Production",
+          "desc": "Master spatial layout, stage engineering, acoustic and lighting design, translation booth setups, and contractor management.",
+          "focusPoints": [
+            "Floor Plan Logistics",
+            "Acoustic & Visual Systems",
+            "Exhibitor Booth Standards"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Crowd Safety & VIP Protocol Stewardship",
+          "desc": "Safety route engineering, emergency egress plans, dedicated VIP entry flows, and formal diplomatic/corporate protocol handling.",
+          "focusPoints": [
+            "Egress & Ingress Modeling",
+            "VIP Lounge Protocol",
+            "On-Site Medical & Safety Readiness"
+          ]
+        },
+        {
+          "num": "04",
+          "title": "Digital Registration & Impact Analytics",
+          "desc": "Automated badge printing, attendance validation, digital matchmaking systems, and post-event analytical reporting.",
+          "focusPoints": [
+            "On-Site Badging Infrastructure",
+            "Visitor Flow Heatmaps",
+            "Post-Event Metric Reports"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "slug": "business-technology-software",
+      "accentColor": "orange",
+      "imageUrl": "services-images/business_technology_service.webp",
+      "title": "Business Technology & Software",
+      "shortDesc": "Enterprise software solutions, digital maturity roadmaps, systems integration, workflow automation, and cybersecurity governance.",
+      "pills": [
+        "Enterprise Software Solutions",
+        "Digital Maturity Governance",
+        "System Integration & Data Flows",
+        "Process Automation & Cybersecurity"
+      ],
+      "heroTagline": "Transforming enterprise operations through robust architecture, secure technology integration, and workflow automation.",
+      "overview": {
+        "what": {
+          "title": "What It Is",
+          "text": "We guide organizations through technology modernizations, bridging business goals with enterprise platforms, custom software, automated data pipelines, and cyber resilience."
+        },
+        "why": {
+          "title": "Why It Matters",
+          "text": "Disjointed software silos cause operational bottlenecks, data blindness, and severe vulnerability. Modern enterprise architecture ensures scalable agility and verifiable data integrity."
+        },
+        "how": {
+          "title": "How EIB Approaches It",
+          "text": "We conduct digital maturity assessments, architect the target systems landscape, oversee vendor and platform implementations, and build compliant governance controls."
+        }
+      },
+      "subServices": [
+        {
+          "num": "01",
+          "title": "Digital Maturity Assessment & Tech Strategy",
+          "desc": "Evaluating existing enterprise IT infrastructure, identifying capability gaps, and drafting phased modernization roadmaps.",
+          "focusPoints": [
+            "Architecture Gap Audits",
+            "Vendor Capability Evaluation",
+            "Technology Budget Strategy"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Enterprise Architecture & Systems Integration",
+          "desc": "Designing unified data flows across ERP, CRM, inventory, and supply chain applications to eliminate operational silos.",
+          "focusPoints": [
+            "API & Middleware Orchestration",
+            "Database Normalization",
+            "Legacy Migration Plans"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Workflow Automation & Process Digitization",
+          "desc": "Automating manual document flows, approval hierarchies, and reporting cycles to accelerate turnaround times.",
+          "focusPoints": [
+            "Automated Approval Routes",
+            "Data Capture Pipelines",
+            "Operational Event Alerts"
+          ]
+        },
+        {
+          "num": "04",
+          "title": "Cybersecurity Governance & Data Protection",
+          "desc": "Aligning technology operations with national cybersecurity regulatory standards, access control policies, and continuity plans.",
+          "focusPoints": [
+            "Access Control Matrices",
+            "Data Backup & Recovery SOPs",
+            "Security Awareness Protocols"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "slug": "professional-development",
+      "accentColor": "red",
+      "imageUrl": "services-images/professional_development_service.webp",
+      "title": "Professional Development",
+      "shortDesc": "Institutional capacity building, executive leadership development, competency frameworks, and specialized training programs.",
+      "pills": [
+        "Institutional Capability Building",
+        "Executive Leadership Programs",
+        "Competency & Skills Frameworks",
+        "Specialized Training Modules"
+      ],
+      "heroTagline": "Equipping organizational talent with the strategic competencies, leadership rigor, and specialized capabilities to execute.",
+      "overview": {
+        "what": {
+          "title": "What It Is",
+          "text": "We build structured learning architectures and competency frameworks that elevate workforce capabilities in alignment with strategic business mandates."
+        },
+        "why": {
+          "title": "Why It Matters",
+          "text": "Even the best strategies fail without competent execution. Structured professional development builds organizational agility, ensures talent retention, and guarantees capability continuity."
+        },
+        "how": {
+          "title": "How EIB Approaches It",
+          "text": "We assess competency baselines, design targeted institutional learning journeys, apply accredited pedagogical standards (ISO 21001), and measure post-training performance transfer."
+        }
+      },
+      "subServices": [
+        {
+          "num": "01",
+          "title": "Executive Leadership & Strategic Governance",
+          "desc": "Advanced programs for enterprise executives focusing on strategic decision-making, crisis navigation, and board relations.",
+          "focusPoints": [
+            "Strategic Decision Frameworks",
+            "Crisis Leadership Simulations",
+            "Executive Governance"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Competency Frameworks & Skills Auditing",
+          "desc": "Developing job family competency dictionaries, behavioral indicators, and diagnostic workforce capability assessments.",
+          "focusPoints": [
+            "Competency Mapping",
+            "Skills Matrix Design",
+            "Succession Readiness Diagnostics"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Specialized Professional Certification Programs",
+          "desc": "Technical qualification tracks in quality management, project management, financial analysis, and operational safety.",
+          "focusPoints": [
+            "Standardized Curricula",
+            "Practical Case Methodologies",
+            "Certification Examination Prep"
+          ]
+        },
+        {
+          "num": "04",
+          "title": "Training Quality Management (ISO 21001 Alignment)",
+          "desc": "Establishing institutional standards for internal corporate academies and training departments based on ISO 21001 requirements.",
+          "framework": "ISO 21001",
+          "focusPoints": [
+            "Trainer Qualification SOPs",
+            "Learner Evaluation Systems",
+            "Continuous Curriculum Review"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "slug": "digital-marketing-advertising",
+      "accentColor": "orange",
+      "imageUrl": "services-images/digital_marketing_service.webp",
+      "title": "Digital Marketing & Advertising",
+      "shortDesc": "Data-driven market positioning, digital campaign architecture, performance advertising, and customer acquisition systems.",
+      "pills": [
+        "Data-Driven Market Positioning",
+        "Targeted Ad Campaign Engineering",
+        "Digital Growth & Funnels",
+        "Customer Acquisition Systems"
+      ],
+      "heroTagline": "Engineering disciplined, measurable digital marketing ecosystems that drive enterprise customer acquisition.",
+      "overview": {
+        "what": {
+          "title": "What It Is",
+          "text": "We build strategic digital marketing frameworks that combine market intelligence, performance media acquisition, conversion architecture, and rigorous analytical reporting."
+        },
+        "why": {
+          "title": "Why It Matters",
+          "text": "Unstructured advertising generates wasteful expenditure without building tangible equity. Disciplined digital architectures ensure accountability, clear attribution, and measurable commercial return."
+        },
+        "how": {
+          "title": "How EIB Approaches It",
+          "text": "We establish audience segmentation models, design multichannel funnel architectures, optimize cost-per-acquisition across digital channels, and audit marketing ROI."
+        }
+      },
+      "subServices": [
+        {
+          "num": "01",
+          "title": "Market Intelligence & Digital Positioning Strategy",
+          "desc": "Analyzing competitive digital footprints, target customer search behaviors, and brand differentiation opportunities.",
+          "focusPoints": [
+            "Audience Persona Modeling",
+            "Search Intent Analysis",
+            "Channel Opportunity Audits"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Multi-Channel Performance Campaign Architecture",
+          "desc": "Structured paid search, social media performance advertising, and programmatic campaigns with rigorous bid management.",
+          "focusPoints": [
+            "Paid Search Architecture",
+            "Paid Social Segmentation",
+            "Budget Pacing Governance"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Conversion Rate Optimization & Funnel Design",
+          "desc": "Designing conversion-focused landing experiences, call-to-action architectures, and behavioral lead nurturing sequences.",
+          "focusPoints": [
+            "Landing Page Diagnostics",
+            "A/B Testing Frameworks",
+            "Form Drop-off Mitigation"
+          ]
+        },
+        {
+          "num": "04",
+          "title": "Attribution Modeling & Marketing Analytics",
+          "desc": "Implementing compliant tracking architectures, multichannel attribution models, and executive marketing dashboards.",
+          "focusPoints": [
+            "Event Tracking Governance",
+            "Cross-Channel Attribution",
+            "CAC & LTV Analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "slug": "contracting-construction",
+      "accentColor": "navy",
+      "imageUrl": "services-images/constractions.webp",
+      "title": "General Contracting & Construction",
+      "shortDesc": "Execution of major construction projects, civil and structural engineering, electromechanical works (MEP), and infrastructure with highest engineering standards.",
+      "externalUrl": "https://www.eliteconstructs.com/",
+      "pills": [
+        "General Contracting & Civil Works",
+        "Electromechanical Engineering (MEP)",
+        "Infrastructure & Utilities Networks",
+        "Engineering Project Management"
+      ],
+      "heroTagline": "Integrated engineering and contracting solutions executing your major ventures with precision and certified standards.",
+      "overview": {
+        "what": {
+          "title": "What is the Service?",
+          "text": "Elite's specialized division for general contracting, civil construction, MEP systems, and infrastructure development delivering turnkey projects with high engineering precision."
+        },
+        "why": {
+          "title": "The Problem Elite Solves",
+          "text": "Fragmented contractors and poor coordination between civil and MEP works cause delays and budget overruns; Elite delivers cohesive end-to-end execution on schedule and budget."
+        },
+        "how": {
+          "title": "Field Methodology",
+          "text": "We deploy specialized engineers and advanced equipment to execute all project milestones adhering to strict safety and quality standards."
+        }
+      },
+      "subServices": [
+        {
+          "num": "01",
+          "title": "Civil & Structural Works",
+          "desc": "Execution of reinforced concrete, steel structures, commercial and industrial buildings to certified specifications.",
+          "focusPoints": [
+            "Structural engineering execution with precision testing",
+            "Architectural finishing and modern exterior facades",
+            "Quality assurance and material testing on site"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Electromechanical Systems (MEP)",
+          "desc": "Design, procurement, and installation of HVAC, fire protection, electrical, and plumbing infrastructure.",
+          "focusPoints": [
+            "Central HVAC and specialized ventilation systems",
+            "Certified fire detection and firefighting systems",
+            "Low-current, power, and sanitary plumbing networks"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Infrastructure & Project Management",
+          "desc": "Execution of stormwater networks, site utilities, and comprehensive field management ensuring on-time delivery.",
+          "focusPoints": [
+            "Infrastructure networks and stormwater management",
+            "Field supervision and occupational safety enforcement",
+            "Progress monitoring and technical compliance reporting"
+          ]
+        }
+      ]
+    }
+  ],
+  "industries": [
+    {
+      "id": "smart-manufacturing",
+      "num": "01",
+      "imageUrl": "sector-images/manufacturing_sector.webp",
+      "title": "Manufacturing & Production",
+      "subtitle": "SIRI Assessments & Industrial Automation Roadmaps",
+      "desc": "Guiding industrial plants through Smart Industry Readiness Index (SIRI) assessments, operational technology modernization, and digital shop-floor governance.",
+      "frameworks": [
+        "SIRI Assessment",
+        "Industry 4.0",
+        "ISO 9001"
+      ],
+      "keySolutions": [
+        "SIRI Readiness Diagnostic across Process, Tech & Org",
+        "Prioritization Matrix for Industrial Automation",
+        "Shop-Floor Operational Data Governance",
+        "Predictive Maintenance & Quality Control Systems"
+      ]
+    },
+    {
+      "id": "warehousing-logistics",
+      "num": "02",
+      "imageUrl": "sector-images/warehousing_sector.webp",
+      "title": "Warehousing & Supply Chain",
+      "subtitle": "WMS Architecture, Cold Chain & Licensing Standards",
+      "desc": "Advising logistics hubs on warehouse licensing, security protocols, WMS software integration, RFID/barcode traceability, cold chain monitoring, and FIFO/FEFO optimization.",
+      "frameworks": [
+        "WMS Integration",
+        "Cold Chain Standards",
+        "Traceability & Security"
+      ],
+      "keySolutions": [
+        "Warehouse Facility Licensing & Regulatory Safety Design",
+        "WMS Implementation & Inventory Traceability Architecture",
+        "FEFO / FIFO Workflow Engineering",
+        "Cold Chain Integrity Monitoring & Temperature SOPs"
+      ]
+    },
+    {
+      "id": "maritime-ports",
+      "num": "03",
+      "imageUrl": "sector-images/energy_sector.webp",
+      "title": "Energy & Utilities",
+      "subtitle": "Terminal Operations, Grid & Energy Management Compliance",
+      "desc": "Navigating critical utility governance, energy infrastructure operational efficiency, regulatory readiness, and international safety protocols.",
+      "frameworks": [
+        "Facility Safety",
+        "Operational Continuity",
+        "ISPS Code",
+        "ISO 50001"
+      ],
+      "keySolutions": [
+        "Operational Safety & Critical Infrastructure Protection",
+        "Power Generation & Distribution Process Optimization",
+        "Emergency Continuity Planning & Regulatory Audit Readiness",
+        "Environmental Compliance & Emissions Monitoring Governance"
+      ]
+    },
+    {
+      "id": "medical-devices",
+      "num": "04",
+      "imageUrl": "sector-images/healthcare_sector.webp",
+      "title": "Healthcare & Laboratories",
+      "subtitle": "SFDA / MDMA Compliance, ISO 13485 & Technical Files",
+      "desc": "Guiding manufacturers and distributors through medical establishment licensing, MDMA approvals, ISO 13485 quality systems, risk management files, and post-market surveillance.",
+      "frameworks": [
+        "ISO 13485",
+        "MDMA / SFDA",
+        "ISO 14971"
+      ],
+      "keySolutions": [
+        "Medical Device Establishment Licensing (MDEL) Advisory",
+        "ISO 13485 Medical & Lab Quality Management Implementation",
+        "Technical File Compilation & Risk Management (ISO 14971)",
+        "Sterilization, Packaging Controls & Post-Market Surveillance"
+      ]
+    },
+    {
+      "id": "food-water",
+      "num": "05",
+      "imageUrl": "sector-images/food_sector.webp",
+      "title": "Food & Drug Safety",
+      "subtitle": "HACCP, ISO 22000, PRPs & Lab Traceability",
+      "desc": "Implementing prerequisite programs (PRPs), hazard analysis critical control points (HACCP), ISO 22000 architectures, laboratory quality testing, and recall traceability systems.",
+      "frameworks": [
+        "HACCP",
+        "ISO 22000",
+        "SFDA Compliance"
+      ],
+      "keySolutions": [
+        "Food & Drug Safety Management Architecture (ISO 22000 / FSSC)",
+        "HACCP Study Documentation & Critical Limit Verification",
+        "Laboratory Quality Verification & SFDA Protocol Design",
+        "Traceability & Rapid Product Recall Mock Drill Systems"
+      ]
+    },
+    {
+      "id": "sustainability-energy",
+      "num": "06",
+      "imageUrl": "sector-images/environment_sector.webp",
+      "title": "Environment & Energy Efficiency",
+      "subtitle": "ISO 50001, Carbon Baselines & Resource Optimization",
+      "desc": "Advising facilities on energy consumption audits, ISO 50001 energy management certification, greenhouse gas accounting, water circularity, and ESG reporting frameworks.",
+      "frameworks": [
+        "ISO 50001",
+        "GHG Protocol",
+        "ESG Frameworks"
+      ],
+      "keySolutions": [
+        "Energy Review & Baseline Calculation (EnB)",
+        "ISO 50001 Energy Management Qualification",
+        "Water Circularity & Industrial Waste Stream Optimization",
+        "Corporate ESG Readiness & Sustainability Metric Reporting"
+      ]
+    },
+    {
+      "id": "hospitality-kitchens",
+      "num": "07",
+      "imageUrl": "sector-images/hospitality_sector.webp",
+      "title": "Hospitality & Central Kitchens",
+      "subtitle": "SOP Standardization, Recipe Scaling & Quality Audits",
+      "desc": "Structuring food preparation workflows, standardizing recipe yields, hygienic layout design, central production scaling, and health inspector audit readiness.",
+      "frameworks": [
+        "SOP Standardization",
+        "Hygiene Licensing",
+        "Recipe Scaling"
+      ],
+      "keySolutions": [
+        "Central Kitchen Spatial Flow & Cross-Contamination Barriers",
+        "Recipe Standardization, Batch Yielding & Cost Engineering",
+        "Staff Hygiene & Food Handling Standard Operating Procedures",
+        "Third-Party Inspection & Secret Shopper Quality Audits"
+      ]
+    },
+    {
+      "id": "education-training",
+      "num": "08",
+      "imageUrl": "sector-images/education_sector.webp",
+      "title": "Education & Training Institutes",
+      "subtitle": "ISO 21001, Curriculum Governance & Accreditation",
+      "desc": "Structuring educational governance, instructional design quality, trainer competency validation, digital learning compliance, and ISO 21001 management systems.",
+      "frameworks": [
+        "ISO 21001",
+        "Curriculum Quality",
+        "Training Governance"
+      ],
+      "keySolutions": [
+        "ISO 21001 Educational Organizations Management System",
+        "Curriculum Design & Learning Objective Mapping",
+        "Instructor Competency Verification & Evaluation Metrics",
+        "Digital LMS Architecture & Training Outcome Verification"
+      ]
+    }
+  ]
+}

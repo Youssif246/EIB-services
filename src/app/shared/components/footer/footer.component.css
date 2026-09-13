@@ -1,0 +1,587 @@
+/* ==========================================================================
+   EIB Footer — Minimalist 3-Column Corporate Architecture
+   Palette: Warm Beige / Light Off-White (#F4EFEB), Deep Charcoal (#15171A)
+   Secondary Accent: EIB Heritage Burgundy (#8F2525) & WhatsApp Emerald (#25D366)
+   ========================================================================== */
+
+.eib-footer {
+  background-color: var(--eib-surface-footer, #F4EFEB);
+  background-image:
+    radial-gradient(ellipse 70% 45% at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 80%),
+    var(--eib-paper-grain);
+  color: #15171A;
+  padding-top: clamp(60px, 7vw, 92px);
+  padding-bottom: clamp(32px, 4vw, 44px);
+  border-top: 1px solid rgba(21, 23, 26, 0.08);
+  position: relative;
+}
+
+/* Central Subtle Top Datum Marker */
+.eib-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 2px;
+  background-color: #8F2525;
+  border-radius: 1px;
+}
+
+/* ==========================================================================
+   Main 3-Column Balanced Grid Layout
+   ========================================================================== */
+.footer-three-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(36px, 4.5vw, 56px);
+  padding-bottom: clamp(44px, 5.5vw, 60px);
+  border-bottom: 1px solid rgba(21, 23, 26, 0.08);
+}
+
+@media (min-width: 640px) and (max-width: 991px) {
+  .footer-three-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 32px;
+  }
+
+  .footer-identity-col {
+    grid-column: 1 / -1;
+    max-width: 580px;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-three-grid {
+    grid-template-columns: 1.4fr 0.95fr 1.25fr;
+    gap: clamp(36px, 5vw, 64px);
+    align-items: flex-start;
+  }
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Column 1: Company Identity & Brief Statement
+   ========================================================================== */
+.footer-identity-col {
+  gap: 18px;
+}
+
+.footer-statement {
+  font-size: 0.9125rem;
+  color: #55514B;
+  line-height: 1.75;
+  max-width: 360px;
+  margin: 0;
+}
+
+/* Social Icon Circles */
+.footer-social-strip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.social-pill-btn {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(21, 23, 26, 0.04);
+  color: #55514B;
+  border: 1px solid rgba(21, 23, 26, 0.08);
+  text-decoration: none;
+  transition: all 220ms ease;
+  touch-action: manipulation;
+}
+
+.social-pill-btn:hover {
+  background-color: #8F2525;
+  color: #FAF8F5;
+  border-color: #8F2525;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(143, 37, 37, 0.2);
+}
+
+.social-pill-btn.wa-pill:hover {
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-color: #25D366;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+/* ==========================================================================
+   Column Headings (With Accent Indicator)
+   ========================================================================== */
+.footer-heading {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #15171A;
+  margin: 0 0 22px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+[dir="rtl"] .footer-heading {
+  letter-spacing: normal;
+  font-family: var(--font-ar);
+}
+
+.heading-line {
+  width: 12px;
+  height: 2px;
+  background-color: #8F2525;
+  border-radius: 1px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Column 2: Clean Navigation List (With Animated Hover Arrow)
+   ========================================================================== */
+.clean-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.clean-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.925rem;
+  color: #4D4943;
+  text-decoration: none;
+  transition: color 200ms ease;
+  width: fit-content;
+  min-height: 40px;
+  padding-block: 4px;
+}
+
+.nav-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  color: #8F2525;
+}
+
+[dir="rtl"] .nav-arrow {
+  transform: translateX(-6px) rotate(180deg);
+}
+
+.clean-link-item:hover {
+  color: #8F2525;
+}
+
+.clean-link-item:hover .nav-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[dir="rtl"] .clean-link-item:hover .nav-arrow {
+  transform: translateX(0) rotate(180deg);
+}
+
+/* ==========================================================================
+   Column 3: Direct Communication Coordinates
+   ========================================================================== */
+.contact-details-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-card-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  min-height: 44px;
+}
+
+.contact-card-row.email-row {
+  transition: color 200ms ease;
+}
+
+.contact-card-row.email-row:hover .coord-main-val {
+  color: #8F2525;
+}
+
+.coord-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: rgba(143, 37, 37, 0.06);
+  border: 1px solid rgba(143, 37, 37, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8F2525;
+  flex-shrink: 0;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.contact-card-row.email-row:hover .coord-icon-box {
+  background-color: #8F2525;
+  color: #FAF8F5;
+  border-color: #8F2525;
+}
+
+.coord-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.coord-tag {
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #7D7870;
+}
+
+[dir="rtl"] .coord-tag {
+  letter-spacing: normal;
+}
+
+.coord-main-val {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #15171A;
+  line-height: 1.4;
+  transition: color 200ms ease;
+}
+
+.coord-main-val.hours-val {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #55514B;
+}
+
+/* ==========================================================================
+   Sub-footer / Bottom Bar
+   ========================================================================== */
+.footer-sub-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: clamp(22px, 2.8vw, 30px);
+}
+
+@media (min-width: 768px) {
+  .footer-sub-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer-copyright-text {
+  font-size: 0.8125rem;
+  color: #68635B;
+  line-height: 1.5;
+}
+
+.footer-legal-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+}
+
+.sub-legal-link {
+  color: #4D4943;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 200ms ease;
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  padding-block: 4px;
+}
+
+.sub-legal-link:hover {
+  color: #8F2525;
+}
+
+.sub-legal-static {
+  color: #7A756D;
+}
+
+.sub-sep {
+  color: rgba(21, 23, 26, 0.2);
+  font-size: 0.7rem;
+  user-select: none;
+}
+
+/* ==========================================================================
+   Developer Collaboration Signature Badge
+   Harmonized with EIB Corporate Color Palette & Typography
+   ========================================================================== */
+.footer-credit-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.credit-label {
+  font-size: 0.8125rem;
+  color: #706B62;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+[dir="rtl"] .credit-label {
+  font-family: var(--font-ar);
+}
+
+.credit-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(21, 23, 26, 0.12);
+  text-decoration: none;
+  transition: all 220ms ease;
+  box-shadow: 0 1px 3px rgba(21, 23, 26, 0.04);
+  touch-action: manipulation;
+  backdrop-filter: blur(8px);
+}
+
+.credit-wa-icon {
+  color: #25D366;
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 220ms ease;
+}
+
+.credit-text {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #15171A;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: color 200ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+[dir="rtl"] .credit-text {
+  font-family: var(--font-ar);
+  letter-spacing: normal;
+}
+
+.credit-brand-highlight {
+  color: #8F2525;
+  font-weight: 700;
+  transition: color 200ms ease;
+}
+
+.credit-pill-badge:hover {
+  background: rgba(143, 37, 37, 0.06);
+  border-color: #8F2525;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(143, 37, 37, 0.14);
+}
+
+.credit-pill-badge:hover .credit-text {
+  color: #8F2525;
+}
+
+.credit-pill-badge:hover .credit-wa-icon {
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   Mobile Stack Adjustments
+   ========================================================================== */
+@media (max-width: 639px) {
+  .footer-identity-col .footer-statement {
+    max-width: 100%;
+  }
+
+  .footer-sub-bar {
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-credit-group {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-legal-group {
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   DARK THEME SPECIFICATION — EIB FOOTER
+   Seamless Charcoal Canvas (#0F1115), Luminous Contrast, Refined Hairline Borders
+   ========================================================================== */
+:host-context([data-theme="dark"]) .eib-footer {
+  background-color: var(--eib-surface-footer, #0F1115);
+  background-image:
+    radial-gradient(ellipse 70% 45% at 50% 0%, rgba(168, 46, 46, 0.12) 0%, transparent 80%),
+    var(--eib-paper-grain);
+  color: #F9FAFB;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+:host-context([data-theme="dark"]) .eib-footer::before {
+  background-color: #A82E2E;
+}
+
+:host-context([data-theme="dark"]) .footer-three-grid {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+:host-context([data-theme="dark"]) .footer-statement {
+  color: #9CA3AF;
+}
+
+:host-context([data-theme="dark"]) .social-pill-btn {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #9CA3AF;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:host-context([data-theme="dark"]) .social-pill-btn:hover {
+  background-color: #A82E2E;
+  color: #F9FAFB;
+  border-color: #A82E2E;
+  box-shadow: 0 4px 16px rgba(168, 46, 46, 0.4);
+}
+
+:host-context([data-theme="dark"]) .social-pill-btn.wa-pill:hover {
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-color: #25D366;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+}
+
+:host-context([data-theme="dark"]) .footer-heading {
+  color: #F9FAFB;
+}
+
+:host-context([data-theme="dark"]) .heading-line {
+  background-color: #FF7B72;
+}
+
+:host-context([data-theme="dark"]) .clean-link-item {
+  color: #9CA3AF;
+}
+
+:host-context([data-theme="dark"]) .clean-link-item:hover {
+  color: #FF7B72;
+}
+
+:host-context([data-theme="dark"]) .nav-arrow {
+  color: #FF7B72;
+}
+
+:host-context([data-theme="dark"]) .coord-icon-box {
+  background-color: rgba(168, 46, 46, 0.15);
+  border-color: rgba(168, 46, 46, 0.28);
+  color: #FF7B72;
+}
+
+:host-context([data-theme="dark"]) .contact-card-row.email-row:hover .coord-icon-box {
+  background-color: #A82E2E;
+  color: #FFFFFF;
+  border-color: #A82E2E;
+}
+
+:host-context([data-theme="dark"]) .contact-card-row.email-row:hover .coord-main-val {
+  color: #FF7B72;
+}
+
+:host-context([data-theme="dark"]) .coord-tag {
+  color: #6B7280;
+}
+
+:host-context([data-theme="dark"]) .coord-main-val {
+  color: #F9FAFB;
+}
+
+:host-context([data-theme="dark"]) .coord-main-val.hours-val {
+  color: #9CA3AF;
+}
+
+:host-context([data-theme="dark"]) .footer-copyright-text {
+  color: #6B7280;
+}
+
+:host-context([data-theme="dark"]) .sub-legal-link {
+  color: #9CA3AF;
+}
+
+:host-context([data-theme="dark"]) .sub-legal-link:hover {
+  color: #FF7B72;
+}
+
+:host-context([data-theme="dark"]) .sub-legal-static {
+  color: #6B7280;
+}
+
+:host-context([data-theme="dark"]) .sub-sep {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+:host-context([data-theme="dark"]) .credit-label {
+  color: #9CA3AF;
+}
+
+:host-context([data-theme="dark"]) .credit-pill-badge {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+:host-context([data-theme="dark"]) .credit-text {
+  color: #E5E7EB;
+}
+
+:host-context([data-theme="dark"]) .credit-brand-highlight {
+  color: #FF7B72;
+}
+
+:host-context([data-theme="dark"]) .credit-pill-badge:hover {
+  background: rgba(168, 46, 46, 0.16);
+  border-color: rgba(255, 123, 114, 0.6);
+  box-shadow: 0 4px 16px rgba(168, 46, 46, 0.35);
+}
+
+:host-context([data-theme="dark"]) .credit-pill-badge:hover .credit-text {
+  color: #FF7B72;
+}
+
+

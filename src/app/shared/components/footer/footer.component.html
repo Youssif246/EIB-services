@@ -1,0 +1,155 @@
+<footer class="eib-footer">
+  <div class="eib-container">
+
+    <!-- Balanced 3-Column Minimalist Layout -->
+    <div class="footer-three-grid">
+
+      <!-- Column 1: Identity & Brief Statement -->
+      <div class="footer-col footer-identity-col">
+        <app-brand-logo theme="light" size="md"></app-brand-logo>
+
+        <p class="footer-statement">
+          {{ languageService.t.footer.tagline }}
+        </p>
+
+        <!-- Social Channels -->
+        <div class="footer-social-strip">
+          <a href="https://www.facebook.com/profile.php?id=61590651866288" target="_blank" rel="noopener noreferrer"
+            class="social-pill-btn" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://x.com/EIBKSA" target="_blank" rel="noopener noreferrer" class="social-pill-btn"
+            aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://www.instagram.com/eliteintegratedbusiness/" target="_blank" rel="noopener noreferrer"
+            class="social-pill-btn" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://wa.me/966551715783" target="_blank" rel="noopener noreferrer" class="social-pill-btn wa-pill"
+            aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Navigation & Core Pages -->
+      <div class="footer-col footer-links-col">
+        <h4 class="footer-heading">
+          <span class="heading-line" aria-hidden="true"></span>
+          <span>{{ languageService.t.footer.navHeading }}</span>
+        </h4>
+
+        <ul class="clean-nav-list">
+          <li>
+            <a routerLink="/" class="clean-link-item">
+              <span class="link-label">{{ languageService.t.footer.home }}</span>
+              <span class="nav-arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/about" class="clean-link-item">
+              <span class="link-label">{{ languageService.t.footer.about }}</span>
+              <span class="nav-arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/services" class="clean-link-item">
+              <span class="link-label">{{ languageService.isRtl() ? 'كافة الخدمات والحلول' : 'All Services &
+                Capabilities' }}</span>
+              <span class="nav-arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/contact" class="clean-link-item">
+              <span class="link-label">{{ languageService.t.footer.contact }}</span>
+              <span class="nav-arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Direct Communication & Coordinates -->
+      <div class="footer-col footer-contact-col">
+        <h4 class="footer-heading">
+          <span class="heading-line" aria-hidden="true"></span>
+          <span>{{ languageService.t.footer.contactHeading }}</span>
+        </h4>
+
+        <div class="contact-details-stack">
+          <!-- Official Corporate Email -->
+          <a href="mailto:info@eliteintegrated.sa" class="contact-card-row email-row">
+            <span class="coord-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <div class="coord-info">
+              <span class="coord-tag">{{ languageService.isRtl() ? 'البريد الرسمي' : 'Official Email' }}</span>
+              <span class="coord-main-val">info@eliteintegrated.sa</span>
+            </div>
+          </a>
+
+          <!-- Advisory Scope -->
+          <div class="contact-card-row">
+            <span class="coord-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-globe"></i>
+            </span>
+            <div class="coord-info">
+              <span class="coord-tag">{{ languageService.isRtl() ? 'نطاق الخدمة' : 'Service Scope' }}</span>
+              <span class="coord-main-val">{{ languageService.isRtl() ? 'استشارات وحلول تشغيلية متكاملة' : 'Integrated
+                Advisory & Operational Solutions' }}</span>
+            </div>
+          </div>
+
+          <!-- Working Hours Note -->
+          <div class="contact-card-row hours-row">
+            <span class="coord-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-clock"></i>
+            </span>
+            <div class="coord-info">
+              <span class="coord-tag">{{ languageService.isRtl() ? 'أوقات العمل' : 'Office Hours' }}</span>
+              <span class="coord-main-val hours-val">{{ languageService.isRtl() ? 'متاح خلال ساعات العمل الرسمية' :
+                'Available during official business hours' }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sub-footer / Bottom Bar -->
+    <div class="footer-sub-bar">
+      <div class="footer-copyright-text">
+        © 2026 Elite Integrated Business (EIB). {{ languageService.isRtl() ? 'جميع الحقوق محفوظة.' : 'All rights
+        reserved.' }}
+      </div>
+
+      <!-- Developer / Collaboration Signature Badge -->
+      <div class="footer-credit-group">
+        <span class="credit-label">{{ languageService.isRtl() ? 'صُنع بواسطة' : 'Crafted by' }}</span>
+        <a href="https://wa.me/201006426860" target="_blank" rel="noopener noreferrer" class="credit-pill-badge"
+          aria-label="WhatsApp Youssif Hossam (01006426860)">
+          <i class="fa-brands fa-whatsapp credit-wa-icon" aria-hidden="true"></i>
+          <span class="credit-text">
+            @if (languageService.isRtl()) {
+            <span class="credit-brand-highlight">إيليت</span> بالتعاون مع يوسف حسام
+            } @else {
+            <span class="credit-brand-highlight">Elite</span> in collaboration with Youssef Hossam
+            }
+          </span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</footer>

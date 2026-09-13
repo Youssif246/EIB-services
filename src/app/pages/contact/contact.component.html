@@ -1,0 +1,148 @@
+<article class="contact-page">
+
+  <!-- ==========================================================================
+       CONTACT DIRECTORY SECTION — COMPACT MINIMALIST HORIZONTAL CARDS
+       Engineering & Corporate Precision: High Visual Density, Zero Dead Space
+       ========================================================================== -->
+  <section class="eib-section contact-section">
+
+    <div class="eib-container">
+
+      <!-- Breadcrumbs Trail -->
+      <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+        <a routerLink="/" class="breadcrumb-item">{{ languageService.t.nav.home }}</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">{{ languageService.t.contactPage.breadcrumbContact }}</span>
+      </nav>
+
+      <!-- Section Header -->
+      <header class="contact-header-block">
+        <div class="header-main-flex">
+          <div class="header-text-pane">
+            <div class="eib-eyebrow">
+              <span class="eib-eyebrow-line"></span>
+              <span class="eyebrow-text">{{ languageService.t.contactPage.eyebrow }}</span>
+            </div>
+
+            <h1 class="contact-main-headline">
+              {{ languageService.t.contactPage.title }}
+            </h1>
+
+            <p class="contact-lead-desc">
+              {{ languageService.t.contactPage.desc }}
+            </p>
+          </div>
+
+          <div class="header-action-pane">
+            <a href="mailto:info@eliteintegrated.sa?subject=طلب استشارة استراتيجية" class="primary-consult-btn">
+              <span>{{ languageService.t.contactPage.primaryAction }}</span>
+              <span class="btn-arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Compact Minimalist Horizontal Cards (2x2 Balanced Grid) -->
+      <div class="contact-compact-grid">
+
+        <!-- Card 1: Service Scope & Practice -->
+        <div class="compact-card">
+          <div class="card-icon-slot">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+
+          <div class="card-info-slot">
+            <span class="slot-label">{{ languageService.isRtl() ? 'نطاق الخدمة' : 'Service Scope' }}</span>
+            <span class="slot-primary-val">{{ languageService.isRtl() ? 'تغطية استشارية وتشغيلية متكاملة' : 'Integrated Advisory & Operations' }}</span>
+          </div>
+
+          <div class="card-action-slot">
+            <span class="compact-coverage-badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              <span>{{ languageService.isRtl() ? 'جاهزية ميدانية ورقمية' : 'Field & Digital Readiness' }}</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Card 2: Official Email -->
+        <div class="compact-card">
+          <div class="card-icon-slot">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+
+          <div class="card-info-slot">
+            <span class="slot-label">{{ languageService.isRtl() ? 'البريد الإلكتروني' : 'Official Email' }}</span>
+            <a href="mailto:info@eliteintegrated.sa" class="slot-primary-val link-val">
+              info@eliteintegrated.sa
+            </a>
+          </div>
+
+          <div class="card-action-slot">
+            <a href="mailto:info@eliteintegrated.sa" class="mini-pill-btn">
+              <span>{{ languageService.isRtl() ? 'مراسلة' : 'Email' }}</span>
+              <span class="pill-arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Direct Phone Lines -->
+        <div class="compact-card">
+          <div class="card-icon-slot">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
+          <div class="card-info-slot">
+            <span class="slot-label">{{ languageService.isRtl() ? 'الهاتف المباشر' : 'Direct Phone' }}</span>
+            <div class="phone-dual-val ltr-dir">
+              <a href="tel:+966551715783" class="slot-primary-val link-val">+966 55 171 5783</a>
+              <span class="dual-sep">/</span>
+              <a href="tel:+966582026325" class="slot-primary-val link-val">+966 58 202 6325</a>
+            </div>
+          </div>
+
+          <div class="card-action-slot">
+            <a href="tel:+966551715783" class="mini-pill-btn">
+              <span>{{ languageService.isRtl() ? 'اتصال' : 'Call' }}</span>
+              <span class="pill-arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: WhatsApp Direct Messaging -->
+        <div class="compact-card wa-compact-card">
+          <div class="card-icon-slot wa-slot">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+
+          <div class="card-info-slot">
+            <span class="slot-label">{{ languageService.isRtl() ? 'المراسلة الفورية' : 'Instant Advisory' }}</span>
+            <span class="slot-primary-val">{{ languageService.isRtl() ? 'محادثة واتساب المباشرة' : 'Direct WhatsApp Chat' }}</span>
+          </div>
+
+          <div class="card-action-slot">
+            <a
+              href="https://wa.me/966551715783"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mini-pill-btn wa-pill-btn"
+            >
+              <span>{{ languageService.isRtl() ? 'تواصل الآن' : 'Chat Now' }}</span>
+              <span class="pill-arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</article>

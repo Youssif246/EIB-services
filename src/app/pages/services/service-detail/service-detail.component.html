@@ -1,0 +1,303 @@
+@if (service; as srv) {
+<article class="service-detail-page">
+  <!-- 01 — EDITORIAL SERVICE HERO -->
+  <header class="eib-section service-hero">
+    <div class="eib-container">
+      <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+        <a routerLink="/" class="breadcrumb-item">{{ languageService.t.serviceDetail.breadcrumbHome }}</a>
+        <span class="breadcrumb-sep">/</span>
+        <a routerLink="/" fragment="services" class="breadcrumb-item">{{
+          languageService.t.serviceDetail.breadcrumbServices }}</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">{{ srv.title }}</span>
+      </nav>
+
+      <div class="hero-split-grid">
+        <div class="hero-info">
+          <div class="eib-eyebrow">
+            <span class="eib-eyebrow-line"></span>
+            <span>{{ srv.id }} — {{ languageService.t.serviceDetail.coreCapabilityBadge }}</span>
+          </div>
+
+          <h1 class="service-title">{{ srv.title }}</h1>
+          <p class="service-tagline">{{ srv.heroTagline }}</p>
+
+          <div class="service-actions">
+            <a routerLink="/contact" class="eib-btn eib-btn-primary">
+              {{ languageService.t.serviceDetail.primaryCta }}
+            </a>
+            <button type="button" (click)="scrollToOverview($event)" class="eib-editorial-link">
+              <span>{{ languageService.t.serviceDetail.methodologyCta }}</span>
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="service-photo-frame">
+            <img [src]="srv.imageUrl" [alt]="srv.title" class="service-photo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 02 — SERVICE STRATEGY & METHODOLOGY SECTION (TOP HEADER + 3-COLUMNS GRID) -->
+  <section id="overview" class="eib-section methodology-section">
+    <div class="eib-container">
+
+      <!-- Section Top Header -->
+      <div class="methodology-top-header">
+        <div class="eib-eyebrow">
+          <span class="eib-eyebrow-line"></span>
+          <span class="eyebrow-text">{{ languageService.t.serviceDetail.methodologyEyebrow }}</span>
+        </div>
+
+        <h2 class="methodology-main-title">
+          {{ languageService.t.serviceDetail.methodologyTitle }}
+        </h2>
+
+        <p class="methodology-lead-text">
+          {{ srv.shortDesc }}
+        </p>
+
+        <!-- Quiet Technical Standard Pill/Badge -->
+        <div class="methodology-standard-pill">
+          <span class="pill-badge-dot" aria-hidden="true"></span>
+          <span class="pill-badge-label">{{ languageService.isRtl() ? 'منهجية إيليت التشغيلية المعتمدة:' : 'EIB
+            Certified Framework:' }}</span>
+          <span class="pill-badge-text">
+            {{ languageService.isRtl()
+            ? 'أطر عمل تشخيصية واستشارية تربط العمليات الميدانية بالنتائج المالية وتتوافق مع معايير الآيزو الدولية.'
+            : 'Diagnostic and advisory frameworks aligned with international ISO and governance standards.' }}
+          </span>
+        </div>
+      </div>
+
+      <!-- 3-Column Horizontal Grid -->
+      <div class="methodology-grid-layout">
+
+        <!-- Pillar 01: What It Is (ما هي الخدمة) -->
+        @if (srv.overview.what) {
+        <div class="methodology-pillar-card">
+          <div class="pillar-card-watermark" aria-hidden="true">01</div>
+          <div class="pillar-card-head">
+            <div class="pillar-icon-box compass-icon" aria-hidden="true">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <span class="pillar-step-badge">01</span>
+          </div>
+
+          <div class="pillar-card-body">
+            <h3 class="pillar-title">{{ srv.overview.what.title }}</h3>
+            <p class="pillar-text">{{ srv.overview.what.text }}</p>
+          </div>
+        </div>
+        }
+
+        <!-- Pillar 02: Why It Matters (أهمية الخدمة) -->
+        @if (srv.overview.why) {
+        <div class="methodology-pillar-card">
+          <div class="pillar-card-watermark" aria-hidden="true">02</div>
+          <div class="pillar-card-head">
+            <div class="pillar-icon-box shield-icon" aria-hidden="true">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <span class="pillar-step-badge">02</span>
+          </div>
+
+          <div class="pillar-card-body">
+            <h3 class="pillar-title">{{ srv.overview.why.title }}</h3>
+            <p class="pillar-text">{{ srv.overview.why.text }}</p>
+          </div>
+        </div>
+        }
+
+        <!-- Pillar 03: How It Works (منهجية العمل) -->
+        @if (srv.overview.how) {
+        <div class="methodology-pillar-card">
+          <div class="pillar-card-watermark" aria-hidden="true">03</div>
+          <div class="pillar-card-head">
+            <div class="pillar-icon-box gears-icon" aria-hidden="true">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <span class="pillar-step-badge">03</span>
+          </div>
+
+          <div class="pillar-card-body">
+            <h3 class="pillar-title">{{ srv.overview.how.title }}</h3>
+            <p class="pillar-text">{{ srv.overview.how.text }}</p>
+          </div>
+        </div>
+        }
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 — SPECIALIZED WORKSTREAMS SHOWCASE (UNIFIED LUXURY CARD SLIDER) -->
+  <section id="workstreams" class="eib-section deliverables-showcase-section">
+    <div class="eib-container">
+
+      <!-- Section Header -->
+      <div class="deliverables-section-header">
+        <div class="eib-eyebrow">
+          <span class="eib-eyebrow-line"></span>
+          <span class="eyebrow-text">{{ languageService.t.serviceDetail.workstreamsEyebrow }}</span>
+        </div>
+        <h2 class="deliverables-main-title">
+          {{ languageService.t.serviceDetail.workstreamsTitle }}
+        </h2>
+        <p class="deliverables-header-subtitle">
+          {{ languageService.t.serviceDetail.workstreamsSubtitle }}
+        </p>
+      </div>
+
+      <!-- Unified Swiper Showcase Wrapper (Strict Overflow Hidden) -->
+      <div class="deliverables-swiper-wrapper">
+        <swiper-container #swiperEl class="deliverables-swiper" slides-per-view="1" space-between="0" speed="550"
+          grab-cursor="true" [attr.dir]="languageService.isRtl() ? 'rtl' : 'ltr'">
+          @for (item of srv.subServices; track item.num) {
+          <swiper-slide>
+            <!-- Pure Editorial Executive Deliverable Card (100% No Images) -->
+            <article class="deliverables-showcase-card">
+              
+              <!-- Main Split Grid: Track Identification + Tangible Deliverables Checklist -->
+              <div class="deliverables-split-layout">
+
+                <!-- Column 1: Track Details & Primary CTA (Right in RTL / Start) -->
+                <div class="deliverable-track-column">
+                  
+                  <!-- Quiet Technical Badge -->
+                  <div class="track-meta-header">
+                    <span class="track-indicator-pill">
+                      <span class="indicator-dot" aria-hidden="true"></span>
+                      <span>
+                        {{ languageService.isRtl() ? 'مسار ' + item.num + ' / ' + (srv.subServices.length < 10 ? '0' + srv.subServices.length : srv.subServices.length) + ' • ' + srv.title : 'Track ' + item.num + ' / ' + (srv.subServices.length < 10 ? '0' + srv.subServices.length : srv.subServices.length) + ' • ' + srv.title }}
+                      </span>
+                    </span>
+                  </div>
+
+                  <!-- Prominent Track Headline -->
+                  <h3 class="deliverable-track-title">{{ item.title }}</h3>
+
+                  <!-- Executive Description Flow -->
+                  <p class="deliverable-track-desc">{{ item.desc }}</p>
+
+                  <!-- Primary Action CTA Button -->
+                  <div class="deliverable-action-slot">
+                    @if (srv.externalUrl) {
+                      <a [href]="srv.externalUrl" target="_blank" rel="noopener noreferrer" class="deliverable-primary-cta">
+                        <span>{{ languageService.isRtl() ? 'زيارة موقع إيليت للمقاولات' : 'Visit Elite Constructs' }}</span>
+                        <span class="cta-arrow" aria-hidden="true">
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
+                      </a>
+                    } @else {
+                      <a routerLink="/contact" class="deliverable-primary-cta">
+                        <span>{{ languageService.isRtl() ? 'احجز استشارة لهذا المسار' : 'Request Track Advisory' }}</span>
+                        <span class="cta-arrow" aria-hidden="true">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                      </a>
+                    }
+                  </div>
+
+                </div>
+
+                <!-- Column 2: Tangible Deliverables Checklist Matrix (Left in RTL / End) -->
+                <div class="deliverable-checklist-column">
+                  <div class="checklist-header-slot">
+                    <div class="checklist-eyebrow-box">
+                      <i class="fa-solid fa-box-archive checklist-eyebrow-icon" aria-hidden="true"></i>
+                      <h4 class="checklist-main-label">
+                        {{ languageService.isRtl() ? 'المخرجات التي يستلمها العميل باليد:' : 'Deliverables Received Upon Engagement:' }}
+                      </h4>
+                    </div>
+                  </div>
+
+                  <!-- Structured Checklist Badges / Feature Blocks -->
+                  <div class="checklist-blocks-stack">
+                    @for (pt of item.focusPoints; track pt) {
+                      <div class="checklist-item-card">
+                        <div class="check-icon-bubble" aria-hidden="true">
+                          <svg class="check-svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                          </svg>
+                        </div>
+                        <div class="check-content-pane">
+                          <span class="check-item-text">{{ pt }}</span>
+                        </div>
+                      </div>
+                    }
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Embedded Bottom Navigation & Control Bar -->
+              <div class="deliverables-bottom-controls-bar">
+                <div class="controls-status-text">
+                  <span class="status-pulse-dot" aria-hidden="true"></span>
+                  <span>{{ languageService.isRtl() ? 'مسارات التنفيذ المعتمدة في وثيقة التعاقد' : 'Certified Operational Workstreams' }}</span>
+                </div>
+
+                <div class="controls-nav-group">
+                  <button
+                    type="button"
+                    class="nav-stepper-btn prev"
+                    (click)="prevSlide()"
+                    [attr.aria-label]="languageService.t.serviceDetail.prevSlide"
+                  >
+                    <i class="fa-solid fa-arrow-left nav-arrow-icon" aria-hidden="true"></i>
+                  </button>
+
+                  <div class="stepper-counter-pill" aria-live="polite">
+                    <span class="counter-curr">{{ item.num }}</span>
+                    <span class="counter-sep">/</span>
+                    <span class="counter-total">{{ srv.subServices.length < 10 ? '0' + srv.subServices.length : srv.subServices.length }}</span>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="nav-stepper-btn next"
+                    (click)="nextSlide()"
+                    [attr.aria-label]="languageService.t.serviceDetail.nextSlide"
+                  >
+                    <i class="fa-solid fa-arrow-right nav-arrow-icon" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+
+            </article>
+          </swiper-slide>
+          }
+        </swiper-container>
+      </div>
+
+      <!-- Bottom Integrated Bar Linking to Next Capability -->
+      @if (nextService) {
+      <div class="deliverables-bottom-bar">
+        <div class="next-capability-link">
+          <span class="next-cap-label">{{ languageService.t.serviceDetail.nextCapability }}:</span>
+          <a [routerLink]="['/services', nextService.slug]" class="eib-editorial-link">
+            <span>{{ nextService.title }}</span>
+            <i class="fa-solid fa-arrow-right next-cap-arrow" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      }
+
+    </div>
+  </section>
+
+  <!-- 04 — FINAL CTA -->
+  <app-cta [customUrl]="srv.externalUrl"></app-cta>
+</article>
+} @else {
+<div class="eib-container not-found-block">
+  <h2>{{ languageService.t.serviceDetail.notFoundTitle }}</h2>
+  <p>{{ languageService.t.serviceDetail.notFoundDesc }}</p>
+  <a routerLink="/" class="eib-btn eib-btn-primary">{{ languageService.t.serviceDetail.returnHome }}</a>
+</div>
+}
