@@ -1,5 +1,5 @@
 @if (!isFinished) {
-<aside class="eib-loader-screen" (animationend)="onAnimationEnd($event)" aria-hidden="true">
+<aside class="eib-loader-screen" [class.is-dark]="themeService.isDark()" (animationend)="onAnimationEnd($event)" aria-hidden="true">
   <!-- Subtle Architectural Axis Crosshairs -->
   <div class="eib-loader-grid">
     <div class="grid-line grid-line-h"></div>
@@ -19,17 +19,25 @@
     <div class="eib-mark-stage">
       <svg class="eib-mark-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <clipPath id="eib-loader-overlap-clip">
-            <rect x="34" y="34" width="56" height="56" rx="8" />
+          <clipPath id="eibLoaderOverlapClip">
+            <rect x="34" y="34" width="56" height="56" rx="9" />
           </clipPath>
+          <linearGradient id="loaderGradRed" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#E5392D" />
+            <stop offset="100%" stop-color="#C62828" />
+          </linearGradient>
+          <linearGradient id="loaderGradOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F57424" />
+            <stop offset="100%" stop-color="#E65100" />
+          </linearGradient>
         </defs>
         <!-- Red Square: glides from top-left offset -->
-        <rect class="rect-red" x="10" y="10" width="56" height="56" rx="8" fill="#DF362D" />
+        <rect class="rect-red" x="10" y="10" width="56" height="56" rx="9" fill="url(#loaderGradRed)" />
         <!-- Orange Square: glides from bottom-right offset -->
-        <rect class="rect-orange" x="34" y="34" width="56" height="56" rx="8" fill="#F27227" fill-opacity="0.95" />
+        <rect class="rect-orange" x="34" y="34" width="56" height="56" rx="9" fill="url(#loaderGradOrange)" />
         <!-- Intersection Plane: reveals on precise geometric convergence -->
-        <rect class="rect-overlap" x="10" y="10" width="56" height="56" rx="8" fill="#B3281E" fill-opacity="0.35"
-          clip-path="url(#eib-loader-overlap-clip)" />
+        <rect class="rect-overlap" x="10" y="10" width="56" height="56" rx="9" fill="#8F2525" fill-opacity="0.38"
+          clip-path="url(#eibLoaderOverlapClip)" />
       </svg>
     </div>
 
@@ -55,6 +63,8 @@
         <span class="eib-tagline-text ar-desc">استشارات إدارية وحلول تشغيلية متكاملة</span>
       </div>
     </div>
+
+
 
   </div>
 </aside>

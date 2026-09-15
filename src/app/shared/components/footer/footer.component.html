@@ -6,7 +6,7 @@
 
       <!-- Column 1: Identity & Brief Statement -->
       <div class="footer-col footer-identity-col">
-        <app-brand-logo theme="light" size="md"></app-brand-logo>
+        <app-brand-logo [theme]="themeService.isDark() ? 'dark' : 'light'" size="md"></app-brand-logo>
 
         <p class="footer-statement">
           {{ languageService.t.footer.tagline }}

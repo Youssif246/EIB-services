@@ -1,5 +1,6 @@
 import { Component, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { ThemeService } from '../../../core/services/theme.service';
 
 @Component({
   selector: 'app-loader',
@@ -9,6 +10,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class LoaderComponent {
   private platformId = inject(PLATFORM_ID);
+  public themeService = inject(ThemeService);
   isFinished = false;
 
   constructor() {

@@ -446,8 +446,15 @@
 .emblem-vector {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 8px 18px rgba(223, 54, 45, 0.2));
+  filter: drop-shadow(0 8px 22px rgba(229, 57, 45, 0.28));
+  transition: filter 250ms ease;
 }
+
+:host-context([data-theme="dark"]) .emblem-vector {
+  filter: drop-shadow(0 8px 24px rgba(245, 116, 36, 0.35));
+}
+
+
 
 .emblem-meta-box {
   display: flex;

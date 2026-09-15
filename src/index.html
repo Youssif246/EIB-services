@@ -6,6 +6,20 @@
   <title>شركة إيليت لقطاع الأعمال | حلول تشغيلية واستشارات إدارية متكاملة</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('eib_theme');
+        var theme = (saved === 'dark' || saved === 'light') ? saved : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
   <meta name="theme-color" content="#8F2525" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#181A1B" media="(prefers-color-scheme: dark)">
   <meta name="description"
@@ -49,7 +63,7 @@
     "name": "Elite Integrated Business",
     "alternateName": "إيليت لقطاع الأعمال",
     "url": "https://eib-service.com",
-    "logo": "https://eib-service.com/assets/images/logo.png",
+    "logo": "https://eib-service.com/elite-logo.webp",
     "areaServed": ["Saudi Arabia", "GCC", "Middle East"],
     "knowsAbout": [
       "Management Consulting",
