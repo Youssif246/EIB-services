@@ -861,6 +861,403 @@
           ]
         }
       ]
+    },
+    {
+      "id": "10",
+      "slug": "nonprofit-charities",
+      "accentColor": "burgundy",
+      "imageUrl": "services-images/nonprofit_charities_service.webp",
+      "title": "Nonprofit & Charities",
+      "shortDesc": "Specialized advisory, operational, training, and internal audit solutions empowering charities and nonprofits to elevate operational efficiency, anchor governance and compliance, and drive sustainable institutional impact aligned with national and international standards.",
+      "pills": [
+        "Governance, Risk & Compliance",
+        "Internal Audit & Policy Architecture",
+        "ISO Standards Alignment & Qualification",
+        "Grant Readiness & Impact Measurement"
+      ],
+      "heroTagline": "An advisory and operational partner developing efficient, transparent, and sustainable governance and quality frameworks for the nonprofit sector.",
+      "overview": {
+        "what": {
+          "title": "What We Deliver",
+          "text": "Comprehensive consulting, field implementation, professional training, and internal auditing tailored for nonprofits, encompassing gap diagnostics, policy and procedure architecture, team enablement, and digital transformation aligned with national and international benchmarks."
+        },
+        "why": {
+          "title": "Institutional Value & Impact",
+          "text": "We resolve compliance exposures, operational fragmentation, and donor readiness gaps by elevating operating efficiency, anchoring transparency and accountability, and expanding strategic partnership opportunities to ensure lasting social impact."
+        },
+        "how": {
+          "title": "Implementation & Enablement",
+          "text": "We follow a phased on-ground pathway: diagnosing baseline gaps, codifying custom standard operating procedures and templates, training internal teams, and conducting recurring internal audits to establish self-sustaining institutional performance."
+        }
+      },
+      "overviewNote": "EIB is an advisory, operational, and training firm, not a certification-granting body.",
+      "subServices": [
+        {
+          "num": "01",
+          "title": "Training & Capacity Building",
+          "desc": "Upskilling and empowering nonprofit teams and executives to raise institutional awareness and practice operational excellence.",
+          "focusPoints": [
+            "Tailored executive and operational workshops for non-profit organizations",
+            "Team qualification on standard operating procedures and record logs",
+            "Instilling institutional awareness and an active compliance culture"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Governance & Risk Management",
+          "desc": "Structuring regulatory, supervisory, and risk mitigation frameworks to protect institutional assets and decision integrity.",
+          "focusPoints": [
+            "Governance charters and operating bylaws for boards and committees",
+            "Enterprise and operational risk registers with proactive treatment plans",
+            "Delegation of authority matrices and supervisory control indicators"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Internal Audit",
+          "desc": "Independent, objective evaluations of operations and activities ensuring compliance and prompt identification of procedural gaps.",
+          "focusPoints": [
+            "Periodic internal audit schedules calibrated to non-profit mandates",
+            "Comprehensive audit reporting capturing findings and improvement areas",
+            "Systematic corrective action verification and closure tracking"
+          ]
+        },
+        {
+          "num": "04",
+          "title": "Qualification & Implementation",
+          "desc": "Guiding organizations step-by-step to build their administrative and operational framework from diagnosis to stable execution.",
+          "focusPoints": [
+            "Rigorous baseline gap assessments across regulatory and operating workflows",
+            "Structured implementation roadmaps with actionable phase milestones",
+            "Standard operating procedures (SOPs), policy manuals, and governance guides",
+            "Approved operational templates and standardized field logs"
+          ]
+        },
+        {
+          "num": "05",
+          "title": "Digital Transformation",
+          "desc": "Automating routine workflows and deploying executive tracking dashboards to enhance turnaround speed and governance oversight.",
+          "focusPoints": [
+            "Digitization of administrative records, paper forms, and daily logs",
+            "Executive oversight dashboards tracking institutional KPIs in real time",
+            "Secure electronic archiving systems safeguarding sensitive documentation"
+          ]
+        },
+        {
+          "num": "06",
+          "title": "Annual Follow-up Contracts",
+          "desc": "Year-round advisory partnership guaranteeing sustained implementation, process iteration, and administrative stability.",
+          "focusPoints": [
+            "Scheduled periodic advisory audits and on-ground compliance checks",
+            "Monthly performance digests delivered directly to board and executive leadership",
+            "Continuous improvement support proactively addressing operational deviations"
+          ]
+        },
+        {
+          "num": "07",
+          "title": "Grant & Partnership Readiness",
+          "desc": "Institutional qualification positioning organizations to satisfy stringent donor mandates and secure strategic funding alliances.",
+          "focusPoints": [
+            "Elevating institutional maturity to streamline donor due diligence",
+            "Reinforcing transparency, public disclosure, and governance accountability",
+            "Maximizing grant acquisition odds and long-term funding partnerships"
+          ]
+        },
+        {
+          "num": "08",
+          "title": "Impact Measurement & Sustainability",
+          "desc": "Architecting social ROI frameworks and impact metrics to ensure program longevity and demonstrate tangible community value.",
+          "focusPoints": [
+            "Calibrating precise social impact indicators for community programs",
+            "Periodic impact assessments communicated transparently to donors and public",
+            "Continuous program optimization informed by verified field metrics"
+          ]
+        }
+      ],
+      "standardsSection": {
+        "eyebrow": "International Standards & Frameworks",
+        "title": "Standards & Specifications Supporting Nonprofits",
+        "subtitle": "Customized alignment, implementation, and internal auditing solutions tailored to non-profit operational requirements.",
+        "disclaimer": "EIB is an advisory, operational, and training firm, not a certification-granting body.",
+        "institutionalGroup": {
+          "title": "Institutional Governance & Quality Standards",
+          "items": [
+            {
+              "code": "ISO 9001",
+              "name": "Quality Management",
+              "desc": "Streamlining operations and maximizing service delivery standards for beneficiaries."
+            },
+            {
+              "code": "ISO 37301 / 37001",
+              "name": "Compliance & Anti-Bribery",
+              "desc": "Structuring systematic compliance with statutory laws and reinforcing ethical integrity."
+            },
+            {
+              "code": "ISO 31000",
+              "name": "Risk Management",
+              "desc": "Proactively identifying and managing enterprise, programmatic, and operational risks."
+            },
+            {
+              "code": "ISO/IEC 27001",
+              "name": "Information Security",
+              "desc": "Safeguarding confidentiality and integrity of donor, beneficiary, and institutional data."
+            },
+            {
+              "code": "ISO 22301",
+              "name": "Business Continuity",
+              "desc": "Ensuring vital developmental services remain uninterrupted during disruptions or crises."
+            },
+            {
+              "code": "ISO 45001",
+              "name": "Occupational Health & Safety",
+              "desc": "Maintaining safe, compliant environments for staff, volunteers, and stakeholders."
+            },
+            {
+              "code": "ISO 10002",
+              "name": "Beneficiary Complaints Management",
+              "desc": "Establishing structured feedback loops, grievance resolution, and service improvement."
+            },
+            {
+              "code": "ISO 21001",
+              "name": "Educational Organizations Management",
+              "desc": "Calibrated for nonprofit entities providing educational, rehabilitation, and training services."
+            },
+            {
+              "code": "ISO 26000",
+              "name": "Social Responsibility",
+              "desc": "Global guideline for embedding social responsibility, ethical conduct, and sustainability."
+            }
+          ]
+        },
+        "foodGroup": {
+          "title": "Food Safety Standards for Relevant Entities",
+          "context": "Applicable to food preservation charities, meal distribution foundations, and relief organizations:",
+          "items": [
+            {
+              "code": "ISO 22000",
+              "name": "Food Safety Management",
+              "desc": "Controlling food safety across donation collection, storage, and charitable distribution."
+            },
+            {
+              "code": "HACCP",
+              "name": "Hazard Analysis & Critical Control Points",
+              "desc": "Proactively identifying and controlling biological, chemical, and physical food hazards."
+            },
+            {
+              "code": "ISO/TS 22002",
+              "name": "Prerequisite Programmes on Food Safety",
+              "desc": "Enforcing operational sanitation and hygienic foundations for meal handling and transport."
+            }
+          ]
+        }
+      },
+      "methodologySection": {
+        "eyebrow": "Field Methodology",
+        "title": "EIB Qualification & Development Methodology",
+        "subtitle": "A disciplined practical progression moving organizations from baseline evaluation to full operational autonomy.",
+        "steps": [
+          {
+            "num": "01",
+            "title": "Gap Assessment",
+            "desc": "Comprehensive diagnosis of the current state, analysis of regulatory requirements, and prioritizing development needs."
+          },
+          {
+            "num": "02",
+            "title": "Roadmap Formulation",
+            "desc": "Structuring a 30/60/30-day phased action plan, assigning clear stakeholder responsibilities, and setting target dates."
+          },
+          {
+            "num": "03",
+            "title": "Policies & Procedures Architecture",
+            "desc": "Developing governance bylaws, standard operating procedures (SOPs), templates, and document control systems."
+          },
+          {
+            "num": "04",
+            "title": "Training & Capacity Building",
+            "desc": "Conducting specialized interactive workshops, team enablement, and raising workforce operational capabilities."
+          },
+          {
+            "num": "05",
+            "title": "Internal Audit & Review",
+            "desc": "Independent on-site inspection, issuing audit reports with documented observations, and verifying corrective actions."
+          },
+          {
+            "num": "06",
+            "title": "Readiness & Continuous Improvement",
+            "desc": "Conducting management reviews, monitoring performance indicators, and sustaining organizational growth."
+          }
+        ],
+        "deliverables": {
+          "title": "Expected Deliverables Handed Over to Leadership:",
+          "items": [
+            {
+              "num": "01",
+              "label": "Institutional & Operational Gap Diagnostics Report"
+            },
+            {
+              "num": "02",
+              "label": "Phased Execution Roadmap & Timeline Schedules"
+            },
+            {
+              "num": "03",
+              "label": "Approved Governance Bylaws & SOP Manuals"
+            },
+            {
+              "num": "04",
+              "label": "Standardized Field Templates & Record Logs Suite"
+            },
+            {
+              "num": "05",
+              "label": "Internal Audit Evaluation & Closure Reports"
+            },
+            {
+              "num": "06",
+              "label": "Institutional Improvement Map & KPI Scorecards"
+            }
+          ]
+        }
+      },
+      "packagesSection": {
+        "eyebrow": "Service Packages",
+        "title": "EIB Nonprofit Institutional Packages",
+        "subtitle": "Flexible, structured options tailored to each organization's readiness level and specific operational priorities.",
+        "scopeLabel": "Included Scope of Work:",
+        "note": "Final technical and financial proposals are defined following scope study, branch counts, and baseline readiness.",
+        "packages": [
+          {
+            "tier": "Foundation Level",
+            "name": "Foundation Package",
+            "purpose": "For a correct institutional start and a resilient operational baseline.",
+            "items": [
+              "Operational gap diagnostic assessment",
+              "Structured execution action plan",
+              "Core policy manuals and bylaws development",
+              "Standard operating templates and record logs",
+              "Introductory workforce training workshop"
+            ]
+          },
+          {
+            "tier": "Development Level",
+            "name": "Development Package",
+            "purpose": "Advancing operational performance, internal controls, and procedural discipline.",
+            "items": [
+              "Advanced SOPs and workflow engineering",
+              "Periodic internal audits and reporting",
+              "Performance indicator (KPI) architecture",
+              "Specialized staff capacity building",
+              "Implementation follow-up and corrective guidance"
+            ]
+          },
+          {
+            "tier": "Excellence Level",
+            "name": "Excellence & Sustainability Package",
+            "purpose": "For lasting institutional impact, advanced governance, and strategic funding readiness.",
+            "items": [
+              "Advanced board and committee governance",
+              "Enterprise risk management register and controls",
+              "Social impact measurement and tracking",
+              "Annual advisory and operational follow-up contracts",
+              "Continuous improvement and institutional coaching"
+            ]
+          }
+        ]
+      },
+      "targetSectorsSection": {
+        "eyebrow": "Target Organizations",
+        "title": "Who We Serve Across the Nonprofit Sector",
+        "subtitle": "Custom solutions calibrated to the legal and operational nuances of non-profit entities in Saudi Arabia.",
+        "items": [
+          {
+            "num": "01",
+            "title": "Charitable Organizations",
+            "desc": "Public benefit associations, social welfare bodies, and humanitarian relief organizations."
+          },
+          {
+            "num": "02",
+            "title": "Food Preservation Charities",
+            "desc": "Entities dedicated to food sustainability, surplus redistribution, and community meal programs."
+          },
+          {
+            "num": "03",
+            "title": "Developmental Foundations",
+            "desc": "Private grantmakers, community empowerment programs, and microeconomic initiatives."
+          },
+          {
+            "num": "04",
+            "title": "Health Associations",
+            "desc": "Charitable medical clinics, specialized patient support, and health advocacy organizations."
+          },
+          {
+            "num": "05",
+            "title": "Educational & Training Nonprofits",
+            "desc": "Community tutoring associations, rehabilitation institutions, and civic educational bodies."
+          },
+          {
+            "num": "06",
+            "title": "Endowment Foundations (Awqaf)",
+            "desc": "Waqf management offices, testamentary trusts, and charitable endowment funds."
+          }
+        ]
+      },
+      "whyEibSection": {
+        "eyebrow": "Why EIB?",
+        "title": "A Pragmatic Strategic Partner for Sustainable Impact",
+        "subtitle": "Combining on-ground understanding of nonprofit realities with corporate governance expertise.",
+        "advantagesTitle": "EIB Competitive Differentiators",
+        "advantages": [
+          {
+            "num": "01",
+            "title": "Hands-on Practical Experience",
+            "desc": "Deep grasp of Saudi non-profit operational realities and regulatory frameworks."
+          },
+          {
+            "num": "02",
+            "title": "Customized Solutions",
+            "desc": "Bespoke tools and systems designed to fit each organization's actual capacity."
+          },
+          {
+            "num": "03",
+            "title": "Execution & Follow-up",
+            "desc": "Real on-site accompaniment translating theoretical guides into practiced routines."
+          },
+          {
+            "num": "04",
+            "title": "Transparent KPIs & Reporting",
+            "desc": "Clear dashboard scorecards providing actionable data for executive decision-making."
+          },
+          {
+            "num": "05",
+            "title": "Empowerment & Training",
+            "desc": "Equipping staff with skills to sustain autonomous operational performance."
+          },
+          {
+            "num": "06",
+            "title": "Sustainable Institutional Impact",
+            "desc": "Robust infrastructure preserving donor confidence and organizational continuity."
+          }
+        ],
+        "outcomesTitle": "Expected Institutional Outcomes",
+        "outcomes": [
+          {
+            "title": "Elevated Operational Efficiency",
+            "desc": "Streamlined resource allocation, clear accountability, and swift workflow delivery."
+          },
+          {
+            "title": "Robust Governance & Compliance",
+            "desc": "Strict adherence to statutory requirements issued by regulatory authorities and donors."
+          },
+          {
+            "title": "Enhanced Transparency & Donor Trust",
+            "desc": "Higher institutional credibility attracting strategic grants and philanthropic partners."
+          },
+          {
+            "title": "Maximized Impact & Program Longevity",
+            "desc": "Directing funds effectively to create measurable, enduring developmental outcomes."
+          }
+        ],
+        "summaryQuote": "We assist charities and nonprofits in building governance, quality, and compliance systems that are efficient, transparent, and sustainable.",
+        "firmNote": "EIB is an advisory, operational, and training firm, not a certification-granting body."
+      }
     }
   ],
   "industries": [

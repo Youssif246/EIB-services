@@ -40,6 +40,69 @@ export class ServiceDetailComponent implements OnInit {
     }
   }
 
+  activeAccordionIndex: number = -1;
+
+  toggleAccordion(index: number) {
+    if (this.activeAccordionIndex === index) {
+      this.activeAccordionIndex = -1;
+      return;
+    }
+
+    const prevIndex = this.activeAccordionIndex;
+
+    if (typeof document === 'undefined' || typeof window === 'undefined') {
+      this.activeAccordionIndex = index;
+      return;
+    }
+
+    const items = document.querySelectorAll('.editorial-accordion-item');
+    const targetItem = items[index - 1] as HTMLElement;
+
+    // Top-to-bottom transition: an open accordion exists ABOVE the clicked item.
+    // Calculate the exact post-collapse top offset so the clicked item sits perfectly under the floating navbar.
+    if (prevIndex !== -1 && prevIndex < index && targetItem) {
+      const prevItem = items[prevIndex - 1] as HTMLElement;
+      const prevContent = prevItem ? (prevItem.querySelector('.accordion-content-collapse') as HTMLElement) : null;
+      const prevHeight = prevContent ? (prevContent.getBoundingClientRect().height || prevContent.offsetHeight) : 0;
+
+      const navEl = document.querySelector('.eib-floating-nav-wrapper') || document.querySelector('header');
+      const navOffset = navEl ? Math.round(navEl.getBoundingClientRect().height + 24) : 95;
+
+      const targetCurrentTop = targetItem.getBoundingClientRect().top + window.scrollY;
+      const finalTargetTop = targetCurrentTop - prevHeight;
+      const finalScrollY = Math.max(0, finalTargetTop - navOffset);
+
+      this.activeAccordionIndex = index;
+
+      window.scrollTo({
+        top: finalScrollY,
+        behavior: 'smooth'
+      });
+      return;
+    }
+
+    // Bottom-to-top transition or first item open:
+    // If the target item's header is partially obscured under the sticky header, bring it smoothly into view.
+    if (targetItem) {
+      const navEl = document.querySelector('.eib-floating-nav-wrapper') || document.querySelector('header');
+      const navOffset = navEl ? Math.round(navEl.getBoundingClientRect().height + 24) : 95;
+      const rect = targetItem.getBoundingClientRect();
+
+      this.activeAccordionIndex = index;
+
+      if (rect.top < navOffset) {
+        const targetCurrentTop = rect.top + window.scrollY;
+        window.scrollTo({
+          top: Math.max(0, targetCurrentTop - navOffset),
+          behavior: 'smooth'
+        });
+      }
+      return;
+    }
+
+    this.activeAccordionIndex = index;
+  }
+
   ngAfterViewInit() {
     if (this.swiperEl?.nativeElement) {
       const swiperContainer = this.swiperEl.nativeElement;

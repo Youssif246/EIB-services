@@ -64,12 +64,11 @@
         <!-- Quiet Technical Standard Pill/Badge -->
         <div class="methodology-standard-pill">
           <span class="pill-badge-dot" aria-hidden="true"></span>
-          <span class="pill-badge-label">{{ languageService.isRtl() ? 'منهجية إيليت التشغيلية المعتمدة:' : 'EIB
-            Certified Framework:' }}</span>
+          <span class="pill-badge-label">{{ srv.overviewNote ? (languageService.isRtl() ? 'تنويه مهني:' : 'Professional Notice:') : (languageService.isRtl() ? 'منهجية إيليت التشغيلية المعتمدة:' : 'EIB Certified Framework:') }}</span>
           <span class="pill-badge-text">
-            {{ languageService.isRtl()
+            {{ srv.overviewNote ? srv.overviewNote : (languageService.isRtl()
             ? 'أطر عمل تشخيصية واستشارية تربط العمليات الميدانية بالنتائج المالية وتتوافق مع معايير الآيزو الدولية.'
-            : 'Diagnostic and advisory frameworks aligned with international ISO and governance standards.' }}
+            : 'Diagnostic and advisory frameworks aligned with international ISO and governance standards.') }}
           </span>
         </div>
       </div>
@@ -275,8 +274,8 @@
         </swiper-container>
       </div>
 
-      <!-- Bottom Integrated Bar Linking to Next Capability -->
-      @if (nextService) {
+      <!-- Bottom Integrated Bar Linking to Next Capability (Standard layout) -->
+      @if (nextService && !srv.standardsSection) {
       <div class="deliverables-bottom-bar">
         <div class="next-capability-link">
           <span class="next-cap-label">{{ languageService.t.serviceDetail.nextCapability }}:</span>
@@ -290,6 +289,565 @@
 
     </div>
   </section>
+
+  <!-- ==========================================================================
+       04 — PREMIUM EDITORIAL ACCORDION CONTENT SYSTEM
+       For Nonprofit & Charities service page:
+       01 — Standards & Specifications
+       02 — Qualification & Development Methodology
+       03 — Expected Deliverables
+       04 — Nonprofit Packages
+       05 — Who We Serve (Target Organizations)
+       06 — Why EIB (Competitive Differentiators)
+       07 — Expected Institutional Impact
+       ========================================================================== -->
+  @if (srv.standardsSection && srv.methodologySection && srv.packagesSection && srv.targetSectorsSection && srv.whyEibSection) {
+  <section id="editorial-accordion-system" class="eib-section nonprofit-accordion-section">
+    <div class="eib-container">
+      
+      <!-- Section Header -->
+      <div class="accordion-master-header">
+        <div class="eib-eyebrow">
+          <span class="eib-eyebrow-line"></span>
+          <span class="eyebrow-text">{{ languageService.isRtl() ? 'الدليل المؤسسي المتكامل' : 'Advisory & Operational Architecture' }}</span>
+        </div>
+        <h2 class="accordion-master-title">
+          {{ languageService.isRtl() ? 'محاور التأهيل والتمكين للقطاع غير الربحي' : 'Institutional Qualification & Enablement Architecture' }}
+        </h2>
+        <p class="accordion-master-lead">
+          {{ languageService.isRtl() 
+            ? 'نظام استشاري متكامل يجمع بين مواءمة المواصفات، مسارات التدريب والتدقيق، الباقات التشغيلية، ومؤشرات تعظيم الأثر الاجتماعي.' 
+            : 'A comprehensive advisory architecture uniting standards alignment, execution pathways, operational packages, and measured social impact.' }}
+        </p>
+      </div>
+
+      <!-- Editorial Accordion Container -->
+      <div class="editorial-accordion-list">
+        
+        <!-- ====================================================================
+             01 — المعايير والمواصفات (STANDARDS & SPECIFICATIONS)
+             ==================================================================== -->
+        <div class="editorial-accordion-item" [class.is-open]="activeAccordionIndex === 1">
+          <button 
+            type="button" 
+            class="accordion-header-row" 
+            (click)="toggleAccordion(1)"
+            [attr.aria-expanded]="activeAccordionIndex === 1"
+          >
+            <div class="accordion-num-col">
+              <span class="acc-num">01</span>
+            </div>
+            <div class="accordion-main-col">
+              <div class="acc-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <div class="acc-text-wrap">
+                <h3 class="acc-title">{{ srv.standardsSection.title }}</h3>
+                <p class="acc-summary">{{ srv.standardsSection.subtitle }}</p>
+              </div>
+            </div>
+            <div class="accordion-toggle-col">
+              <span class="acc-toggle-indicator" aria-hidden="true">
+                <i class="fa-solid fa-plus toggle-icon"></i>
+              </span>
+            </div>
+          </button>
+          
+          <div class="accordion-content-collapse" [class.is-open]="activeAccordionIndex === 1">
+            <div class="accordion-body-content">
+              <div class="acc-inner-composition standards-acc-layout">
+                <div class="acc-inner-lead-block">
+                  <span class="acc-inner-eyebrow">{{ srv.standardsSection.eyebrow }}</span>
+                  <p class="acc-inner-lead-desc">
+                    {{ languageService.isRtl() 
+                      ? 'نوفر حلول المواءمة والتطبيق والتدقيق الداخلي المتوافقة مع طبيعة واحتياج الجمعيات لرفع الموثوقية والحوكمة المؤسسية.' 
+                      : 'Tailored alignment, implementation, and audit frameworks meeting the operational reality and governance mandates of Saudi nonprofits.' }}
+                  </p>
+                </div>
+
+                <!-- Group A: Institutional & Governance Standards -->
+                <div class="standards-editorial-subgroup">
+                  <div class="std-group-head">
+                    <span class="std-accent-dot"></span>
+                    <i class="fa-solid fa-shield-halved std-group-icon" aria-hidden="true"></i>
+                    <h4 class="std-group-title">{{ srv.standardsSection.institutionalGroup.title }}</h4>
+                  </div>
+                  <div class="standards-token-stream">
+                    @for (std of srv.standardsSection.institutionalGroup.items; track std.code) {
+                      <div class="std-editorial-chip">
+                        <span class="chip-code">{{ std.code }}</span>
+                        <span class="chip-name">{{ std.name }}</span>
+                      </div>
+                    }
+                  </div>
+                  <p class="standards-summary-note">
+                    {{ languageService.isRtl() 
+                      ? 'تغطي أنظمة إدارة الجودة، الحوكمة والنزاهة ومكافحة الرشوة، إدارة المخاطر المؤسسية، أمن وسرية المعلومات، استمرارية الأعمال، والسلامة المهنية وإدارة شكاوى المستفيدين.' 
+                      : 'Encompassing quality management, governance, anti-bribery, enterprise risk, cybersecurity, business continuity, occupational safety, and beneficiary grievance mechanisms.' }}
+                  </p>
+                </div>
+
+                <!-- Group B: Specialized Food Safety Standards -->
+                <div class="standards-editorial-subgroup food-safety-subgroup">
+                  <div class="std-group-head">
+                    <span class="std-accent-dot"></span>
+                    <i class="fa-solid fa-utensils std-group-icon" aria-hidden="true"></i>
+                    <h4 class="std-group-title">{{ srv.standardsSection.foodGroup.title }}</h4>
+                  </div>
+                  <div class="std-food-callout">
+                    <i class="fa-solid fa-circle-info food-callout-icon" aria-hidden="true"></i>
+                    <p class="std-food-context">{{ srv.standardsSection.foodGroup.context }}</p>
+                  </div>
+                  <div class="standards-token-stream">
+                    @for (std of srv.standardsSection.foodGroup.items; track std.code) {
+                      <div class="std-editorial-chip food-chip">
+                        <span class="chip-code">{{ std.code }}</span>
+                        <span class="chip-name">{{ std.name }}</span>
+                      </div>
+                    }
+                  </div>
+                </div>
+
+                <!-- Quiet Disclaimer -->
+                <div class="acc-quiet-disclaimer">
+                  <i class="fa-solid fa-circle-check disclaimer-icon" aria-hidden="true"></i>
+                  <span>{{ srv.standardsSection.disclaimer }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             02 — منهجية التأهيل والتطوير (METHODOLOGY)
+             ==================================================================== -->
+        <div class="editorial-accordion-item" [class.is-open]="activeAccordionIndex === 2">
+          <button 
+            type="button" 
+            class="accordion-header-row" 
+            (click)="toggleAccordion(2)"
+            [attr.aria-expanded]="activeAccordionIndex === 2"
+          >
+            <div class="accordion-num-col">
+              <span class="acc-num">02</span>
+            </div>
+            <div class="accordion-main-col">
+              <div class="acc-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-route"></i>
+              </div>
+              <div class="acc-text-wrap">
+                <h3 class="acc-title">{{ srv.methodologySection.title }}</h3>
+                <p class="acc-summary">{{ srv.methodologySection.subtitle }}</p>
+              </div>
+            </div>
+            <div class="accordion-toggle-col">
+              <span class="acc-toggle-indicator" aria-hidden="true">
+                <i class="fa-solid fa-plus toggle-icon"></i>
+              </span>
+            </div>
+          </button>
+          
+          <div class="accordion-content-collapse" [class.is-open]="activeAccordionIndex === 2">
+            <div class="accordion-body-content">
+              <div class="acc-inner-composition methodology-acc-layout">
+                <div class="acc-inner-lead-block">
+                  <span class="acc-inner-eyebrow">{{ srv.methodologySection.eyebrow }}</span>
+                  <p class="acc-inner-lead-desc">{{ srv.methodologySection.subtitle }}</p>
+                </div>
+
+                <!-- Connected 6-Stage Journey Progression -->
+                <div class="methodology-journey-track">
+                  @for (step of srv.methodologySection.steps; track step.num) {
+                    <div class="methodology-journey-node">
+                      <div class="journey-marker-row">
+                        <span class="journey-step-badge">{{ step.num }}</span>
+                        <span class="journey-line" aria-hidden="true"></span>
+                      </div>
+                      <div class="journey-node-body">
+                        <h4 class="journey-title">{{ step.title }}</h4>
+                        <p class="journey-desc">{{ step.desc }}</p>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             03 — المخرجات والتسليمات (DELIVERABLES)
+             ==================================================================== -->
+        <div class="editorial-accordion-item" [class.is-open]="activeAccordionIndex === 3">
+          <button 
+            type="button" 
+            class="accordion-header-row" 
+            (click)="toggleAccordion(3)"
+            [attr.aria-expanded]="activeAccordionIndex === 3"
+          >
+            <div class="accordion-num-col">
+              <span class="acc-num">03</span>
+            </div>
+            <div class="accordion-main-col">
+              <div class="acc-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-file-circle-check"></i>
+              </div>
+              <div class="acc-text-wrap">
+                <h3 class="acc-title">{{ srv.methodologySection.deliverables.title }}</h3>
+                <p class="acc-summary">
+                  {{ languageService.isRtl() ? 'حزمة الوثائق الرسمية والتقارير التنفيذية المسلمة للجمعية باليد.' : 'Certified operational documents, reports, and asset suites delivered to the nonprofit.' }}
+                </p>
+              </div>
+            </div>
+            <div class="accordion-toggle-col">
+              <span class="acc-toggle-indicator" aria-hidden="true">
+                <i class="fa-solid fa-plus toggle-icon"></i>
+              </span>
+            </div>
+          </button>
+          
+          <div class="accordion-content-collapse" [class.is-open]="activeAccordionIndex === 3">
+            <div class="accordion-body-content">
+              <div class="acc-inner-composition deliverables-acc-layout">
+                <div class="acc-inner-lead-block">
+                  <span class="acc-inner-eyebrow">{{ languageService.isRtl() ? 'المخرجات المعتمدة' : 'Verified Deliverables' }}</span>
+                  <p class="acc-inner-lead-desc">
+                    {{ languageService.isRtl() 
+                      ? 'وثائق وأدلة ونماذج تشغيلية رسمية تُسلم لإدارة الجمعية ومجلس إدارتها بنهاية مراحل التطوير:' 
+                      : 'Formal operational documents, manuals, and templates handed over to the board and executive management:' }}
+                  </p>
+                </div>
+
+                <!-- Deliverables Checklist / Editorial List -->
+                <ol class="deliverables-checklist-grid">
+                  @for (del of srv.methodologySection.deliverables.items; track del.num) {
+                    <li class="del-checklist-item">
+                      <div class="del-check-icon-box" aria-hidden="true">
+                        <i class="fa-solid fa-check"></i>
+                      </div>
+                      <div class="del-check-info">
+                        <div class="del-title-row">
+                          <span class="del-check-num">{{ del.num }}</span>
+                          <h4 class="del-check-title">{{ del.label }}</h4>
+                          <span class="del-pill-tag">{{ languageService.isRtl() ? 'مخرج معتمد' : 'Verified' }}</span>
+                        </div>
+                        <span class="del-check-meta">
+                          {{ languageService.isRtl() ? 'وثيقة تنفيذية معتمدة ومجهزة للتطبيق المؤسسي الفوري' : 'Certified operational deliverable ready for immediate institutional deployment' }}
+                        </span>
+                      </div>
+                    </li>
+                  }
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             04 — باقات الخدمة (NONPROFIT PACKAGES)
+             ==================================================================== -->
+        <div class="editorial-accordion-item" [class.is-open]="activeAccordionIndex === 4">
+          <button 
+            type="button" 
+            class="accordion-header-row" 
+            (click)="toggleAccordion(4)"
+            [attr.aria-expanded]="activeAccordionIndex === 4"
+          >
+            <div class="accordion-num-col">
+              <span class="acc-num">04</span>
+            </div>
+            <div class="accordion-main-col">
+              <div class="acc-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div class="acc-text-wrap">
+                <h3 class="acc-title">{{ srv.packagesSection.title }}</h3>
+                <p class="acc-summary">{{ srv.packagesSection.subtitle }}</p>
+              </div>
+            </div>
+            <div class="accordion-toggle-col">
+              <span class="acc-toggle-indicator" aria-hidden="true">
+                <i class="fa-solid fa-plus toggle-icon"></i>
+              </span>
+            </div>
+          </button>
+          
+          <div class="accordion-content-collapse" [class.is-open]="activeAccordionIndex === 4">
+            <div class="accordion-body-content">
+              <div class="acc-inner-composition packages-acc-layout">
+                <div class="acc-inner-lead-block">
+                  <span class="acc-inner-eyebrow">{{ srv.packagesSection.eyebrow }}</span>
+                  <p class="acc-inner-lead-desc">{{ srv.packagesSection.subtitle }}</p>
+                </div>
+
+                <!-- Mobile Swipe Hint (Pure CSS) -->
+                <div class="packages-mobile-swipe-prompt" aria-hidden="true">
+                  <span>{{ languageService.isRtl() ? '← اسحب لاستعراض الباقات الثلاث →' : '← Swipe to explore the 3 packages →' }}</span>
+                </div>
+
+                <!-- 3 Package Cards (Desktop: 3 Cols, Mobile: CSS Snap) -->
+                <div class="packages-editorial-track">
+                  @for (pkg of srv.packagesSection.packages; track pkg.name; let idx = $index) {
+                    <div class="package-editorial-card" [class.is-featured]="idx === 1">
+                      @if (idx === 1) {
+                        <div class="pkg-featured-badge">
+                          <i class="fa-solid fa-star"></i>
+                          <span>{{ languageService.isRtl() ? 'الأكثر طلباً للارتقاء المؤسسي' : 'Most In-Demand Package' }}</span>
+                        </div>
+                      }
+                      <div class="pkg-card-top">
+                        <span class="pkg-card-tier">{{ pkg.tier }}</span>
+                        <h4 class="pkg-card-name">{{ pkg.name }}</h4>
+                        <p class="pkg-card-purpose">{{ pkg.purpose }}</p>
+                      </div>
+                      
+                      <div class="pkg-card-hairline" aria-hidden="true"></div>
+                      
+                      <div class="pkg-card-body">
+                        <span class="pkg-scope-heading">{{ srv.packagesSection.scopeLabel }}</span>
+                        <ul class="pkg-items-list">
+                          @for (item of pkg.items; track item) {
+                            <li>
+                              <i class="fa-solid fa-check pkg-check-icon" aria-hidden="true"></i>
+                              <span class="pkg-item-text">{{ item }}</span>
+                            </li>
+                          }
+                        </ul>
+                      </div>
+                    </div>
+                  }
+                </div>
+
+                <!-- Terms Note -->
+                <p class="packages-note-quiet">
+                  <i class="fa-solid fa-circle-info note-icon" aria-hidden="true"></i>
+                  <span>{{ srv.packagesSection.note }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             05 — الجهات التي نخدمها (WHO WE SERVE)
+             ==================================================================== -->
+        <div class="editorial-accordion-item" [class.is-open]="activeAccordionIndex === 5">
+          <button 
+            type="button" 
+            class="accordion-header-row" 
+            (click)="toggleAccordion(5)"
+            [attr.aria-expanded]="activeAccordionIndex === 5"
+          >
+            <div class="accordion-num-col">
+              <span class="acc-num">05</span>
+            </div>
+            <div class="accordion-main-col">
+              <div class="acc-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div class="acc-text-wrap">
+                <h3 class="acc-title">{{ srv.targetSectorsSection.title }}</h3>
+                <p class="acc-summary">{{ srv.targetSectorsSection.subtitle }}</p>
+              </div>
+            </div>
+            <div class="accordion-toggle-col">
+              <span class="acc-toggle-indicator" aria-hidden="true">
+                <i class="fa-solid fa-plus toggle-icon"></i>
+              </span>
+            </div>
+          </button>
+          
+          <div class="accordion-content-collapse" [class.is-open]="activeAccordionIndex === 5">
+            <div class="accordion-body-content">
+              <div class="acc-inner-composition sectors-acc-layout">
+                <div class="acc-inner-lead-block">
+                  <span class="acc-inner-eyebrow">{{ srv.targetSectorsSection.eyebrow }}</span>
+                  <p class="acc-inner-lead-desc">{{ srv.targetSectorsSection.subtitle }}</p>
+                </div>
+
+                <!-- Visually Interesting Editorial List (6 Sectors) -->
+                <ol class="target-sectors-editorial-stream">
+                  @for (sec of srv.targetSectorsSection.items; track sec.title; let idx = $index) {
+                    <li class="sector-editorial-entry">
+                      <div class="sector-badge-col">
+                        <span class="sector-entry-num">{{ sec.num }}</span>
+                        <div class="sector-icon-circle" aria-hidden="true">
+                          <i class="fa-solid" 
+                            [class.fa-hand-holding-heart]="idx === 0" 
+                            [class.fa-building-columns]="idx === 1" 
+                            [class.fa-chart-pie]="idx === 2" 
+                            [class.fa-heart-pulse]="idx === 3" 
+                            [class.fa-graduation-cap]="idx === 4" 
+                            [class.fa-users-line]="idx === 5"></i>
+                        </div>
+                      </div>
+                      <div class="sector-entry-body">
+                        <h4 class="sector-entry-title">{{ sec.title }}</h4>
+                        <p class="sector-entry-desc">{{ sec.desc }}</p>
+                      </div>
+                    </li>
+                  }
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             06 — لماذا إيليت؟ (WHY EIB)
+             ==================================================================== -->
+        <div class="editorial-accordion-item" [class.is-open]="activeAccordionIndex === 6">
+          <button 
+            type="button" 
+            class="accordion-header-row" 
+            (click)="toggleAccordion(6)"
+            [attr.aria-expanded]="activeAccordionIndex === 6"
+          >
+            <div class="accordion-num-col">
+              <span class="acc-num">06</span>
+            </div>
+            <div class="accordion-main-col">
+              <div class="acc-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-compass"></i>
+              </div>
+              <div class="acc-text-wrap">
+                <h3 class="acc-title">{{ srv.whyEibSection.advantagesTitle }}</h3>
+                <p class="acc-summary">
+                  {{ languageService.isRtl() ? 'مزايا وقيم تنافسية وخبرة ميدانية عميقة في لوائح وبيئة العمل الخيري بالمملكة.' : 'Core competitive advantages and deep field grasp of the Saudi nonprofit sector.' }}
+                </p>
+              </div>
+            </div>
+            <div class="accordion-toggle-col">
+              <span class="acc-toggle-indicator" aria-hidden="true">
+                <i class="fa-solid fa-plus toggle-icon"></i>
+              </span>
+            </div>
+          </button>
+          
+          <div class="accordion-content-collapse" [class.is-open]="activeAccordionIndex === 6">
+            <div class="accordion-body-content">
+              <div class="acc-inner-composition why-acc-layout">
+                <div class="acc-inner-lead-block">
+                  <span class="acc-inner-eyebrow">{{ srv.whyEibSection.eyebrow }}</span>
+                  <p class="acc-inner-lead-desc">{{ srv.whyEibSection.subtitle }}</p>
+                </div>
+
+                <!-- Six Compact Editorial Rows with bespoke icons -->
+                <ol class="why-eib-editorial-stream">
+                  @for (adv of srv.whyEibSection.advantages; track adv.title; let idx = $index) {
+                    <li class="why-editorial-row">
+                      <div class="why-row-leading">
+                        <span class="why-row-num">{{ adv.num }}</span>
+                        <div class="why-row-icon" aria-hidden="true">
+                          <i class="fa-solid" 
+                            [class.fa-scale-balanced]="idx === 0" 
+                            [class.fa-sliders]="idx === 1" 
+                            [class.fa-chalkboard-user]="idx === 2" 
+                            [class.fa-shield-halved]="idx === 3" 
+                            [class.fa-user-tie]="idx === 4" 
+                            [class.fa-seedling]="idx === 5"></i>
+                        </div>
+                      </div>
+                      <div class="why-row-body">
+                        <h4 class="why-row-title">{{ adv.title }}</h4>
+                        <p class="why-row-desc">{{ adv.desc }}</p>
+                      </div>
+                    </li>
+                  }
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             07 — الأثر المؤسسي المتوقع (EXPECTED IMPACT)
+             ==================================================================== -->
+        <div class="editorial-accordion-item" [class.is-open]="activeAccordionIndex === 7">
+          <button 
+            type="button" 
+            class="accordion-header-row" 
+            (click)="toggleAccordion(7)"
+            [attr.aria-expanded]="activeAccordionIndex === 7"
+          >
+            <div class="accordion-num-col">
+              <span class="acc-num">07</span>
+            </div>
+            <div class="accordion-main-col">
+              <div class="acc-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="acc-text-wrap">
+                <h3 class="acc-title">{{ srv.whyEibSection.outcomesTitle }}</h3>
+                <p class="acc-summary">
+                  {{ languageService.isRtl() ? 'نتائج وعوائد مؤسسية قابلة للقياس تعزز كفاءة المنظومة واستدامة العطاء.' : 'Measurable institutional outcomes elevating operational efficiency, governance, and sustainability.' }}
+                </p>
+              </div>
+            </div>
+            <div class="accordion-toggle-col">
+              <span class="acc-toggle-indicator" aria-hidden="true">
+                <i class="fa-solid fa-plus toggle-icon"></i>
+              </span>
+            </div>
+          </button>
+          
+          <div class="accordion-content-collapse" [class.is-open]="activeAccordionIndex === 7">
+            <div class="accordion-body-content">
+              <div class="acc-inner-composition impact-acc-layout">
+                <div class="acc-inner-lead-block">
+                  <span class="acc-inner-eyebrow">{{ languageService.isRtl() ? 'العائد المؤسسي' : 'Institutional ROI' }}</span>
+                  <p class="acc-inner-lead-desc">
+                    {{ languageService.isRtl() ? 'مخرجات ونتائج استراتيجية ملموسة تعود بالنفع على الجمعية وفريق عملها ومستفيديها:' : 'Tangible strategic returns benefiting the organization, workforce, and beneficiaries:' }}
+                  </p>
+                </div>
+
+                <!-- 4 Strategic Outcomes: Metric Columns with Line Header -->
+                <div class="impact-outcomes-editorial-grid">
+                  @for (outc of srv.whyEibSection.outcomes; track outc.title; let idx = $index) {
+                    <div class="impact-outcome-item">
+                      <div class="outcome-header-row">
+                        <span class="outcome-idx">0{{ idx + 1 }}</span>
+                        <div class="outcome-line" aria-hidden="true"></div>
+                      </div>
+                      <div class="outcome-content">
+                        <h4 class="outcome-name">{{ outc.title }}</h4>
+                        <p class="outcome-text">{{ outc.desc }}</p>
+                      </div>
+                    </div>
+                  }
+                </div>
+
+                <!-- Final Statement Quote Banner -->
+                <div class="impact-closing-banner">
+                  <div class="closing-quote-icon" aria-hidden="true">
+                    <i class="fa-solid fa-quote-right"></i>
+                  </div>
+                  <div class="closing-quote-body">
+                    <p class="closing-quote-text">{{ srv.whyEibSection.summaryQuote }}</p>
+                    <span class="closing-firm-note">{{ srv.whyEibSection.firmNote }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Seamless Next Capability Link at the end of the accordion system -->
+      @if (nextService) {
+        <div class="accordion-bottom-nav">
+          <span class="next-nav-label">{{ languageService.t.serviceDetail.nextCapability }}:</span>
+          <a [routerLink]="['/services', nextService.slug]" class="next-nav-link">
+            <span>{{ nextService.title }}</span>
+            <i class="fa-solid fa-arrow-right next-nav-arrow" aria-hidden="true"></i>
+          </a>
+        </div>
+      }
+
+    </div>
+  </section>
+  }
 
   <!-- 04 — FINAL CTA -->
   <app-cta [customUrl]="srv.externalUrl"></app-cta>

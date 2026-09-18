@@ -14,7 +14,8 @@ export const serverRoutes: ServerRoute[] = [
         { slug: 'business-technology-software' },
         { slug: 'professional-development' },
         { slug: 'digital-marketing-advertising' },
-        { slug: 'contracting-construction' }
+        { slug: 'contracting-construction' },
+        { slug: 'nonprofit-charities' }
       ];
     }
   },
