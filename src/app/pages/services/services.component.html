@@ -32,8 +32,8 @@
   </header>
 
   <!-- ==========================================================================
-       02 — ALL 8 CORE SERVICES (BALANCED BENTO CARDS GRID)
-       Equal visual weight across all 8 strategic practices
+       02 — ALL CORE SERVICES (BALANCED BENTO CARDS GRID WITH REAL PHOTOGRAPHY)
+       Equal visual weight across all strategic practices
        ========================================================================== -->
   <section class="eib-section services-grid-section">
     <div class="eib-container">
@@ -42,90 +42,52 @@
         @for (srv of services; track srv.id) {
           <div class="service-bento-card">
             
-            <!-- Card Header: Expressive Icon + Elegant Number -->
-            <div class="card-top-row">
-              <div class="service-icon-box" [attr.data-slug]="srv.slug">
-                @switch (srv.slug) {
-                  @case ('management-consulting') {
-                    <!-- 01: Management Consulting Icon -->
-                    <i class="fa-solid fa-layer-group"></i>
-                  }
-                  @case ('financial-solutions') {
-                    <!-- 02: Financial Solutions Icon -->
-                    <i class="fa-solid fa-scale-balanced"></i>
-                  }
-                  @case ('quality-iso-excellence') {
-                    <!-- 03: Quality & ISO Excellence Icon -->
-                    <i class="fa-solid fa-certificate"></i>
-                  }
-                  @case ('pr-media') {
-                    <!-- 04: PR & Media Icon -->
-                    <i class="fa-solid fa-bullhorn"></i>
-                  }
-                  @case ('exhibitions-events') {
-                    <!-- 05: Exhibitions & Conferences Icon -->
-                    <i class="fa-solid fa-calendar-check"></i>
-                  }
-                  @case ('business-technology-software') {
-                    <!-- 06: Business Tech & Software Icon -->
-                    <i class="fa-solid fa-laptop-code"></i>
-                  }
-                  @case ('professional-development') {
-                    <!-- 07: Professional Development Icon -->
-                    <i class="fa-solid fa-graduation-cap"></i>
-                  }
-                  @case ('digital-marketing-advertising') {
-                    <!-- 08: Digital Marketing Icon -->
-                    <i class="fa-solid fa-bullseye"></i>
-                  }
-                  @case ('contracting-construction') {
-                    <!-- 09: Contracting & Construction Icon -->
-                    <i class="fa-solid fa-helmet-safety"></i>
-                  }
-                  @case ('nonprofit-charities') {
-                    <!-- 10: Nonprofit & Charities Icon -->
-                    <i class="fa-solid fa-hand-holding-heart"></i>
-                  }
-                  @default {
-                    <i class="fa-solid fa-briefcase"></i>
-                  }
+            <!-- Card Media: Professional Photography -->
+            <a [routerLink]="['/services', srv.slug]" class="service-card-media-wrapper" [attr.aria-label]="srv.title">
+              <img 
+                [src]="srv.imageUrl" 
+                [alt]="srv.title" 
+                class="service-card-img" 
+                loading="lazy" 
+                decoding="async"
+              />
+              <div class="service-media-gradient-overlay" aria-hidden="true"></div>
+              <span class="service-id-badge">{{ srv.id }}</span>
+            </a>
+
+            <!-- Card Body & Content -->
+            <div class="card-content-body">
+              <div class="card-main-content">
+                <h2 class="service-card-title">
+                  <a [routerLink]="['/services', srv.slug]" class="title-link">
+                    {{ srv.title }}
+                  </a>
+                </h2>
+
+                <p class="service-card-desc">
+                  {{ srv.shortDesc }}
+                </p>
+              </div>
+
+              <!-- Scannable Capability Pills -->
+              <div class="card-pills-wrap">
+                @for (pill of srv.pills; track pill) {
+                  <span class="capability-pill">
+                    <span class="pill-dot" aria-hidden="true"></span>
+                    <span>{{ pill }}</span>
+                  </span>
                 }
               </div>
 
-              <span class="service-id-badge">{{ srv.id }}</span>
-            </div>
-
-            <!-- Card Body: Title + Description -->
-            <div class="card-main-content">
-              <h2 class="service-card-title">
-                <a [routerLink]="['/services', srv.slug]" class="title-link">
-                  {{ srv.title }}
+              <!-- Card Footer: Direct Action Button -->
+              <div class="card-bottom-bar">
+                <a [routerLink]="['/services', srv.slug]" class="service-action-btn">
+                  <span>{{ languageService.t.servicesPage.exploreService }}</span>
+                  <span class="btn-arrow-icon" aria-hidden="true">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
                 </a>
-              </h2>
-
-              <p class="service-card-desc">
-                {{ srv.shortDesc }}
-              </p>
-            </div>
-
-            <!-- Scannable Capability Pills -->
-            <div class="card-pills-wrap">
-              @for (pill of srv.pills; track pill) {
-                <span class="capability-pill">
-                  <span class="pill-dot" aria-hidden="true"></span>
-                  <span>{{ pill }}</span>
-                </span>
-              }
-            </div>
-
-            <!-- Card Footer: Direct Action Button -->
-            <div class="card-bottom-bar">
-              <a [routerLink]="['/services', srv.slug]" class="service-action-btn">
-                <span>{{ languageService.t.servicesPage.exploreService }}</span>
-                <span class="btn-arrow-icon" aria-hidden="true">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </span>
-              </a>
+              </div>
             </div>
 
           </div>

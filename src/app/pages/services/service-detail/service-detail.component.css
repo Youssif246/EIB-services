@@ -1352,13 +1352,24 @@ swiper-slide {
 
 .acc-inner-eyebrow {
   display: inline-block;
-  font-family: 'Syne', monospace, sans-serif;
-  font-size: 0.75rem;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8125rem;
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--eib-burgundy, #8F2525);
   margin-bottom: 6px;
+}
+
+[dir="rtl"] .acc-inner-eyebrow,
+[dir="rtl"] .pkg-card-tier,
+[dir="rtl"] .pkg-scope-heading,
+[dir="rtl"] .del-pill-tag,
+[dir="rtl"] .journey-step-badge,
+[dir="rtl"] .next-nav-label {
+  font-family: inherit;
+  letter-spacing: 0 !important;
+  text-transform: none;
 }
 
 .acc-inner-lead-desc {
