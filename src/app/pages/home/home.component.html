@@ -22,8 +22,9 @@
         </p>
 
         <div class="hero-ctas">
-          <a routerLink="/contact" class="eib-btn eib-btn-primary hero-primary-btn">
-            {{ languageService.t.home.hero.primaryCta }}
+          <a routerLink="/" fragment="industries" class="eib-btn eib-btn-primary hero-primary-btn">
+            <span>{{ languageService.t.home.hero.primaryCta }}</span>
+            <i class="fa-solid fa-arrow-right hero-primary-arrow" aria-hidden="true"></i>
           </a>
           <a routerLink="/" fragment="services" class="eib-editorial-link hero-secondary-btn">
             <span>{{ languageService.t.home.hero.secondaryCta }}</span>
