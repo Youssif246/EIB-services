@@ -38,7 +38,8 @@
           <picture>
             <source media="(max-width: 768px)" srcset="/hero-image-mobile.webp" type="image/webp" />
             <source srcset="/hero-image.webp" type="image/webp" />
-            <img src="/hero-image.png" alt="Corporate Architecture" class="hero-photo" width="1672" height="941" loading="eager" fetchpriority="high" decoding="async" />
+            <img src="/hero-image.png" alt="Corporate Architecture" class="hero-photo" width="1672" height="941"
+              loading="eager" fetchpriority="high" decoding="async" />
           </picture>
         </div>
       </div>
@@ -47,93 +48,12 @@
 </section>
 
 <!-- ==========================================================================
-     02 — EDITORIAL SERVICES DIRECTORY (01–08 PRACTICES)
-     Not a Catalog, Not a Dashboard, Not a Collection of Cards
-     ========================================================================== -->
-<section id="services" class="eib-section services-section">
-  <div class="eib-container">
-    <div class="section-intro">
-      <span class="journey-chapter">01</span>
-      <div class="eib-eyebrow">
-        <span class="eib-eyebrow-line orange"></span>
-        <span>{{ languageService.t.home.services.eyebrow }}</span>
-      </div>
-      <h2 class="eib-section-title">
-        {{ languageService.t.home.services.title }}
-      </h2>
-      <p class="eib-section-subtitle">
-        {{ languageService.t.home.services.subtitle }}
-      </p>
-    </div>
-
-    <!-- 3-Card Services Carousel (Executive Corporate Edition) -->
-    <div class="services-carousel-wrap">
-      <div class="services-slider-viewport" [class.is-dragging]="isServicesDragging"
-        (pointerdown)="onServicesPointerDown($event)"
-        (pointermove)="onServicesPointerMove($event)"
-        (pointerup)="onServicesPointerUp($event)"
-        (pointercancel)="onServicesPointerCancel($event)">
-        <div class="services-slider-track" [style.transform]="getServicesTrackTransform()">
-          @for (srv of languageService.t.services; track srv.id) {
-          <article class="service-carousel-card">
-            <div class="card-image-box">
-              <a [routerLink]="['/services', srv.slug]" class="card-image-link" (click)="onServiceCardClick($event)" [attr.aria-label]="srv.title">
-                <img [src]="srv.imageUrl" [alt]="srv.title" class="card-img" (error)="onImageError($event)" loading="lazy" decoding="async" width="400" height="245" draggable="false" />
-              </a>
-              <div class="card-img-vignette"></div>
-              <div class="card-badge-pill">
-                <span class="badge-accent">{{ srv.id }}</span>
-                <span class="badge-sep">/</span>
-                <span class="badge-total">{{ totalServicesFormatted }}</span>
-              </div>
-            </div>
-
-            <div class="card-body">
-              <div class="card-accent-bar"></div>
-              <h3 class="card-title">
-                <a [routerLink]="['/services', srv.slug]" class="title-internal-link" (click)="onServiceCardClick($event)">
-                  {{ srv.title }}
-                </a>
-              </h3>
-              <p class="card-desc">{{ srv.shortDesc }}</p>
-
-              <div class="card-action">
-                <a [routerLink]="['/services', srv.slug]" class="card-link" (click)="onServiceCardClick($event)">
-                  <span class="link-label">{{ languageService.t.home.services.viewMandate }}</span>
-                  <span class="link-arrow-circle">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </article>
-          }
-        </div>
-      </div>
-
-      <!-- Executive Navigation Controls -->
-      <div class="services-arrows-bar">
-        <button type="button" class="services-arrow-btn prev" (click)="prevSlide()" aria-label="Previous Services">
-          <i class="fa-solid fa-arrow-left"></i>
-        </button>
-
-        <span class="services-nav-dot"></span>
-
-        <button type="button" class="services-arrow-btn next" (click)="nextSlide()" aria-label="Next Services">
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==========================================================================
-     03 — REGULATED INDUSTRY EXPERTISE (EDITORIAL DISCOVERY)
+     02 — REGULATED INDUSTRY EXPERTISE (EDITORIAL DISCOVERY)
      Answering: "Does EIB Understand My Industry?"
      Visual Discovery | Zero Platform Dashboard Selectors
      ========================================================================== -->
 <!-- ==========================================================================
-     03 — REGULATED INDUSTRY EXPERTISE
+     02 — REGULATED INDUSTRY EXPERTISE
      Simple 3-Card Editorial Industry Slider
      ========================================================================== -->
 <section id="industries" class="eib-section industry-slider-section">
@@ -142,7 +62,7 @@
     <!-- Editorial Section Header -->
     <header class="industry-slider-header">
       <div class="industry-eyebrow-row">
-        <span class="journey-chapter">02</span>
+        <span class="journey-chapter">01</span>
         <div class="industry-slider-eyebrow">
           <span class="industry-eyebrow-line"></span>
           <span class="industry-eyebrow-text">{{ languageService.t.home.industries.eyebrow }}</span>
@@ -164,8 +84,8 @@
         <article class="industry-card" [class.is-center]="idx === industrySlideIndex + 1">
           <!-- Large High-Quality Image Viewport -->
           <div class="card-visual-frame">
-            <img [src]="ind.imageUrl" [alt]="ind.title" class="card-image" (error)="onImageError($event)" loading="lazy" decoding="async" width="400" height="300"
-              draggable="false" />
+            <img [src]="ind.imageUrl" [alt]="ind.title" class="card-image" (error)="onImageError($event)" loading="lazy"
+              decoding="async" width="400" height="300" draggable="false" />
             <div class="card-image-vignette"></div>
             <span class="card-floating-num">{{ ind.num }}</span>
           </div>
@@ -212,6 +132,90 @@
 
   </div>
 </section>
+
+<!-- ==========================================================================
+     03 — EDITORIAL SERVICES DIRECTORY (01–08 PRACTICES)
+     Not a Catalog, Not a Dashboard, Not a Collection of Cards
+     ========================================================================== -->
+
+<section id="services" class="eib-section services-section">
+  <div class="eib-container">
+    <div class="section-intro">
+      <span class="journey-chapter">02</span>
+      <div class="eib-eyebrow">
+        <span class="eib-eyebrow-line orange"></span>
+        <span>{{ languageService.t.home.services.eyebrow }}</span>
+      </div>
+      <h2 class="eib-section-title">
+        {{ languageService.t.home.services.title }}
+      </h2>
+      <p class="eib-section-subtitle">
+        {{ languageService.t.home.services.subtitle }}
+      </p>
+    </div>
+
+    <!-- 3-Card Services Carousel (Executive Corporate Edition) -->
+    <div class="services-carousel-wrap">
+      <div class="services-slider-viewport" [class.is-dragging]="isServicesDragging"
+        (pointerdown)="onServicesPointerDown($event)" (pointermove)="onServicesPointerMove($event)"
+        (pointerup)="onServicesPointerUp($event)" (pointercancel)="onServicesPointerCancel($event)">
+        <div class="services-slider-track" [style.transform]="getServicesTrackTransform()">
+          @for (srv of languageService.t.services; track srv.id) {
+          <article class="service-carousel-card">
+            <div class="card-image-box">
+              <a [routerLink]="['/services', srv.slug]" class="card-image-link" (click)="onServiceCardClick($event)"
+                [attr.aria-label]="srv.title">
+                <img [src]="srv.imageUrl" [alt]="srv.title" class="card-img" (error)="onImageError($event)"
+                  loading="lazy" decoding="async" width="400" height="245" draggable="false" />
+              </a>
+              <div class="card-img-vignette"></div>
+              <div class="card-badge-pill">
+                <span class="badge-accent">{{ srv.id }}</span>
+                <span class="badge-sep">/</span>
+                <span class="badge-total">{{ totalServicesFormatted }}</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-accent-bar"></div>
+              <h3 class="card-title">
+                <a [routerLink]="['/services', srv.slug]" class="title-internal-link"
+                  (click)="onServiceCardClick($event)">
+                  {{ srv.title }}
+                </a>
+              </h3>
+              <p class="card-desc">{{ srv.shortDesc }}</p>
+
+              <div class="card-action">
+                <a [routerLink]="['/services', srv.slug]" class="card-link" (click)="onServiceCardClick($event)">
+                  <span class="link-label">{{ languageService.t.home.services.viewMandate }}</span>
+                  <span class="link-arrow-circle">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+          }
+        </div>
+      </div>
+
+      <!-- Executive Navigation Controls -->
+      <div class="services-arrows-bar">
+        <button type="button" class="services-arrow-btn prev" (click)="prevSlide()" aria-label="Previous Services">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <span class="services-nav-dot"></span>
+
+        <button type="button" class="services-arrow-btn next" (click)="nextSlide()" aria-label="Next Services">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ==========================================================================
      04 — STRATEGIC PHILOSOPHY / INSTITUTIONAL INTEGRATION

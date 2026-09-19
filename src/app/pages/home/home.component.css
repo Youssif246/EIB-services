@@ -280,9 +280,9 @@
   border-bottom: 1px solid rgba(21, 23, 26, 0.07);
 }
 
-/* Background Architectural Watermark "01" (Bleeding Partially Outside Content) */
+/* Background Architectural Watermark "02" (Bleeding Partially Outside Content) */
 .services-section::before {
-  content: '01';
+  content: '02';
   position: absolute;
   top: clamp(24px, 4vw, 56px);
   inset-inline-start: clamp(10px, 4vw, 60px);
@@ -663,9 +663,9 @@
   padding: clamp(84px, 9vw, 136px) 0;
 }
 
-/* Background Architectural Watermark "02" (Alternating to End Flank for Asymmetry) */
+/* Background Architectural Watermark "01" (Alternating to End Flank for Asymmetry) */
 .industry-slider-section::before {
-  content: '02';
+  content: '01';
   position: absolute;
   top: clamp(28px, 4vw, 56px);
   inset-inline-end: clamp(10px, 4vw, 60px);
